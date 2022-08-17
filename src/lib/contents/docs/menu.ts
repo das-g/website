@@ -16,9 +16,15 @@ function M(
 
 export const MENU: MenuEntry[] = [
   M("Introduction", ""),
-  M("Quickstart", "quickstart"),
+  // M("Quickstart", "quickstart"),
   M("Getting Started", "getting-started"),
-  M("Configure", "configure", [
+  M("Learn Gitpod", "develop", [
+    M("One workspace per task", "workspaces"),
+    M("Life of a workspace", "life-of-workspace"),
+    M("Contexts", "context-urls"),
+    M("Collaboration & Sharing", "sharing-and-collaboration"),
+  ]),
+  M("Configure a Project", "configure", [
     M(".gitpod.yml", "config-gitpod-file"),
     // Why is this side bar name different to the title / URL?
     M("Docker", "config-docker"),
@@ -28,19 +34,20 @@ export const MENU: MenuEntry[] = [
     M("Environment Variables", "environment-variables"),
     M("Network Bridging", "configure/tailscale"),
     M("Workspace Location", "checkout-location"),
-    M("Browser Settings", "configure/browser-settings"),
-    M("Dotfiles", "config-dotfiles", []),
     M("SSH", "configure/ssh"),
     M("Multi-Repo", "multi-repo-workspaces", [], "beta"),
   ]),
-  M("Develop", "develop", [
-    M("One workspace per task", "workspaces"),
-    M("Life of a workspace", "life-of-workspace"),
-    M("Contexts", "context-urls"),
-    M("Collaboration & Sharing", "sharing-and-collaboration"),
+  M("Configure a Team", "configure", [
     M("Teams & Projects", "teams-and-projects", [], "beta"),
     M("Team Billing", "team-billing", [], "beta"),
     M("Create a Team Plan", "teams", []),
+  ]),
+  M("User Settings", "configure", [
+    M("Prebuilds", "prebuilds"),
+    M("Environment Variables", "environment-variables"),
+    M("Browser Settings", "configure/browser-settings"),
+    M("Dotfiles", "config-dotfiles", []),
+    M("SSH", "configure/ssh"),
   ]),
   M("IDEs & Editors", "ides-and-editors", [
     M("VS Code Browser", "ides-and-editors/vscode-browser"),
@@ -63,23 +70,9 @@ export const MENU: MenuEntry[] = [
   M("Languages", "languages", [
     M("JavaScript", "languages/javascript"),
     M("Python", "languages/python"),
-    M("HTML/CSS", "languages/html"),
     M("Java", "languages/java"),
-    M("C++", "languages/cpp"),
     M("Go", "languages/go"),
-    M("Bash", "languages/bash"),
-    M("Ruby", "languages/ruby"),
-    M("PHP", "languages/php"),
-    M("Vue", "languages/vue"),
-    M("Scala", "languages/scala"),
     M("Rust", "languages/rust"),
-    M(".NET", "languages/dotnet"),
-    M("Dart", "languages/dart"),
-    M("Julia", "languages/julia"),
-    M("LaTeX", "languages/latex"),
-    M("R", "languages/r"),
-    M("Kotlin", "languages/kotlin"),
-    M("Deno", "languages/deno"),
   ]),
   M("Integrations", "integrations", [
     M("GitLab", "gitlab-integration"),
