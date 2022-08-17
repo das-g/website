@@ -43,8 +43,6 @@ export const MENU: MenuEntry[] = [
     M("Create a Team Plan", "teams", []),
   ]),
   M("User Settings", "configure", [
-    M("Prebuilds", "prebuilds"),
-    M("Environment Variables", "environment-variables"),
     M("Browser Settings", "configure/browser-settings"),
     M("Dotfiles", "config-dotfiles", []),
     M("SSH", "configure/ssh"),
@@ -69,19 +67,19 @@ export const MENU: MenuEntry[] = [
     M("Command Line (SSH)", "ides-and-editors/command-line", []),
     M("FAQs", "ides-and-editors/faqs", []),
   ]),
-  M("Languages", "languages", [
-    M("JavaScript", "languages/javascript"),
-    M("Python", "languages/python"),
-    M("Java", "languages/java"),
-    M("Go", "languages/go"),
-    M("Rust", "languages/rust"),
-  ]),
   M("Authentication", "integrations", [
     M("GitLab", "gitlab-integration"),
     M("GitHub", "github-integration"),
     M("Bitbucket", "bitbucket-integration"),
     M("GitHub Enterprise", "github-enterprise-integration"),
     M("Bitbucket Server", "bitbucket-server-integration"),
+  ]),
+  M("Languages", "languages", [
+    M("JavaScript", "languages/javascript"),
+    M("Python", "languages/python"),
+    M("Java", "languages/java"),
+    M("Go", "languages/go"),
+    M("Rust", "languages/rust"),
   ]),
   M("Gitpod Self-Hosted", "self-hosted/latest", [
     M("Installation Guides", "self-hosted/latest/installation-guides", [
