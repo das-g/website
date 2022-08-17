@@ -48,6 +48,8 @@ export const MENU: MenuEntry[] = [
     M("Browser Settings", "configure/browser-settings"),
     M("Dotfiles", "config-dotfiles", []),
     M("SSH", "configure/ssh"),
+    M("Browser Bookmarklet", "browser-bookmarklet"),
+    M("Browser Extension", "browser-extension"),
   ]),
   M("IDEs & Editors", "ides-and-editors", [
     M("VS Code Browser", "ides-and-editors/vscode-browser"),
@@ -74,14 +76,12 @@ export const MENU: MenuEntry[] = [
     M("Go", "languages/go"),
     M("Rust", "languages/rust"),
   ]),
-  M("Integrations", "integrations", [
+  M("Authentication", "integrations", [
     M("GitLab", "gitlab-integration"),
     M("GitHub", "github-integration"),
     M("Bitbucket", "bitbucket-integration"),
     M("GitHub Enterprise", "github-enterprise-integration"),
     M("Bitbucket Server", "bitbucket-server-integration"),
-    M("Browser Bookmarklet", "browser-bookmarklet"),
-    M("Browser Extension", "browser-extension"),
   ]),
   M("Gitpod Self-Hosted", "self-hosted/latest", [
     M("Installation Guides", "self-hosted/latest/installation-guides", [
