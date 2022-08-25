@@ -198,9 +198,10 @@ helm upgrade \
     --namespace cert-manager \
     --reset-values \
     --set installCRDs=true \
+    --set 'extraArgs={--dns01-recursive-nameservers-only=true,--dns01-recursive-nameservers=8.8.8.8:53\,1.1.1.1:53}' \
     --set webhook.hostNetwork=true \
-    --set serviceAccount.create=false \
     --set webhook.securePort=10260 \
+    --set serviceAccount.create=false \
     --set serviceAccount.name=cert-manager \
     --wait \
     cert-manager \
