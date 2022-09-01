@@ -272,6 +272,11 @@ iam:
         namespace: cert-manager
       wellKnownPolicies:
         certManager: true
+    - metadata:
+        name: external-dns
+        namespace: external-dns
+      wellKnownPolicies:
+        externalDNS: true
 
 # Uncomment and update for your region if you wish to use fewer availability zones
 # availabilityZones:
