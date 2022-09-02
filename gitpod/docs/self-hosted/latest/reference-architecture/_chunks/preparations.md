@@ -106,6 +106,12 @@ This guide uses the following tools:
 az aks install-cli
 ```
 
+TODO: describe required variables
+
+```
+export *VARIABLES
+```
+
 TODO: document resource group
 
 ```bash

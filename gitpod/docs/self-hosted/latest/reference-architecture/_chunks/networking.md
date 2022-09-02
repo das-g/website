@@ -202,6 +202,58 @@ helm upgrade \
 With Route53 created, you can now proceed to install cert-manager. Cert-manager is needed for Gitpod's internal networking even if you are managing DNS yourself.
 
 </div>
+
+<div slot="azure">
+
+**DNS Zone**
+
+```bash
+DOMAIN_NAME="azure.adrien.gitpod-self-hosted.com"
+az network dns zone create --name $DOMAIN_NAME --resource-group $RESOURCE_GROUP
+```
+
+**Authorize AKS cluster to control DNS records in the zone**
+
+```bash
+ZONE_ID=$(az network dns zone show --name "${DOMAIN}" --resource-group "${RESOURCE_GROUP}" --query "id" -o tsv)
+KUBELET_OBJECT_ID=$(az aks show --name "${CLUSTER_NAME}" --resource-group "${RESOURCE_GROUP}" --query "identityProfile.kubeletidentity.objectId" -o tsv)
+KUBELET_CLIENT_ID=$(az aks show --name "${CLUSTER_NAME}" --resource-group "${RESOURCE_GROUP}" --query "identityProfile.kubeletidentity.clientId" -o tsv)
+
+az role assignment create \
+    --assignee "${KUBELET_OBJECT_ID}" \
+    --role "DNS Zone Contributor" \
+    --scope "${ZONE_ID}"
+```
+
+> Note: this authorization authorizes both cert-manager and external-dns to manage records in the DNS zones.
+> This differs from AWS and GCP in that the other clouds require independent credentials to operate.
+
+**Install External-DNS**
+
+```bash
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm upgrade \
+    --atomic \
+    --cleanup-on-fail \
+    --create-namespace \
+    --install \
+    --namespace external-dns \
+    --reset-values \
+    --set provider=azure \
+    --set azure.resourceGroup="${RESOURCE_GROUP}" \
+    --set azure.subscriptionId="${AZURE_SUBSCRIPTION_ID}" \
+    --set azure.tenantId="${AZURE_TENANT_ID}" \
+    --set azure.useManagedIdentityExtension=true \
+    --set azure.userAssignedIdentityID="${KUBELET_CLIENT_ID}" \
+    --set logFormat=json \
+    --wait \
+    external-dns \
+    bitnami/external-dns
+```
+
+</div>
+
 </CloudPlatformToggle>
 
 ### cert-manager
@@ -263,6 +315,25 @@ kubectl patch deployment cert-manager -n cert-manager -p \
 
 ```
 
+</div>
+
+<div slot="azure">
+```bash
+helm repo add jetstack https://charts.jetstack.io
+helm repo update
+helm upgrade \
+    --atomic \
+    --cleanup-on-fail \
+    --create-namespace \
+    --install \
+    --namespace='cert-manager' \
+    --reset-values \
+    --set installCRDs=true \
+    --set 'extraArgs={--dns01-recursive-nameservers-only=true,--dns01-recursive-nameservers=8.8.8.8:53\,1.1.1.1:53}' \
+    --wait \
+    cert-manager \
+    jetstack/cert-manager
+```
 </div>
 </CloudPlatformToggle>
 
@@ -343,4 +414,30 @@ spec:
 ```
 
 </div>
+
+<div slot="azure">
+
+```yaml
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: gitpod-issuer
+spec:
+  acme:
+    email: $LETSENCRYPT_EMAIL
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: issuer-account-key
+    solvers:
+      - dns01:
+          azureDNS:
+            subscriptionID: $AZURE_SUBSCRIPTION_ID
+            resourceGroupName: $RESOURCE_GROUP
+            hostedZoneName: $DOMAIN
+```
+
+```bash
+kubectl apply -f issuer.yaml
+```
+
 </CloudPlatformToggle>
