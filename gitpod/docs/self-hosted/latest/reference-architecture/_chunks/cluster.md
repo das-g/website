@@ -657,4 +657,67 @@ aws iam delete-policy --policy-arn 'arn:aws:iam::12344:policy/gitpod_s3_access_p
 ```
 
 </div>
+
+<div slot="azure">
+
+TODO: latest Kubernetes version
+
+```bash
+AKS_VERSION=$(az aks get-versions \
+--location northeurope \
+--query "orchestrators[?contains(orchestratorVersion, '1.24.')].orchestratorVersion" \
+-o json | jq -r '.[-1]')
+```
+
+```bash
+K8S_NODE_VM_SIZE=${K8S_NODE_VM_SIZE:="Standard_D4_v3"}
+SERVICES_POOL="services"
+WORKSPACES_POOL="workspaces"
+
+az aks create \
+	--enable-cluster-autoscaler \
+	--enable-managed-identity \
+	--location "${LOCATION}" \
+	--kubernetes-version "${AKS_VERSION}" \
+	--min-count "1" \
+	--max-count "4" \
+	--max-pods "110" \
+	--name "${CLUSTER_NAME}" \
+	--node-osdisk-size "100" \
+	--node-vm-size "${K8S_NODE_VM_SIZE}" \
+	--nodepool-labels gitpod.io/workload_meta=true gitpod.io/workload_ide=true \
+	--nodepool-name "${SERVICES_POOL}" \
+	--resource-group "${RESOURCE_GROUP}" \
+	--no-ssh-key \
+	--vm-set-type "VirtualMachineScaleSets"
+```
+
+**NOTE**: Same VM size used for both workspaces and services; these need to be adjusted.
+
+```bash
+ az aks nodepool add \
+	--cluster-name "${CLUSTER_NAME}" \
+	--enable-cluster-autoscaler \
+	--kubernetes-version "${AKS_VERSION}" \
+	--labels gitpod.io/workload_workspace_services=true gitpod.io/workload_workspace_regular=true gitpod.io/workload_workspace_headless=true \
+	--min-count "1" \
+	--max-count "50" \
+	--max-pods "110" \
+	--name "${WORKSPACES_POOL}" \
+	--node-osdisk-size "512" \
+	--node-vm-size "${K8S_NODE_VM_SIZE}" \
+	--resource-group "${RESOURCE_GROUP}"
+```
+
+```bash
+az aks get-credentials \
+    --name "${CLUSTER_NAME}" \
+    --resource-group "${RESOURCE_GROUP}" \
+    --overwrite-existing
+```
+
+NOTE: image pull secrets? Needed? (https://github.com/gitpod-io/gitpod-microsoft-aks-guide/blob/main/setup.sh#L130)
+
+</div>
+
 </CloudPlatformToggle>

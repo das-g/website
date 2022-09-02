@@ -102,6 +102,10 @@ This guide uses the following tools:
 - [Azure CLI](...)
 - Helm
 
+```bash
+az aks install-cli
+```
+
 TODO: document resource group
 
 ```bash
