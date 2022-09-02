@@ -94,4 +94,20 @@ All commands that follow assume you have set an environment variable of `AWS_REG
 
 </div>
 
+<div slot="azure">
+
+TODO: enumerate credentials needed to create AKS resources.
+
+This guide uses the following tools:
+- [Azure CLI](...)
+- Helm
+
+TODO: document resource group
+
+```bash
+az group create --location $LOCATION --name gitpod
+```
+
+</div>
+
 </CloudPlatformToggle>
