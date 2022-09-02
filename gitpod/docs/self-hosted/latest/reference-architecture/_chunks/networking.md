@@ -322,10 +322,10 @@ kubectl patch deployment cert-manager -n cert-manager -p \
 helm repo add jetstack https://charts.jetstack.io
 helm repo update
 helm upgrade \
+    --install \
     --atomic \
     --cleanup-on-fail \
     --create-namespace \
-    --install \
     --namespace='cert-manager' \
     --reset-values \
     --set installCRDs=true \
@@ -334,6 +334,7 @@ helm upgrade \
     cert-manager \
     jetstack/cert-manager
 ```
+
 </div>
 </CloudPlatformToggle>
 
