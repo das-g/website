@@ -29,4 +29,18 @@ ECR is currently not supported, so configuring the registry will require using a
 To configure Gitpod to use the bucket created, ensure you select `In-cluster Registry`, and `S3 storage` in the installation UI. Then input the values of the bucket you've created. When setting the endpoint, please include the region such that `s3.amazonaws.com` becomes `s3.eu-west-1.amazonaws.com`.
 
 </div>
+
+<div slot="azure">
+
+```bash
+az acr create \
+  --admin-enabled true \
+  --location "${LOCATION}" \
+  --name "${REGISTRY_NAME}" \
+  --resource-group "${RESOURCE_GROUP}" \
+  --sku Premium
+```
+
+</div>
+
 </CloudPlatformToggle>
