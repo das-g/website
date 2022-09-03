@@ -190,4 +190,43 @@ unset AWS_SECRET_ACCESS_KEY
 ```
 
 </div>
+
+<div slot="azure">
+
+The Azure storage account name must be globally unique; note the value of `$STORAGE_ACCOUNT_NAME` for later.
+
+```bash
+export STORAGE_ACCOUNT_NAME="gitpod$(openssl rand -hex 4)"
+echo "$STORAGE_ACCOUNT_NAME"
+```
+
+```bash
+az storage account create \
+  --access-tier Hot \
+  --kind StorageV2 \
+  --location "${LOCATION}" \
+  --name "${STORAGE_ACCOUNT_NAME}" \
+  --resource-group "${RESOURCE_GROUP}" \
+  --sku Standard_LRS
+```
+
+After creating the storage account, grant access to Gitpod cluster to that storage account.
+
+```bash
+PRINCIPAL_ID=$(az aks show --name "${CLUSTER_NAME}" --resource-group "${RESOURCE_GROUP}" --query "identityProfile.kubeletidentity.objectId" -o tsv)
+
+STORAGE_ACCOUNT_ID=$(az storage account show \
+  --name "${STORAGE_ACCOUNT_NAME}" \
+  --output tsv \
+  --query id \
+  --resource-group "${RESOURCE_GROUP}" )
+
+az role assignment create \
+    --assignee "${PRINCIPAL_ID}" \
+    --role "Storage Blob Data Contributor" \
+    --scope "${STORAGE_ACCOUNT_ID}"
+```
+
+</div>
+
 </CloudPlatformToggle>
