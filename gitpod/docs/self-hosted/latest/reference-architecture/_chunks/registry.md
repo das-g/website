@@ -32,13 +32,36 @@ To configure Gitpod to use the bucket created, ensure you select `In-cluster Reg
 
 <div slot="azure">
 
+
 ```bash
 az acr create \
   --admin-enabled true \
   --location "${LOCATION}" \
-  --name "${REGISTRY_NAME}" \
+  --name "${REGISTRY_NAME}${REGISTRY_SUFFIX}" \
   --resource-group "${RESOURCE_GROUP}" \
   --sku Premium
+```
+
+The registry server, username, and password will be needed when Gitpod is installed; note these values for later.
+
+```bash
+  DOCKER_REGISTRY_SERVER=$(az acr show \
+    --name "${REGISTRY_NAME}" \
+    --output tsv \
+    --query loginServer \
+    --resource-group "${RESOURCE_GROUP}")
+
+  DOCKER_USER=$(az acr credential show \
+    --name "${REGISTRY_NAME}" \
+    --output tsv \
+    --query username \
+    --resource-group "${RESOURCE_GROUP}")
+
+  DOCKER_PASSWORD=$(az acr credential show \
+    --name "${REGISTRY_NAME}" \
+    --output tsv \
+    --query passwords[0].value \
+    --resource-group "${RESOURCE_GROUP}")
 ```
 
 </div>
