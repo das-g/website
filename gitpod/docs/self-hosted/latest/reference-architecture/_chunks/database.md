@@ -222,4 +222,47 @@ export MYSQL_RDS_ENDPOINT="$(aws rds describe-db-instances --db-instance-identif
 ```
 
 </div>
+
+<div slot="azure">
+
+```bash
+export MYSQL_GITPOD_PASSWORD=$(openssl rand -base64 20)
+echo "$MYSQL_GITPOD_PASSWORD"
+```
+
+Azure MySQL server names must be universally unique; we recommend using a random value to avoid conflicts. Note this value for later use.
+
+```bash
+export MYSQL_INSTANCE_NAME="gitpod$(openssl rand -hex 4)"
+echo "$MYSQL_INSTANCE_NAME"
+```
+
+
+```bash
+ az mysql server create \
+    --admin-user gitpod \
+    --admin-password "${MYSQL_GITPOD_PASSWORD}" \
+    --auto-grow Enabled \
+    --location "${LOCATION}" \
+    --name "${MYSQL_INSTANCE_NAME}" \
+    --public Enabled \
+    --resource-group "${RESOURCE_GROUP}" \
+    --sku-name GP_Gen5_2 \
+    --ssl-enforcement Enabled \
+    --storage-size 20480 \
+    --version "5.7"
+```
+
+TODO: the guide instructions suggested turning off SSL enforcement but the reference architecture is deviating here. This needs to be double checked before merge.
+
+```bash
+    az mysql db create \
+      --name gitpod \
+      --resource-group "${RESOURCE_GROUP}" \
+      --server-name "${MYSQL_INSTANCE_NAME}"
+```
+
+</div>
+
+
 </CloudPlatformToggle>
