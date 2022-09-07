@@ -137,6 +137,10 @@ az group create --location $LOCATION --name "$RESOURCE_GROUP"
 
 > Creating a new resource group for Gitpod resources is recommended but a pre-existing resource group may be used if necessary.
 
+**Service Principal**
+
+TODO: should we use a dedicated service principal when creating Gitpod?
+
 </div>
 
 </CloudPlatformToggle>
