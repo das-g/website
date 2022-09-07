@@ -669,47 +669,72 @@ AKS_VERSION=$(az aks get-versions \
 -o json | jq -r '.[-1]')
 ```
 
+Create the AKS cluster and a default nodepool; Gitpod and cluster services will run on this node pool.
+
 ```bash
 K8S_NODE_VM_SIZE=${K8S_NODE_VM_SIZE:="Standard_D4_v3"}
 SERVICES_POOL="services"
-WORKSPACES_POOL="workspaces"
 
 az aks create \
+	--name "${CLUSTER_NAME}" \
+	--nodepool-name "services" \
+	--location "${LOCATION}" \
+	--resource-group "${RESOURCE_GROUP}" \
+	--kubernetes-version "${AKS_VERSION}" \
 	--enable-cluster-autoscaler \
 	--enable-managed-identity \
-	--location "${LOCATION}" \
-	--kubernetes-version "${AKS_VERSION}" \
 	--min-count "1" \
 	--max-count "4" \
 	--max-pods "110" \
-	--name "${CLUSTER_NAME}" \
 	--node-osdisk-size "100" \
 	--node-vm-size "${K8S_NODE_VM_SIZE}" \
-	--nodepool-labels gitpod.io/workload_meta=true gitpod.io/workload_ide=true \
-	--nodepool-name "${SERVICES_POOL}" \
-	--resource-group "${RESOURCE_GROUP}" \
+	--nodepool-labels \
+      gitpod.io/workload_meta=true \
+      gitpod.io/workload_ide=true \
+	    gitpod.io/workload_workspace_services=true \
 	--no-ssh-key \
 	--vm-set-type "VirtualMachineScaleSets"
 ```
+
+Create a nodepool for regular workspaces:
 
 **NOTE**: Same VM size used for both workspaces and services; these need to be adjusted.
 
 ```bash
  az aks nodepool add \
+	--name "regular-workspaces" \
 	--cluster-name "${CLUSTER_NAME}" \
-	--enable-cluster-autoscaler \
+	--resource-group "${RESOURCE_GROUP}" \
 	--kubernetes-version "${AKS_VERSION}" \
-	--labels gitpod.io/workload_workspace_services=true gitpod.io/workload_workspace_regular=true gitpod.io/workload_workspace_headless=true \
+	--labels gitpod.io/workload_workspace_regular=true \
+	--enable-cluster-autoscaler \
 	--min-count "1" \
 	--max-count "50" \
 	--max-pods "110" \
-	--name "${WORKSPACES_POOL}" \
 	--node-osdisk-size "512" \
 	--node-vm-size "${K8S_NODE_VM_SIZE}" \
-	--resource-group "${RESOURCE_GROUP}"
+```
+Create a nodepool for headless workspaces. As headless workspaces typically run non user-facing workloads this node pool is configured to scale to zero.
+
+**TODO** Do we need node taints to repel things like kotsadm?
+
+```bash
+ az aks nodepool add \
+	--name "headless-workspaces" \
+	--cluster-name "${CLUSTER_NAME}" \
+	--resource-group "${RESOURCE_GROUP}" \
+	--kubernetes-version "${AKS_VERSION}" \
+	--labels gitpod.io/workload_workspace_headless=true \
+	--enable-cluster-autoscaler \
+  --node-count "0" \
+	--min-count "0" \
+	--max-count "50" \
+	--max-pods "110" \
+	--node-osdisk-size "512" \
+	--node-vm-size "${K8S_NODE_VM_SIZE}"
 ```
 
-After cluster and nodepool creation has been completed fetch the AKS credentials:
+After the cluster and node pools have been created, fetch the AKS credentials. These credentials will be used to install external-dns, cert-manager, and install Gitpod itself.
 
 ```bash
 az aks get-credentials \
@@ -717,8 +742,6 @@ az aks get-credentials \
     --resource-group "${RESOURCE_GROUP}" \
     --overwrite-existing
 ```
-
-NOTE: image pull secrets? Needed? (https://github.com/gitpod-io/gitpod-microsoft-aks-guide/blob/main/setup.sh#L130)
 
 </div>
 
