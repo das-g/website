@@ -227,6 +227,14 @@ az role assignment create \
     --scope "${STORAGE_ACCOUNT_ID}"
 ```
 
+```bash
+STORAGE_ACCOUNT_KEY=$(az storage account keys list \
+    --account-name "${STORAGE_ACCOUNT_NAME}" \
+    --resource-group "${RESOURCE_GROUP}" \
+    --output json
+)
+```
+
 </div>
 
 </CloudPlatformToggle>

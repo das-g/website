@@ -102,20 +102,23 @@ This guide uses the following tools:
 - [Azure CLI](...)
 - Helm
 
-```bash
-az aks install-cli
-```
-
-TODO: describe required variables
-
-```
-export *VARIABLES
-```
-
-TODO: document resource group
+If `kubectl` is not present the Azure CLI can install a version compatible with AKS:
 
 ```bash
-az group create --location $LOCATION --name gitpod
+sudo az aks install-cli
+```
+
+Set environment variables indicating the resource group and location where Gitpod resources will be created:
+
+```bash
+export RESOURCE_GROUP="gitpod"
+export LOCATION="centralus"
+```
+
+Then create resource group named above:
+
+```
+az group create --location $LOCATION --name "$RESOURCE_GROUP"
 ```
 
 </div>

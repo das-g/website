@@ -45,23 +45,28 @@ az acr create \
 The registry server, username, and password will be needed when Gitpod is installed; note these values for later.
 
 ```bash
-  DOCKER_REGISTRY_SERVER=$(az acr show \
+AZURE_REGISTRY_URL=$(az acr show \
     --name "${REGISTRY_NAME}" \
     --output tsv \
     --query loginServer \
     --resource-group "${RESOURCE_GROUP}")
 
-  DOCKER_USER=$(az acr credential show \
-    --name "${REGISTRY_NAME}" \
+AZURE_REGISTRY_USERNAME=$(az acr credential show \ --name "${REGISTRY_NAME}" \
     --output tsv \
     --query username \
     --resource-group "${RESOURCE_GROUP}")
 
-  DOCKER_PASSWORD=$(az acr credential show \
+AZURE_REGISTRY_PASSWORD=$(az acr credential show \
     --name "${REGISTRY_NAME}" \
     --output tsv \
     --query passwords[0].value \
     --resource-group "${RESOURCE_GROUP}")
+```
+
+**TODO:** az aks 
+
+```bash
+az aks check-acr
 ```
 
 </div>
