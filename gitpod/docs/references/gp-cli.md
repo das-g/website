@@ -1,6 +1,6 @@
 ---
 section: gp-cli
-title: GP CLI
+title: gp CLI
 ---
 
 <script context="module">
