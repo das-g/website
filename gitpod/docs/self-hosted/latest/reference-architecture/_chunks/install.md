@@ -130,7 +130,7 @@ Un-select the in-cluster MySQL checkbox.
 | In-cluster               | no                                                                                                                     |
 | Google Cloud SQL Proxy   | unchecked                                                                                                              |
 | Host                     | `${MYSQL_INSTANCE_NAME}.mysql.database.azure.com` <br/>(Replace `${MYSQL_INSTANCE_NAME}` with the Azure database name) |
-| Username                 | Value of `${MYSQL_GITPOD_USERNAME}@${MYSQL_INSTANCE_NAME}`                                                                                    |
+| Username                 | Value of `${MYSQL_GITPOD_USERNAME}@${MYSQL_INSTANCE_NAME}`                                                             |
 | Password                 | value of `${MYSQL_GITPOD_PASSWORD}`                                                                                    |
 | Password                 | Use default value (`3306`)                                                                                             |
 
@@ -153,6 +153,5 @@ Keep cert-manager selected for the TLS certificates options.
 
 
 </div>
-
 
 </CloudPlatformToggle>
