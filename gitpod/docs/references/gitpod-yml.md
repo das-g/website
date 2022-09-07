@@ -1,5 +1,5 @@
 ---
-section: references
+section: gitpod-yml
 title: .gitpod.yml Reference
 ---
 
@@ -35,7 +35,6 @@ Below is a full reference of all available properties. To see the underlying sch
     - [`jetbrains.[product].plugins`](#jetbrainsproductplugins)
     - [`jetbrains.[product].prebuilds`](#jetbrainsproductprebuilds)
     - [`jetbrains.[product].vmoptions`](#jetbrainsproductvmoptions)
-  - [`mainConfiguration`](#mainconfiguration)
   - [`ports`](#ports)
     - [`ports[n].name`](#portsnname)
     - [`ports[n].description`](#portsndescription)
@@ -51,6 +50,7 @@ Below is a full reference of all available properties. To see the underlying sch
     - [`tasks[n].openIn`](#tasksnopenin)
     - [`tasks[n].openMode`](#tasksnopenmode)
     - [`tasks[n].prebuild`](#tasksnprebuild)
+    - [`mainConfiguration`](#mainconfiguration)
   - [`vscode`](#vscode)
     - [`vscode.extensions`](#vscodeextensions)
   - [`workspaceLocation`](#workspacelocation)
