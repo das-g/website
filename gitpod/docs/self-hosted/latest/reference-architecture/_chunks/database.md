@@ -225,11 +225,6 @@ export MYSQL_RDS_ENDPOINT="$(aws rds describe-db-instances --db-instance-identif
 
 <div slot="azure">
 
-```bash
-export MYSQL_GITPOD_PASSWORD=$(openssl rand -base64 20)
-echo "$MYSQL_GITPOD_PASSWORD"
-```
-
 Azure MySQL server names must be universally unique; we recommend using a random value to avoid conflicts. Note this value for later use.
 
 ```bash
@@ -237,13 +232,20 @@ export MYSQL_INSTANCE_NAME="gitpod$(openssl rand -hex 4)"
 echo "$MYSQL_INSTANCE_NAME"
 ```
 
+Set the gitpod MySQL username and password. The username of `gitpod` is recommended but is not required.
+
+```bash
+export MYSQL_GITPOD_USERNAME="gitpod"
+export MYSQL_GITPOD_PASSWORD=$(openssl rand -base64 20)
+echo "$MYSQL_GITPOD_PASSWORD"
+```
 
 ```bash
  az mysql server create \
     --name "${MYSQL_INSTANCE_NAME}" \
     --resource-group "${RESOURCE_GROUP}" \
     --location "${LOCATION}" \
-    --admin-user gitpod \
+    --admin-user "${MYSQL_USERNAME}" \
     --admin-password "${MYSQL_GITPOD_PASSWORD}" \
     --auto-grow Enabled \
     --public Enabled \
