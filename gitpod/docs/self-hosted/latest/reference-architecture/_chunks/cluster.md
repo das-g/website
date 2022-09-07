@@ -660,16 +660,19 @@ aws iam delete-policy --policy-arn 'arn:aws:iam::12344:policy/gitpod_s3_access_p
 
 <div slot="azure">
 
-TODO: latest Kubernetes version
+This section will create a Kubernetes cluster based on the latest supported version of AKS, create node pools for Gitpod services, regular workspaces, and headless workspaces, and will fetch cluster credentials.
+
+First, determine the latest version of AKS suitable for Gitpod.
+
+> Gitpod supports Kubernetes 1.21 or later, but using the latest supported version of AKS is recommended.
 
 ```bash
-AKS_VERSION=$(az aks get-versions \
---location northeurope \
---query "orchestrators[?contains(orchestratorVersion, '1.24.')].orchestratorVersion" \
--o json | jq -r '.[-1]')
+AKS_VERSION=$(az aks get-versions
+    --location $LOCATION
+    --query "orchestrators[?contains(orchestratorVersion, '1.24.')].orchestratorVersion | [-1]" -o tsv)
 ```
 
-Create the AKS cluster and a default nodepool; Gitpod and cluster services will run on this node pool.
+Create the AKS cluster and a default node pool. Gitpod services and other supporting components will run on this node pool.
 
 ```bash
 K8S_NODE_VM_SIZE=${K8S_NODE_VM_SIZE:="Standard_D4_v3"}
@@ -696,7 +699,7 @@ az aks create \
 	--vm-set-type "VirtualMachineScaleSets"
 ```
 
-Create a nodepool for regular workspaces:
+Create a node pool for regular workspaces:
 
 **NOTE**: Same VM size used for both workspaces and services; these need to be adjusted.
 
@@ -714,7 +717,7 @@ Create a nodepool for regular workspaces:
 	--node-osdisk-size "512" \
 	--node-vm-size "${K8S_NODE_VM_SIZE}" \
 ```
-Create a nodepool for headless workspaces. As headless workspaces typically run non user-facing workloads this node pool is configured to scale to zero.
+Create a node pool for headless workspaces. As headless workspaces typically run non user-facing workloads this node pool is configured to scale to zero.
 
 **TODO** Do we need node taints to repel things like kotsadm?
 

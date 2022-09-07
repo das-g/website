@@ -96,15 +96,6 @@ All commands that follow assume you have set an environment variable of `AWS_REG
 
 <div slot="azure">
 
-**Requirements**
-
-To deploy Gitpod on [Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes), you must have an Azure subscription and account with permission deploy AKS clusters and associated component services, including the following:
-
-- MySQL Databases
-- Storage accounts
-- Azure Container Registries
-- Load balancers
-
 **Tools**
 
 This guide uses the following tools:
@@ -117,6 +108,21 @@ If `kubectl` is not present the Azure CLI can be used to install `kubectl`  and 
 ```bash
 sudo az aks install-cli
 ```
+
+**Credentials**
+
+To deploy Gitpod on [Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes), you must have an Azure subscription and account with permission deploy AKS clusters and associated component services, including the following:
+
+- MySQL Databases
+- Storage accounts
+- Azure Container Registries
+- Load balancers
+
+Make sure your credentials are available by running `az login`. If you're authenticating to Azure in an environment that doesn't have a browser you can login with the [Azure device authorization flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-device-code) by running `az login --use-device-code`.
+
+**Service Principal**
+
+TODO: should we use a dedicated service principal when creating Gitpod?
 
 **Location and Resource Group**
 
@@ -136,10 +142,6 @@ az group create --location $LOCATION --name "$RESOURCE_GROUP"
 ```
 
 > Creating a new resource group for Gitpod resources is recommended but a pre-existing resource group may be used if necessary.
-
-**Service Principal**
-
-TODO: should we use a dedicated service principal when creating Gitpod?
 
 </div>
 
