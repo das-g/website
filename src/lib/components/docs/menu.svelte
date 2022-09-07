@@ -3,7 +3,7 @@
   import type { MenuEntry } from "$lib/types/menu-entry.type";
   export let MENU: MenuEntry[];
   let dictionary: any = {
-    "Getting Started": "Introduction",
+    "Getting started": "Introduction",
     // "Gitpod Self-Hosted": "Gitpod Self-Hosted",
     Teams: "Configure",
     ".gitpod.yml": "References",
