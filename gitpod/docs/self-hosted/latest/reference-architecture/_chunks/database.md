@@ -240,13 +240,13 @@ echo "$MYSQL_INSTANCE_NAME"
 
 ```bash
  az mysql server create \
+    --name "${MYSQL_INSTANCE_NAME}" \
+    --resource-group "${RESOURCE_GROUP}" \
+    --location "${LOCATION}" \
     --admin-user gitpod \
     --admin-password "${MYSQL_GITPOD_PASSWORD}" \
     --auto-grow Enabled \
-    --location "${LOCATION}" \
-    --name "${MYSQL_INSTANCE_NAME}" \
     --public Enabled \
-    --resource-group "${RESOURCE_GROUP}" \
     --sku-name GP_Gen5_2 \
     --ssl-enforcement Enabled \
     --storage-size 20480 \
@@ -260,6 +260,15 @@ TODO: the guide instructions suggested turning off SSL enforcement but the refer
       --name gitpod \
       --resource-group "${RESOURCE_GROUP}" \
       --server-name "${MYSQL_INSTANCE_NAME}"
+```
+
+```bash
+  az mysql server firewall-rule create \
+    --name "Azure_Resources" \
+    --server-name "${MYSQL_INSTANCE_NAME}" \
+    --resource-group "${RESOURCE_GROUP}" \
+    --start-ip-address "0.0.0.0" \
+    --end-ip-address "0.0.0.0"
 ```
 
 </div>
