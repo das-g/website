@@ -1,5 +1,5 @@
 ---
-section: learn
+section: workspaces
 title: Collaboration & Sharing
 ---
 

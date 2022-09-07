@@ -1,13 +1,13 @@
 ---
 section: projects
-title: Checkout and Workspace Location
+title: Workspace Location
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Checkout and Workspace Location
+# {title}
 
 Older Go projects without module support need a <a href="https://golang.org/doc/code.html#Organization" target="_blank">specific workspace layout</a>:
 the source code of your repository and its dependencies must be in the directories

@@ -1,13 +1,13 @@
 ---
 section: authentication
-title: Bitbucket Integration
+title: Bitbucket
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Bitbucket Integration
+# {title}
 
 Gitpod works with any public or private repository on [Bitbucket](https://bitbucket.org/).
 

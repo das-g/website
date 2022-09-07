@@ -1,5 +1,5 @@
 ---
-section: ides-and-editors
+section: integrations
 title: JetBrains Gateway
 ---
 

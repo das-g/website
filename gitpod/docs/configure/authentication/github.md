@@ -1,13 +1,13 @@
 ---
 section: authentication
-title: GitHub Integration
+title: GitHub
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# GitHub Integration - github.com
+# {title}
 
 Gitpod works well with public or private repositories from [github.com](https://github.com/).
 

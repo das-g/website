@@ -1,13 +1,13 @@
 ---
 section: teams
-title: Create a Team Plan
+title: Plans
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Team Plans
+# {title}
 
 > **NOTE**
 > You can now configure [Team Billing](/docs/team-billing) directly from Teams & Projects with the following benefits:

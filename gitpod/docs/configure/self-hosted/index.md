@@ -1,6 +1,6 @@
 ---
 section: self-hosted/latest
-title: Gitpod Self-Hosted
+title: Self-Hosted
 ---
 
 <script context="module">

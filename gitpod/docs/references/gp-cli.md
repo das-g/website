@@ -1,13 +1,13 @@
 ---
-section: command-line-interface
-title: Command Line Interface
+section: gp-cli
+title: GP CLI
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Command Line Interface
+# {title}
 
 Gitpod supports a command line interface that is available in each workspace terminal called `gp`:
 

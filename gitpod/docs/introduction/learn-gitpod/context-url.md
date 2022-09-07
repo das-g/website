@@ -1,13 +1,13 @@
 ---
-section: learn
-title: Gitpod Contexts
+section: learn-gitpod
+title: Context URL
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Contexts
+# {title}
 
 Gitpod understands a variety of common situations you experience as part of your development workflow and automates repetitive tasks, giving you time to focus on more impactful work.
 
@@ -17,7 +17,7 @@ Regardless of the context, Gitpod performs the tasks configured in `.gitpod.yml`
 
 Gitpod is aware of the following contexts:
 
-- [Contexts](#contexts)
+- [{title}](#title)
   - [Repository Context](#repository-context)
   - [Branch and Commit Contexts](#branch-and-commit-contexts)
   - [Issue Context](#issue-context)

@@ -1,13 +1,13 @@
 ---
-section: gitpod-releases
-title: Releases
+section: release-cycle
+title: Release Cycle
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Gitpod Releases
+# {title}
 
 Information regarding how, and when Gitpod releases updates.
 

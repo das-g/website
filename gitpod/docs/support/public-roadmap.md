@@ -1,13 +1,13 @@
 ---
-section: roadmap
-title: Roadmap
+section: public-roadmap
+title: Public roadmap
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Roadmap
+# {title}
 
 The most up-to-date Gitpod roadmap can be found at www.gitpod.io/roadmap.
 

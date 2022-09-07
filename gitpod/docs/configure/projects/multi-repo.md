@@ -1,6 +1,6 @@
 ---
 section: projects
-title: Multi-repo Workspaces
+title: Multi-repo
 ---
 
 <script context="module">

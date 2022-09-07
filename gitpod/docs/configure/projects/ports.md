@@ -1,6 +1,6 @@
 ---
 section: projects
-title: Configure Ports
+title: Ports
 ---
 
 <script context="module">
@@ -8,7 +8,7 @@ title: Configure Ports
   import IdeToggle from "$lib/components/docs/ide-toggle.svelte";
 </script>
 
-# Configure Ports
+# {title}
 
 Gitpod supports exposing HTTP ports via a custom domain that is associated with your workspace. You can also use port forwarding, so that you do not need to update your application if it already references the localhost hostname. You can forward all ports using the [local companion](/docs/ides-and-editors/local-companion), natively in both [VS Code Desktop](/docs/ides-and-editors/vscode), [JetBrains](/docs/ides-and-editors/jetbrains-gateway) and also via the [command-line](/docs/ides-and-editors/command-line) using SSH.
 

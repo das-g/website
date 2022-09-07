@@ -1,6 +1,6 @@
 ---
 section: users
-title: Configure SSH
+title: SSH
 ---
 
 <script context="module">

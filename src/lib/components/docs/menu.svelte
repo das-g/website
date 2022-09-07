@@ -5,9 +5,10 @@
   let dictionary: any = {
     "Getting Started": "Introduction",
     // "Gitpod Self-Hosted": "Gitpod Self-Hosted",
-    "Configure a Team": "Configure",
+    Teams: "Configure",
     ".gitpod.yml": "References",
-    Contribute: "Support",
+    Contribute: "Gitpod",
+    Troubleshooting: "Support",
   };
 </script>
 

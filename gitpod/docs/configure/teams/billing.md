@@ -1,13 +1,13 @@
 ---
 section: teams
-title: Team Billing
+title: Billing
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Team Billing
+# {title}
 
 > Team Billing is part of [Teams & Projects](/docs/teams-and-projects), currently in [Beta](/docs/references/gitpod-releases).
 

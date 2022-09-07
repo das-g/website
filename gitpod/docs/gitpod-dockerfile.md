@@ -1,13 +1,13 @@
 ---
 section: references
-title: Custom Docker image
+title: Docker
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Custom Docker image
+# Docker
 
 Welcome 👋! You arrived here a bit early as we are currently (May 2021) in the process of rewriting the Gitpod documentation.
 

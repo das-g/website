@@ -1,6 +1,6 @@
 ---
 section: self-hosted/latest
-title: Gitpod Self-Hosted
+title: Self-Hosted
 ---
 
 <script context="module">
@@ -19,7 +19,7 @@ data={{
   }}
 />
 
-# Gitpod Self-Hosted
+# {title}
 
 Gitpod can be deployed and operated on your own infrastructure. It supports different cloud providers, self-managed Kubernetes clusters, corporate firewalls, and even off-grid / air-gapped networks.
 

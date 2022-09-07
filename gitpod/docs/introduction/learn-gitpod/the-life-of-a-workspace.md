@@ -1,13 +1,13 @@
 ---
-section: learn
-title: Life of a workspace
+section: learn-gitpod
+title: The life of a workspace
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Life of a Workspace
+# {title}
 
 Gitpod makes creating fresh workspaces as easy as [clicking a button on a repository page](/docs/browser-extension).
 Gitpod's continuous dev environments encourages you to create fresh workspaces rather than restarting older ones.

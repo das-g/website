@@ -16,14 +16,16 @@ function M(
 
 export const MENU: MenuEntry[] = [
   M("Getting Started", "introduction/getting-started"),
-  M("Learn Gitpod", "introduction/learn", [
-    M("One workspace per task", "introduction/learn/workspaces"),
-    M("Life of a workspace", "introduction/learn/life-of-workspace"),
-    M("Contexts", "introduction/learn/context-urls"),
+  M("Learn Gitpod", "introduction/learn-gitpod", [
     M(
-      "Collaboration & Sharing",
-      "introduction/learn/sharing-and-collaboration"
+      "One workspace per task",
+      "introduction/learn-gitpod/one-workspace-per-task"
     ),
+    M(
+      "The life of a workspace",
+      "introduction/learn-gitpod/the-life-of-a-workspace"
+    ),
+    M("Context URL", "introduction/learn-gitpod/context-url"),
   ]),
   M("Languages", "introduction/languages", [
     M("JavaScript", "introduction/languages/javascript"),
@@ -32,31 +34,43 @@ export const MENU: MenuEntry[] = [
     M("Go", "introduction/languages/go"),
     M("Rust", "introduction/languages/rust"),
   ]),
-  M("Configure a Team", "configure/teams", [
-    M("Teams & Projects", "configure/teams/teams-and-projects", [], "beta"),
-    M("Team Billing", "configure/teams/team-billing", [], "beta"),
-    M("Create a Team Plan", "configure/teams/teams", []),
+
+  M("Teams", "configure/teams", [
+    M("Billing", "configure/teams/billing", [], "beta"),
+    M("Plans", "configure/teams/plans", []),
   ]),
-  M("Configure a Project", "configure/projects", [
-    M(".gitpod.yml", "configure/projects/config-gitpod-file"),
+
+  M("Projects", "configure/projects", [
+    M(".gitpod.yml", "configure/projects/gitpod-yaml"),
     // Why is this side bar name different to the title / URL?
-    M("Docker", "configure/projects/config-docker"),
-    M("Start Tasks", "configure/projects/config-start-tasks"),
-    M("Ports", "configure/projects/config-ports"),
+    M("Tasks", "configure/projects/tasks"),
+    M("Ports", "configure/projects/ports"),
     M("Prebuilds", "configure/projects/prebuilds"),
     M("Environment Variables", "configure/projects/environment-variables"),
-    M("Network Bridging", "configure/projects/tailscale"),
-    M("Workspace Location", "configure/projects/checkout-location"),
-    M("Multi-Repo", "configure/projects/multi-repo-workspaces", [], "beta"),
+    M("Workspace location", "configure/projects/workspace-location"),
+    M("Multi-repo", "configure/projects/multi-repo", [], "beta"),
   ]),
-  M("Configure a User", "configure/users", [
-    M("Browser Settings", "configure/users/browser-settings"),
-    M("Dotfiles", "configure/users/config-dotfiles", []),
+
+  M("Users", "configure/users", [
+    M("Browser settings", "configure/users/browser-settings"),
+    M("Dotfiles", "configure/users/dotfiles", []),
     M("SSH", "configure/users/ssh"),
-    M("Browser Bookmarklet", "configure/users/browser-bookmarklet"),
-    M("Browser Extension", "configure/users/browser-extension"),
+    M("Browser bookmarklet", "configure/users/browser-bookmarklet"),
+    M("Browser extension", "configure/users/browser-extension"),
   ]),
-  M("Gitpod Self-Hosted", "configure/self-hosted/latest", [
+
+  M("Workspaces", "configure/workspaces", [
+    M("Collaboration", "configure/workspaces/collaboration", [], "beta"),
+  ]),
+
+  M("Authentication", "configure/authentication", [
+    M("GitLab", "configure/authentication/gitlab"),
+    M("GitHub", "configure/authentication/github"),
+    M("Bitbucket", "configure/authentication/bitbucket"),
+    M("GitHub Enterprise", "configure/authentication/github-enterprise"),
+    M("Bitbucket Server", "configure/authentication/bitbucket-server"),
+  ]),
+  M("Self-Hosted", "configure/self-hosted/latest", [
     M(
       "Installation Guides",
       "configure/self-hosted/latest/installation-guides",
@@ -101,20 +115,7 @@ export const MENU: MenuEntry[] = [
     ]),
   ]),
   M(".gitpod.yml", "references/gitpod-yml"),
-  M("Authentication", "references/authentication", [
-    M("GitLab", "references/authentication/gitlab-integration"),
-    M("GitHub", "references/authentication/github-integration"),
-    M("Bitbucket", "references/authentication/bitbucket-integration"),
-    M(
-      "GitHub Enterprise",
-      "references/authentication/github-enterprise-integration"
-    ),
-    M(
-      "Bitbucket Server",
-      "references/authentication/bitbucket-server-integration"
-    ),
-  ]),
-  M("IDEs & Editors", "references/ides-and-editors", [
+  M("IDEs & editors", "references/ides-and-editors", [
     M("VS Code Browser", "references/ides-and-editors/vscode-browser"),
     M("VS Code Desktop", "references/ides-and-editors/vscode", [], "beta"),
     M("IntelliJ IDEA", "references/ides-and-editors/intellij", [], "beta"),
@@ -131,18 +132,17 @@ export const MENU: MenuEntry[] = [
       [],
       "beta"
     ),
-    M(
-      "JetBrains Gateway",
-      "references/ides-and-editors/jetbrains-gateway",
-      [],
-      "beta"
-    ),
     M("VS Code Extensions", "references/ides-and-editors/vscode-extensions"),
     M("VS Code Settings Sync", "references/ides-and-editors/settings-sync"),
     M("Command Line (SSH)", "references/ides-and-editors/command-line", []),
     M("FAQs", "references/ides-and-editors/faqs", []),
   ]),
-  M("Command Line Interface", "references/command-line-interface"),
+  M("Integrations", "integrations", [
+    M("Tailscale", "integrations/tailscale"),
+    M("Docker", "integrations/docker"),
+    M("JetBrains Gateway", "integrations/jetbrains-gateway", [], "beta"),
+  ]),
+  M("gp CLI", "references/gp-cli"),
   // M("Custom Docker image", "references/gitpod-dockerfile"),
   // M("Architecture", "references/architecture"),
   M("Contribute", "support/contribute", [
@@ -150,8 +150,9 @@ export const MENU: MenuEntry[] = [
     M("Documentation", "support/contribute/documentation"),
     M("Features & Patches", "support/contribute/features-and-patches"),
   ]),
-  M("Roadmap", "support/roadmap"),
-  M("Gitpod Releases", "support/gitpod-releases"),
+  M("Release cycle", "support/release-cycle"),
+  M("Public roadmap", "support/public-roadmap"),
+
   M("Troubleshooting", "support/troubleshooting", []),
 ];
 

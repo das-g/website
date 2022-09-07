@@ -1,5 +1,5 @@
 ---
-section: introduction/learn
+section: learn-gitpod
 title: One workspace per task
 ---
 
@@ -7,7 +7,7 @@ title: One workspace per task
   export const prerender = true;
 </script>
 
-# One workspace per task
+# {title}
 
 On any given day, you may be involved in tasks such as the following:
 

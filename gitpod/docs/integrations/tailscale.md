@@ -1,13 +1,13 @@
 ---
-section: projects
-title: network bridging
+section: integrations
+title: Tailscale
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Network Bridging
+# Tailscale
 
 With Tailscale you can automatically and securely connect your Gitpod workspace to other development resources, whether in the cloud or on prem, such as a production database behind your company’s firewall. You can also spin up several Gitpod workspaces that can talk to each other.
 

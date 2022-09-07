@@ -1,13 +1,13 @@
 ---
 section: projects
-title: Start Tasks
+title: Tasks
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# Start Tasks
+# {title}
 
 <!--
   Source for diagrams: https://excalidraw.com/#json=5144082254921728,Kl_Vys0jGocSg6BQ9musNw

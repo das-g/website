@@ -1,6 +1,6 @@
 ---
 section: users
-title: Browser Settings
+title: Browser settings
 ---
 
 <script context="module">

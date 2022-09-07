@@ -1,13 +1,13 @@
 ---
 section: authentication
-title: GitLab Integration
+title: GitLab
 ---
 
 <script context="module">
   export const prerender = true;
 </script>
 
-# GitLab Integration
+# {title}
 
 Gitpod works nicely with GitLab: You can start Gitpod workspaces directly from the web pages of your GitLab repositories, and you can configure Gitpod to automatically prebuild these workspaces such that you can start coding on any branch in no time.
 
@@ -41,8 +41,14 @@ To use Gitpod on a GitLab repository, you have to connect your GitLab account wi
 
 Gitpod supports the following use cases:
 
-- [Connecting Your GitLab.com Account](#connecting-your-gitlabcom-account)
-- [Connecting Your Self-Hosted GitLab Account](#connecting-your-self-hosted-gitlab-account)
+- [{title}](#title)
+  - [Starting Workspaces](#starting-workspaces)
+  - [Enabling Prebuilds](#enabling-prebuilds)
+  - [Connecting Your GitLab Account](#connecting-your-gitlab-account)
+    - [Connecting Your GitLab.com Account](#connecting-your-gitlabcom-account)
+    - [Connecting Your Self-Hosted GitLab Account](#connecting-your-self-hosted-gitlab-account)
+    - [Disconnecting Your GitLab Account](#disconnecting-your-gitlab-account)
+  - [Registering A Self-Hosted GitLab Installation](#registering-a-self-hosted-gitlab-installation)
 
 ### Connecting Your GitLab.com Account
 
