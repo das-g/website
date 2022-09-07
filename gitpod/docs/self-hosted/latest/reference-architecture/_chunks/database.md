@@ -250,7 +250,7 @@ echo "$MYSQL_GITPOD_PASSWORD"
     --auto-grow Enabled \
     --public Enabled \
     --sku-name GP_Gen5_2 \
-    --ssl-enforcement Enabled \
+    --ssl-enforcement Disabled \
     --storage-size 20480 \
     --version "5.7"
 ```
