@@ -96,17 +96,31 @@ All commands that follow assume you have set an environment variable of `AWS_REG
 
 <div slot="azure">
 
-TODO: enumerate credentials needed to create AKS resources.
+**Requirements**
+
+To deploy Gitpod on [Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes), you must have an Azure subscription and account with permission deploy AKS clusters and associated component services, including the following:
+
+- MySQL Databases
+- Storage accounts
+- Azure Container Registries
+- Load balancers
+
+**Tools**
 
 This guide uses the following tools:
-- [Azure CLI](...)
-- Helm
 
-If `kubectl` is not present the Azure CLI can install a version compatible with AKS:
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli)
+- [kubelogin](https://github.com/Azure/kubelogin)
+
+If `kubectl` is not present the Azure CLI can be used to install `kubectl`  and `kubelogin`.
 
 ```bash
 sudo az aks install-cli
 ```
+
+**Location and Resource Group**
+
+Azure uses _resource groups_ to logically group related resources. This guide uses a dedicated resource group for the Gitpod AKS cluster and all component resources.
 
 Set environment variables indicating the resource group and location where Gitpod resources will be created:
 
@@ -115,11 +129,13 @@ export RESOURCE_GROUP="gitpod"
 export LOCATION="centralus"
 ```
 
-Then create resource group named above:
+Then create a new resource group:
 
-```
+```bash
 az group create --location $LOCATION --name "$RESOURCE_GROUP"
 ```
+
+> Creating a new resource group for Gitpod resources is recommended but a pre-existing resource group may be used if necessary.
 
 </div>
 
