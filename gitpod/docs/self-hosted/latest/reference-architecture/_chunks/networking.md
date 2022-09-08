@@ -235,10 +235,9 @@ az role assignment create \
     --scope "${ZONE_ID}"
 ```
 
-> This role assignment provides the authorization for both cert-manager and external-dns to manage records in the specified DNS zones.
-> This differs from AWS and GCP in that the other clouds require independent credentials to operate.
-
-TODO: document AKS managed identity  using [AKS Kubelet Identity](https://cert-manager.io/docs/configuration/acme/dns01/azuredns/#managed-identity-using-aks-kubelet-identity)
+> This role assignment uses [AKS Kubelet Identity](https://cert-manager.io/docs/configuration/acme/dns01/azuredns/#managed-identity-using-aks-kubelet-identity)
+> to authorizes the entire AKS cluster to manage DNS records in the given zone, including cert-manager and external-dns. Other pods (and potentially gitpod workspaces)
+> may be able to alter DNS records as well.
 
 Install the external-dns helm chart:
 
@@ -270,7 +269,9 @@ helm upgrade \
 
 ### cert-manager
 
-Gitpod secures its internal communication between components with **TLS certificates**. You need to have a **[cert-manager](https://cert-manager.io/)** instance in your cluster that is responsible for issuing these certificates. There are different ways to install cert-manager. If you don’t have a cert-manager instance in your cluster, please refer to the [cert-manager docs](https://cert-manager.io/docs/) to choose an installation method.
+Gitpod uses TLS secure external traffic bound for Gitpod as well as identifying, authorizing, and securing internal traffic between Gitpod's internal components. While you can provide your own TLS certificate for securing external connections to Gitpod, cert-manager is required to generate internal TLS certificates.
+
+Refer to the [cert-manager DNS01 docs](https://cert-manager.io/docs/configuration/acme/dns01/) for more information.
 
 <CloudPlatformToggle>
 <div slot="gcp">
@@ -330,19 +331,22 @@ kubectl patch deployment cert-manager -n cert-manager -p \
 </div>
 
 <div slot="azure">
+
+Install cert-manager with the following command:
+
 ```bash
 helm repo add jetstack https://charts.jetstack.io
 helm repo update
 helm upgrade \
     --install \
     --atomic \
+    --wait \
     --cleanup-on-fail \
     --create-namespace \
     --namespace='cert-manager' \
     --reset-values \
     --set installCRDs=true \
     --set 'extraArgs={--dns01-recursive-nameservers-only=true,--dns01-recursive-nameservers=8.8.8.8:53\,1.1.1.1:53}' \
-    --wait \
     cert-manager \
     jetstack/cert-manager
 ```
@@ -352,7 +356,9 @@ helm upgrade \
 
 ### TLS certificate
 
-In this reference architecture, we use cert-manager to also create **TLS certificates for the Gitpod domain**. Since we need wildcard certificates for the subdomains, you must use the [DNS-01 challenge](https://letsencrypt.org/docs/challenge-types/#dns-01-challenge). In case you already have TLS certificates for your domain, you can skip this step and use your own certificates during the installation.
+In this reference architecture, we use cert-manager to also create **TLS certificates for the Gitpod domain**. Since we need wildcard certificates for the subdomains, you must use the [DNS-01 challenge](https://letsencrypt.org/docs/challenge-types/#dns-01-challenge).
+
+Using a certificate issued by Let's Encrypt is recommended as it minimizes overhead involving TLS certificates and managing CA certificate trust, but is not required. If you already have a TLS certificates for your Gitpod installation with suitable DNS names you can skip this step and use your own certificates during the installation.
 
 <CloudPlatformToggle id="cloud-platform-toggle-cert-manager-tls">
 <div slot="gcp">
@@ -430,10 +436,7 @@ spec:
 
 <div slot="azure">
 
-This section will create a cert-manager ClusterIssuer
-
-See the [cert-manager AzureDNS DNS01](https://cert-manager.io/docs/configuration/acme/dns01/azuredns/) documentation for more information.
-
+This section will create a cert-manager ClusterIssuer that will generate publicly trusted certificates using Let's Encrypt.
 
 First, determine your Azure subscription ID. You can typically determine your subscription ID from your Azure CLI credentials.
 
@@ -467,5 +470,8 @@ Then apply the ClusterIssuer resource:
 ```bash
 kubectl apply -f issuer.yaml
 ```
+
+> This example ClusterIssuer depends on [Azure Managed Identity](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview) to authorize requests from cert-manager to the AzureDNS API.
+> Refer to the [cert-manager AzureDNS DNS01](https://cert-manager.io/docs/configuration/acme/dns01/azuredns/) documentation for more information on cert-manager API authorization
 
 </CloudPlatformToggle>
