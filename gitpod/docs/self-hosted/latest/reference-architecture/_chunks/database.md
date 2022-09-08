@@ -10,7 +10,7 @@ Gitpod uses a **relational database management system** to store structural data
 
 In this reference architecture, we use managed MYSQL databases provided by cloud providers.
 
-> Gitpod requires your database instance to have a database named `gitpod` in it.
+> Gitpod requires your database instance to have two databases named `gitpod` and `gitpod-sessions`.
 
 <CloudPlatformToggle id="cloud-platform-toggle-database">
 <div slot="gcp">
@@ -225,7 +225,9 @@ export MYSQL_RDS_ENDPOINT="$(aws rds describe-db-instances --db-instance-identif
 
 <div slot="azure">
 
-Azure MySQL server names must be universally unique; we recommend using a random value to avoid conflicts. Note this value for later use.
+This section will create an Azure MySQL server instance and database for Gitpod. This external database is required to run a Gitpod cluster for production purposes. Using a dedicated MySQL instance for Gitpod is recommended but a pre-existing MySQL instance may be used if it can host databases named `gitpod` and `gitpod-sessions`.
+
+First, set a MySQL server name. Azure MySQL server names must be universally unique; we recommend using a random value to avoid conflicts. Note this value for later use.
 
 ```bash
 export MYSQL_INSTANCE_NAME="gitpod$(openssl rand -hex 4)"
@@ -239,6 +241,8 @@ export MYSQL_GITPOD_USERNAME="gitpod"
 export MYSQL_GITPOD_PASSWORD=$(openssl rand -base64 20)
 echo "$MYSQL_GITPOD_PASSWORD"
 ```
+
+With the generated instance name and password, create the Azure MySQL server.
 
 ```bash
  az mysql server create \
@@ -255,7 +259,9 @@ echo "$MYSQL_GITPOD_PASSWORD"
     --version "5.7"
 ```
 
-TODO: the guide instructions suggested turning off SSL enforcement but the reference architecture is deviating here. This needs to be double checked before merge.
+TODO: the guide instructions suggested turning off SSL enforcement; this isn't desirable for obvious reasons. This needs to be double checked before merge.
+
+After creating the MySQL server create a database called `gitpod`.
 
 ```bash
     az mysql db create \
@@ -263,6 +269,8 @@ TODO: the guide instructions suggested turning off SSL enforcement but the refer
       --resource-group "${RESOURCE_GROUP}" \
       --server-name "${MYSQL_INSTANCE_NAME}"
 ```
+
+**TODO**: Can we limit the inbound IP address range on this? Should check the RA terraform modules.
 
 ```bash
   az mysql server firewall-rule create \
@@ -274,6 +282,5 @@ TODO: the guide instructions suggested turning off SSL enforcement but the refer
 ```
 
 </div>
-
 
 </CloudPlatformToggle>
