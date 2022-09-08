@@ -45,11 +45,19 @@ The VPC needs public and private subnets. All managed node groups and Gitpod ser
 If installing Calico, follow their [installation steps](https://projectcalico.docs.tigera.io/getting-started/kubernetes/managed-public-cloud/eks) and ensure you modify the `hostNetwork: True` option on the cert-manager installation options later.
 
 </div>
+<div slot="azure">
+
+Azure automatically provisions [Azure public load balancers](https://docs.microsoft.com/en-us/azure/aks/load-balancer-standard) that load balance public Gitpod services and provide public Internet connectivity for Gitpod's workloads. No additional configuration is required.
+
+</div>
+
 </CloudPlatformToggle>
 
 ### External DNS
 
 You also need to configure your **DNS server**. If you have your own DNS server for your domain, make sure the domain with all wildcards points to your load balancer.
+
+Creating a dedicated DNS zone is recommended when using cert-manager or external-dns but is not required. A pre-existing DNS zone may be used as long as the **cert-manager** and/or **external-dns** services are authorized to manage DNS records within that zone. If you are providing your own TLS certificates and will manually create A records pointing to Gitpod's public load balancer IP addresses then creating a zone is unnecessary.
 
 <CloudPlatformToggle id="cloud-platform-toggle-dns">
 <div slot="gcp">
@@ -205,14 +213,16 @@ With Route53 created, you can now proceed to install cert-manager. Cert-manager 
 
 <div slot="azure">
 
-**DNS Zone**
+This section will create an Azure managed zone, grant the AKS cluster permission to manage records in that zone and install external-dns.
+
+Create a new Azure managed zone. For example, if you plan on hosting Gitpod at `gitpod.svcs.example.com` then create a managed zone called `svcs.example.com`.
 
 ```bash
-DOMAIN_NAME="azure.adrien.gitpod-self-hosted.com"
+DOMAIN_NAME="svcs.example.com"
 az network dns zone create --name $DOMAIN_NAME --resource-group $RESOURCE_GROUP
 ```
 
-**Authorize AKS cluster to control DNS records in the zone**
+Authorize the AKS cluster to control DNS records in the zone:
 
 ```bash
 ZONE_ID=$(az network dns zone show --name "${DOMAIN}" --resource-group "${RESOURCE_GROUP}" --query "id" -o tsv)
@@ -225,19 +235,22 @@ az role assignment create \
     --scope "${ZONE_ID}"
 ```
 
-> Note: this authorization authorizes both cert-manager and external-dns to manage records in the DNS zones.
+> This role assignment provides the authorization for both cert-manager and external-dns to manage records in the specified DNS zones.
 > This differs from AWS and GCP in that the other clouds require independent credentials to operate.
 
-**Install External-DNS**
+TODO: document AKS managed identity  using [AKS Kubelet Identity](https://cert-manager.io/docs/configuration/acme/dns01/azuredns/#managed-identity-using-aks-kubelet-identity)
+
+Install the external-dns helm chart:
 
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 helm upgrade \
+    --install \
     --atomic \
+    --wait \
     --cleanup-on-fail \
     --create-namespace \
-    --install \
     --namespace external-dns \
     --reset-values \
     --set provider=azure \
@@ -247,7 +260,6 @@ helm upgrade \
     --set azure.useManagedIdentityExtension=true \
     --set azure.userAssignedIdentityID="${KUBELET_CLIENT_ID}" \
     --set logFormat=json \
-    --wait \
     external-dns \
     bitnami/external-dns
 ```
@@ -418,6 +430,19 @@ spec:
 
 <div slot="azure">
 
+This section will create a cert-manager ClusterIssuer
+
+See the [cert-manager AzureDNS DNS01](https://cert-manager.io/docs/configuration/acme/dns01/azuredns/) documentation for more information.
+
+
+First, determine your Azure subscription ID. You can typically determine your subscription ID from your Azure CLI credentials.
+
+```bash
+AZURE_SUBSCRIPTION_ID="$(az account subscription list --query '[0].subscriptionId' --output tsv)"
+```
+
+Then create an `issuer.yaml` containing the following content, expanding the `$AZURE_SUBSCRIPTION_ID`, `$RESOURCE_GROUP`, and `$DOMAIN_NAME` variables:
+
 ```yaml
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -425,8 +450,8 @@ metadata:
   name: gitpod-issuer
 spec:
   acme:
-    email: $LETSENCRYPT_EMAIL
     server: https://acme-v02.api.letsencrypt.org/directory
+    email: "email@gitpod.example.com"
     privateKeySecretRef:
       name: issuer-account-key
     solvers:
@@ -434,8 +459,10 @@ spec:
           azureDNS:
             subscriptionID: $AZURE_SUBSCRIPTION_ID
             resourceGroupName: $RESOURCE_GROUP
-            hostedZoneName: $DOMAIN
+            hostedZoneName: $DOMAIN_NAME
 ```
+
+Then apply the ClusterIssuer resource:
 
 ```bash
 kubectl apply -f issuer.yaml
