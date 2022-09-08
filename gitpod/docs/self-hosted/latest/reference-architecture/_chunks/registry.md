@@ -32,12 +32,21 @@ To configure Gitpod to use the bucket created, ensure you select `In-cluster Reg
 
 <div slot="azure">
 
+This section will create an Amazon Container Registry for workspace images.
+
+First, generate a name for the ACR instance. ACR instance names must be unique; using a random suffix is recommended but any unique registry name is sufficient.
+
+```bash
+REGISTRY_NAME="gitpod$(openssl rand -hex 4)"
+```
+
+Create the container registry:
 
 ```bash
 az acr create \
   --admin-enabled true \
   --location "${LOCATION}" \
-  --name "${REGISTRY_NAME}${REGISTRY_SUFFIX}" \
+  --name "${REGISTRY_NAME}" \
   --resource-group "${RESOURCE_GROUP}" \
   --sku Premium
 ```
@@ -59,14 +68,8 @@ AZURE_REGISTRY_USERNAME=$(az acr credential show \ --name "${REGISTRY_NAME}" \
 AZURE_REGISTRY_PASSWORD=$(az acr credential show \
     --name "${REGISTRY_NAME}" \
     --output tsv \
-    --query passwords[0].value \
+    --query "passwords[0].value" \
     --resource-group "${RESOURCE_GROUP}")
-```
-
-**TODO:** az aks 
-
-```bash
-az aks check-acr
 ```
 
 </div>

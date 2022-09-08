@@ -259,9 +259,7 @@ With the generated instance name and password, create the Azure MySQL server.
     --version "5.7"
 ```
 
-TODO: the guide instructions suggested turning off SSL enforcement; this isn't desirable for obvious reasons. This needs to be double checked before merge.
-
-After creating the MySQL server create a database called `gitpod`.
+After creating the MySQL server create a database called `gitpod`. When Gitpod is installed it will create an additional database called `gitpod-sessions`.
 
 ```bash
     az mysql db create \
@@ -270,7 +268,10 @@ After creating the MySQL server create a database called `gitpod`.
       --server-name "${MYSQL_INSTANCE_NAME}"
 ```
 
-**TODO**: Can we limit the inbound IP address range on this? Should check the RA terraform modules.
+Create a MySQL firewall rule allowing access from your AKS cluster to the MySQL database.
+
+> 💡 MySQL firewall rules with a start IP address of `0.0.0.0` and end IP address of `0.0.0.0` restrict access to Azure resources.
+> See the [Azure MySQL firewall API documentation](https://docs.microsoft.com/en-us/azure/mysql/single-server/concepts-firewall-rules#connecting-from-azure) for more information.
 
 ```bash
   az mysql server firewall-rule create \
