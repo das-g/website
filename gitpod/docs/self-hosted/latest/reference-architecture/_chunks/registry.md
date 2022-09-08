@@ -40,6 +40,8 @@ First, generate a name for the ACR instance. ACR instance names must be unique; 
 REGISTRY_NAME="gitpod$(openssl rand -hex 4)"
 ```
 
+Note the value of `$REGISTRY_NAME` for later use.
+
 Create the container registry:
 
 ```bash
