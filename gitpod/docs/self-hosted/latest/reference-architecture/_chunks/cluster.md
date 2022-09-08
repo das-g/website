@@ -667,8 +667,8 @@ First, determine the latest version of AKS suitable for Gitpod.
 > Gitpod supports Kubernetes 1.21 or later, but using the latest supported version of AKS is recommended.
 
 ```bash
-AKS_VERSION=$(az aks get-versions
-    --location $LOCATION
+AKS_VERSION=$(az aks get-versions \
+    --location $LOCATION \
     --query "orchestrators[?contains(orchestratorVersion, '1.24.')].orchestratorVersion | [-1]" -o tsv)
 ```
 
@@ -678,27 +678,26 @@ Create the AKS cluster and a default node pool. Gitpod services and other suppor
 
 ```bash
 K8S_NODE_VM_SIZE=${K8S_NODE_VM_SIZE:="Standard_D4_v3"}
-SERVICES_POOL="services"
 
 az aks create \
-	--name "${CLUSTER_NAME}" \
-	--nodepool-name "services" \
-	--location "${LOCATION}" \
-	--resource-group "${RESOURCE_GROUP}" \
-	--kubernetes-version "${AKS_VERSION}" \
-	--enable-cluster-autoscaler \
-	--enable-managed-identity \
-	--min-count "1" \
-	--max-count "4" \
-	--max-pods "110" \
-	--node-osdisk-size "100" \
-	--node-vm-size "${K8S_NODE_VM_SIZE}" \
-	--nodepool-labels \
-      gitpod.io/workload_meta=true \
-      gitpod.io/workload_ide=true \
-	    gitpod.io/workload_workspace_services=true \
-	--no-ssh-key \
-	--vm-set-type "VirtualMachineScaleSets"
+    --name "${CLUSTER_NAME}" \
+    --nodepool-name "services" \
+    --location "${LOCATION}" \
+    --resource-group "${RESOURCE_GROUP}" \
+    --kubernetes-version "${AKS_VERSION}" \
+    --enable-cluster-autoscaler \
+    --enable-managed-identity \
+    --min-count "1" \
+    --max-count "4" \
+    --max-pods "110" \
+    --node-osdisk-size "100" \
+    --node-vm-size "${K8S_NODE_VM_SIZE}" \
+    --nodepool-labels \
+        gitpod.io/workload_meta=true \
+        gitpod.io/workload_ide=true \
+        gitpod.io/workload_workspace_services=true \
+    --no-ssh-key \
+    --vm-set-type "VirtualMachineScaleSets"
 ```
 
 Create a node pool for regular workspaces:
@@ -706,37 +705,37 @@ Create a node pool for regular workspaces:
 **NOTE**: Same VM size used for both workspaces and services; these need to be adjusted.
 
 ```bash
- az aks nodepool add \
-	--name "regular-workspaces" \
-	--cluster-name "${CLUSTER_NAME}" \
-	--resource-group "${RESOURCE_GROUP}" \
-	--kubernetes-version "${AKS_VERSION}" \
-	--labels gitpod.io/workload_workspace_regular=true \
-	--enable-cluster-autoscaler \
-	--min-count "1" \
-	--max-count "50" \
-	--max-pods "110" \
-	--node-osdisk-size "512" \
-	--node-vm-size "${K8S_NODE_VM_SIZE}" \
+az aks nodepool add \
+    --name "regular-workspaces" \
+    --cluster-name "${CLUSTER_NAME}" \
+    --resource-group "${RESOURCE_GROUP}" \
+    --kubernetes-version "${AKS_VERSION}" \
+    --labels gitpod.io/workload_workspace_regular=true \
+    --enable-cluster-autoscaler \
+    --min-count "1" \
+    --max-count "50" \
+    --max-pods "110" \
+    --node-osdisk-size "512" \
+    --node-vm-size "${K8S_NODE_VM_SIZE}" \
 ```
 Create a node pool for headless workspaces. As headless workspaces typically run non user-facing workloads this node pool is configured to scale to zero.
 
 **TODO** Do we need node taints to repel things like kotsadm?
 
 ```bash
- az aks nodepool add \
-	--name "headless-workspaces" \
-	--cluster-name "${CLUSTER_NAME}" \
-	--resource-group "${RESOURCE_GROUP}" \
-	--kubernetes-version "${AKS_VERSION}" \
-	--labels gitpod.io/workload_workspace_headless=true \
-	--enable-cluster-autoscaler \
-  --node-count "0" \
-	--min-count "0" \
-	--max-count "50" \
-	--max-pods "110" \
-	--node-osdisk-size "512" \
-	--node-vm-size "${K8S_NODE_VM_SIZE}"
+az aks nodepool add \
+    --name "headless-workspaces" \
+    --cluster-name "${CLUSTER_NAME}" \
+    --resource-group "${RESOURCE_GROUP}" \
+    --kubernetes-version "${AKS_VERSION}" \
+    --labels gitpod.io/workload_workspace_headless=true \
+    --enable-cluster-autoscaler \
+    --node-count "0" \
+    --min-count "0" \
+    --max-count "50" \
+    --max-pods "110" \
+    --node-osdisk-size "512" \
+    --node-vm-size "${K8S_NODE_VM_SIZE}"
 ```
 
 After the cluster and node pools have been created, fetch the AKS credentials. These credentials will be used to install external-dns, cert-manager, and install Gitpod itself.
