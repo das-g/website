@@ -674,6 +674,8 @@ AKS_VERSION=$(az aks get-versions
 
 Create the AKS cluster and a default node pool. Gitpod services and other supporting components will run on this node pool.
 
+**TODO**: By default AKS creates cluster using the `kubenet` plugin. Do we need to use the Calico CNI?
+
 ```bash
 K8S_NODE_VM_SIZE=${K8S_NODE_VM_SIZE:="Standard_D4_v3"}
 SERVICES_POOL="services"
