@@ -407,7 +407,7 @@ export const selfHostedToc: FeatureTableToc[] = [
     data: {
       text: "Prebuilds",
       tooltip:
-        "Enable prebuilds to continuously build your Git branches, so you and your team can always start coding right away. More on <a href='/docs/prebuilds'>prebuilds</a>.",
+        "Enable prebuilds to continuously build your Git branches, so you and your team can always start coding right away. More on <a href='docs/configure/projects/prebuilds'>prebuilds</a>.",
     },
   },
   {

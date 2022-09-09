@@ -60,7 +60,7 @@ Now granted, not every workshop requires people to install or configure virtual 
 
 By taking lessons learned from the infrastructure-as-code movement and converting workshops to Docker images, workshops become repeatable and reproducible. By utilising products such as Gitpod to consume, build and execute your `Dockerfile` then attendees no longer need to download or configure your software. All they need is a browser.
 
-A Gitpod workspace gives you the same capabilities (yes, even root, Docker & qemu) as a Linux machine that is [already pre-built](/docs/prebuilds), works on any device from anywhere and that launches in seconds.
+A Gitpod workspace gives you the same capabilities (yes, even root, Docker & qemu) as a Linux machine that is [already pre-built](docs/configure/projects/prebuilds), works on any device from anywhere and that launches in seconds.
 
 <!-- ![Credit: Geoffrey Huntley](../../../static/images/blog/workshops-as-code/teaser.jpg) -->
 

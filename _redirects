@@ -27,7 +27,7 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/45_checkout_location /docs/checkout-location 301
 /docs/45_Checkout_Location /docs/checkout-location 301
 /docs/45_Config_Go /docs/checkout-location 301
-/docs/46_prebuilds /docs/prebuilds 301
+/docs/46_prebuilds docs/configure/projects/prebuilds 301
 /docs/47_environment_variables /docs/environment-variables 301
 /docs/47_Environment_Variables /docs/environment-variables 301
 /docs/50_ide /docs/ide 301
@@ -118,3 +118,4 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/self-hosted/latest/getting-started#step-4-install-gitpod /docs/self-hosted/latest/installing-gitpod#install-gitpod 301
 /docs/self-hosted/latest/getting-started /docs/self-hosted/latest/installing-gitpod 301
 /docs/self-hosted/latest/resource-configuration /docs/self-hosted/latest/advanced/resource-configuration 301
+/docs/prebuilds /docs/configure/projects/prebuilds 301

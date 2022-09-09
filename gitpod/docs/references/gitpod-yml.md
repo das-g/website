@@ -9,7 +9,7 @@ title: .gitpod.yml
 
 # {title}
 
-The `.gitpod.yml` file at the root of your project is where you tell Gitpod how to prepare & build your project, start development servers and configure continuous [prebuilds](/docs/prebuilds) for GitHub.
+The `.gitpod.yml` file at the root of your project is where you tell Gitpod how to prepare & build your project, start development servers and configure continuous [prebuilds](docs/configure/projects/prebuilds) for GitHub.
 
 Below is a full reference of all available properties. To see the underlying schema, please refer to [`gitpod-io/gitpod`](https://github.com/gitpod-io/gitpod/blob/main/components/gitpod-protocol/data/gitpod-schema.json) in the [gitpod-io/gitpod](https://github.com/gitpod-io/gitpod) repository.
 
@@ -168,7 +168,7 @@ gitConfig:
 
 ## `github`
 
-Configure the [GitHub Gitpod](https://github.com/apps/gitpod-io) app. At this time, the following configuration is used to configure [continuous prebuilds](/docs/prebuilds) for GitHub repositories.
+Configure the [GitHub Gitpod](https://github.com/apps/gitpod-io) app. At this time, the following configuration is used to configure [continuous prebuilds](docs/configure/projects/prebuilds) for GitHub repositories.
 
 <div class="overflow-x-auto">
 
@@ -646,7 +646,7 @@ Learn more about [Environment Variables](/docs/environment-variables) in the doc
 
 A shell command to run between `before` and the main `command`.
 
-This task is executed only once. When you start a workspace that does not have a [prebuild](/docs/prebuilds), `init` is executed at workspace start. When you start a workspace that has a prebuild, `init` executes as part of the prebuild, but does NOT execute again at workspace start.
+This task is executed only once. When you start a workspace that does not have a [prebuild](docs/configure/projects/prebuilds), `init` is executed at workspace start. When you start a workspace that has a prebuild, `init` executes as part of the prebuild, but does NOT execute again at workspace start.
 
 This task is expected to terminate. If it fails, the `command` property will not be executed.
 

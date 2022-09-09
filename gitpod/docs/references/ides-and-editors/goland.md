@@ -130,7 +130,7 @@ Gitpod prebuilds allow you to improve it further by indexing before you start a 
 
 To leverage it:
 
-- configure prebuilds for your repository, refer to [Prebuilds](/docs/prebuilds);
+- configure prebuilds for your repository, refer to [Prebuilds](docs/configure/projects/prebuilds);
 - enable indexing for {title} in prebuilds by editing [.gitpod.yml](/docs/config-gitpod-file) in your repository:
 
 ```yaml

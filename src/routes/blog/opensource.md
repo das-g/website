@@ -45,7 +45,7 @@ In case you want to host Gitpod on your own infrastructure or private cloud, sta
 
 - [Snapshots](/docs/sharing-and-collaboration#sharing-snapshots) (share a reproducible workspace with your team)
 - [Live Share](/docs/sharing-and-collaboration#sharing-running-workspaces) (invite others into your running workspace)
-- [Unlimited Prebuilds](/docs/prebuilds#prebuilds) (making ephemeral dev environments possible)
+- [Unlimited Prebuilds](docs/configure/projects/prebuilds#prebuilds) (making ephemeral dev environments possible)
 - Admin Dashboard
 
 Offering a paid plan for enterprises makes it possible for us to keep working towards building a new category in developer tooling, which completes modern DevOps pipelines. In the future we will add additional functionality to both the open source code as well our paid offering.

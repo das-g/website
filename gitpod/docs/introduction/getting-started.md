@@ -161,7 +161,7 @@ For each new commit to your project, Gitpod continuously creates prebuilt worksp
 
 ### Configure prebuilds for your projects
 
-Depending on your Git provider, the steps to configure prebuilds vary slightly. Please refer to the dedicated [Prebuilds](/docs/prebuilds) page for detailed instructions on how to configure prebuilds for your project.
+Depending on your Git provider, the steps to configure prebuilds vary slightly. Please refer to the dedicated [Prebuilds](docs/configure/projects/prebuilds) page for detailed instructions on how to configure prebuilds for your project.
 
 ## Next steps
 

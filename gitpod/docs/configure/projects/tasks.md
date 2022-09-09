@@ -31,12 +31,12 @@ With Gitpod, you have the following three types of tasks:
 - `init`: Use this for heavy-lifting tasks such as downloading dependencies or compiling source code.
 - `command`: Use this to start your database or development server.
 
-The order in which these tasks execute depends on whether you have [Prebuilds](/docs/prebuilds) configured for your project and which startup scenario applies. Let's look at the details.
+The order in which these tasks execute depends on whether you have [Prebuilds](docs/configure/projects/prebuilds) configured for your project and which startup scenario applies. Let's look at the details.
 
 > **Caveats**
 >
-> - Any file changes made outside of `/workspace` file hierarchy from `init` tasks will be lost on workspace start when prebuilds are enabled. [Learn more](/docs/prebuilds#workspace-directory-only)
-> - User specific environment variables are not loaded automatically for `init` and `before` tasks but can be loaded if you want. [Learn more](/docs/prebuilds#user-specific-environment-variables-in-prebuilds)
+> - Any file changes made outside of `/workspace` file hierarchy from `init` tasks will be lost on workspace start when prebuilds are enabled. [Learn more](docs/configure/projects/prebuilds#workspace-directory-only)
+> - User specific environment variables are not loaded automatically for `init` and `before` tasks but can be loaded if you want. [Learn more](docs/configure/projects/prebuilds#user-specific-environment-variables-in-prebuilds)
 
 ### Prebuild and New Workspaces
 

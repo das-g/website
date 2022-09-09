@@ -77,7 +77,12 @@ export const screencasts: Screencast[] = [
     duration: 135,
     tile: "screencast-5.jpg",
     youtubeId: "ZtlJ0PakUHQ",
-    relatedDocs: [{ path: "/docs/prebuilds", title: "Prebuilt Workspaces" }],
+    relatedDocs: [
+      {
+        path: "docs/configure/projects/prebuilds",
+        title: "Prebuilt Workspaces",
+      },
+    ],
     tags: ["Advanced"],
   },
   {
