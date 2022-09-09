@@ -35,10 +35,10 @@ The default Gitpod workspace image default is [workspace-full](https://github.co
 
 Along with other languages and tools, this base image includes:
 
-- [SDKMAN!](https://sdkman.io/) `v5.15.0` (`sdk version`)
-- [Java](https://www.java.com) `v11.0.13` (`java -version`)
-- [Gradle](https://gradle.org/) `v7.4.1` (`gradle -version`)
-- [Maven](https://maven.apache.org/) `v3.8.5` (`mvn -version`)
+- [SDKMAN!](https://sdkman.io/) `v5.16.0` (`sdk version`)
+- [Java](https://www.java.com) `v11.0.16` (`java -version`)
+- [Gradle](https://gradle.org/) `v7.5.1` (`gradle -version`)
+- [Maven](https://maven.apache.org/) `v3.8.6` (`mvn -version`)
 
 > **Note:** We discuss how to set up a [custom base image](/docs/languages/java#setting-up-a-custom-dockerfile) later in the guide.
 
