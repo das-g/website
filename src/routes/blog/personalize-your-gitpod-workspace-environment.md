@@ -27,7 +27,7 @@ In this article, we'll show you three features in Gitpod for personalisation:
 
 Gitpod currently supports various popular IDEs & Editors 🎉. You can edit code in Gitpod using:
 
-- [JetBrains IDE’s](https://www.gitpod.io/docs/references/ides-and-editors) via [JetBrains Gateway](https://www.gitpod.io/docs/references/ides-and-editors/jetbrains-gateway)
+- [JetBrains IDE’s](https://www.gitpod.io/docs/references/ides-and-editors) via [JetBrains Gateway](https://www.gitpod.io/docs/integrations/jetbrains-gateway)
 - [VS Code in the browser](https://www.gitpod.io/docs/references/ides-and-editors/vscode-browser) and [VS Code on desktop](https://www.gitpod.io/docs/references/ides-and-editors/vscode)
 - [Command-line-based](https://www.gitpod.io/docs/references/ides-and-editors/command-line) editors such as Vim
 

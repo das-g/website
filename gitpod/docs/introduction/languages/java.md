@@ -166,7 +166,7 @@ See [start tasks](/docs/config-start-tasks) and [.gitpod.yml reference](/docs/re
 
 To run your application, you have two options:
 
-1. **Update your start task command** - Starting your application using the `command` start task will run the start process on workspace start. With both [VS Code Browser](/docs/references/ides-and-editors/vscode) and [VS Code Desktop](/docs/references/ides-and-editors/vscode-browser), tasks are automatically opened in the terminal(s). With [IntelliJ](/docs/references/ides-and-editors/intellij) / [JetBrains Gateway](/docs/references/ides-and-editors/jetbrains-gateway), configured tasks can be viewed by running `gp tasks` in the workspace.
+1. **Update your start task command** - Starting your application using the `command` start task will run the start process on workspace start. With both [VS Code Browser](/docs/references/ides-and-editors/vscode) and [VS Code Desktop](/docs/references/ides-and-editors/vscode-browser), tasks are automatically opened in the terminal(s). With [IntelliJ](/docs/references/ides-and-editors/intellij) / [JetBrains Gateway](/docs/integrations/jetbrains-gateway), configured tasks can be viewed by running `gp tasks` in the workspace.
 2. **Use a run / launch configuration** - Alternatively, you can commit a [run/debug configuration in IntelliJ IDEA](/docs/languages/java#configuring-jetbrains-rundebug-configurations) or a [launch configuration in VS Code](/docs/languages/java#configuring-vs-code-launch-configurations) as a way to start your application.
 
 #### Using start tasks to run Java
@@ -253,7 +253,7 @@ With [VS Code Desktop](/docs/references/ides-and-editors/vscode), local port-for
     <figcaption>Port forwarding in VS Code Desktop</figcaption>
 </figure>
 
-With IntelliJ IDEA using [JetBrains Gateway](/docs/references/ides-and-editors/jetbrains-gateway) you can setup remote port-forwarding manually.
+With IntelliJ IDEA using [JetBrains Gateway](/docs/integrations/jetbrains-gateway) you can setup remote port-forwarding manually.
 
 <figure>
 <img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Port forwarding in a JetBrains IDE" src="/images/jetbrains-gateway/port-forward-jetbrains.png">
@@ -398,7 +398,7 @@ See [Browser Extension](/docs/browser-extension) for more.
     <figcaption>Updating Gitpod IDE preferences to a JetBrains IDE</figcaption>
 </figure>
 
-With Gitpod, you can work with [VS Code Browser](/docs/references/ides-and-editors/vscode-browser), [VS Code Desktop](/docs/references/ides-and-editors/vscode) or [JetBrains](/docs/references/ides-and-editors/jetbrains-gateway) IDEs, such as [IntelliJ IDEA](/docs/references/ides-and-editors/intellij). Setting your preference ensures all future workspaces start with the chosen IDE or editor. Visit the [preferences](https://gitpod.io/preferences) page to configure these settings.
+With Gitpod, you can work with [VS Code Browser](/docs/references/ides-and-editors/vscode-browser), [VS Code Desktop](/docs/references/ides-and-editors/vscode) or [JetBrains](/docs/integrations/jetbrains-gateway) IDEs, such as [IntelliJ IDEA](/docs/references/ides-and-editors/intellij). Setting your preference ensures all future workspaces start with the chosen IDE or editor. Visit the [preferences](https://gitpod.io/preferences) page to configure these settings.
 
 See [IDEs & Editors](/docs/references/ides-and-editors) for more.
 
