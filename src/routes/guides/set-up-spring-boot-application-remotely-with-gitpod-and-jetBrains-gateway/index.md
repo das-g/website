@@ -70,7 +70,7 @@ Gitpod JetBrains IDE integration is powered with JetBrains Gateway, a compact de
           <figcaption style="text-align:center">Create a new workspace</figcaption>
       </figure>
 
-If you want to read about the whole process in detail, you can refer to our online [documentation](https://www.gitpod.io/docs/ides-and-editors/intellij) 📖.
+If you want to read about the whole process in detail, you can refer to our online [documentation](https://www.gitpod.io/docs/references/ides-and-editors/intellij) 📖.
 
 ## 2. How to create a new Spring Boot project
 

@@ -10,14 +10,14 @@ title: Ports
 
 # {title}
 
-Gitpod supports exposing HTTP ports via a custom domain that is associated with your workspace. You can also use port forwarding, so that you do not need to update your application if it already references the localhost hostname. You can forward all ports using the [local companion](/docs/ides-and-editors/local-companion), natively in both [VS Code Desktop](/docs/ides-and-editors/vscode), [JetBrains](/docs/ides-and-editors/jetbrains-gateway) and also via the [command-line](/docs/ides-and-editors/command-line) using SSH.
+Gitpod supports exposing HTTP ports via a custom domain that is associated with your workspace. You can also use port forwarding, so that you do not need to update your application if it already references the localhost hostname. You can forward all ports using the [local companion](/docs/references/ides-and-editors/local-companion), natively in both [VS Code Desktop](/docs/references/ides-and-editors/vscode), [JetBrains](/docs/references/ides-and-editors/jetbrains-gateway) and also via the [command-line](/docs/references/ides-and-editors/command-line) using SSH.
 
 ## Default port behaviors
 
 By default, when a port is opening in a Gitpod workspace, Gitpod will:
 
 1. **Direct HTTP traffic** - When an application starts listening to an HTTP port, Gitpod detects the port and exposes it on a URL that requires authentication. Setting the port to "public" would make the port URL accessible to anyone on the internet (or the installed network if using self-hosted Gitpod).
-1. **Notify the user** - Gitpod sends the user a popup notification in their [IDE or editor](/docs/ides-and-editors) to let the user know that a port has been detected.
+1. **Notify the user** - Gitpod sends the user a popup notification in their [IDE or editor](/docs/references/ides-and-editors) to let the user know that a port has been detected.
 
 <figure>
 <img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Setting a port public/private in VS Code Browser" src="/images/editors/port-notification-vscode.png">
@@ -141,7 +141,7 @@ Local port forwarding allows you to forward a port running in your Gitpod worksp
 <IdeToggle id="ide-toggle-ports">
 
 <div slot="jetbrains">
-    <p>To forward a port in JetBrains, navigate to the preferences page in the <a href="/docs/ides-and-editors/jetbrains-gateway">JetBrains Gateway</a> client to select the port and protocol to be forwarded.</p>
+    <p>To forward a port in JetBrains, navigate to the preferences page in the <a href="/docs/references/ides-and-editors/jetbrains-gateway">JetBrains Gateway</a> client to select the port and protocol to be forwarded.</p>
     <figure>
     <img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Port forwarding in a JetBrains IDE" src="/images/jetbrains-gateway/port-forward-jetbrains.png">
         <figcaption>Port forwarding in a JetBrains IDE</figcaption>
@@ -149,7 +149,7 @@ Local port forwarding allows you to forward a port running in your Gitpod worksp
 </div>
 
 <div slot="vscodebrowser">
-    <p>Using the <a href="/docs/ides-and-editors/local-companion">Local Companion</a>, you can automatically forward all ports from your workspace to localhost. Setting up port forwarding for VS Code Browser allows you to use a project already configured with <code>localhost</code> without requiring any code changes.</p>
+    <p>Using the <a href="/docs/references/ides-and-editors/local-companion">Local Companion</a>, you can automatically forward all ports from your workspace to localhost. Setting up port forwarding for VS Code Browser allows you to use a project already configured with <code>localhost</code> without requiring any code changes.</p>
 </div>
 
 <div slot="vscodedesktop">
@@ -166,7 +166,7 @@ Local port forwarding allows you to forward a port running in your Gitpod worksp
 
 ### Local port forwarding via SSH
 
-Using [SSH command-line](/docs/ides-and-editors/command-line) access to your workspace, ports can also be forwarded manually using tools such as the OpenSSH remote login client.
+Using [SSH command-line](/docs/references/ides-and-editors/command-line) access to your workspace, ports can also be forwarded manually using tools such as the OpenSSH remote login client.
 
 **Example:** Forwarding port `3000` to `localhost:3000`
 

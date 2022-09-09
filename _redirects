@@ -51,22 +51,22 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/go-in-gitpod /docs/languages/go 301
 /docs/html-in-gitpod /docs/languages/html 301
 /docs/ide /docs/editors 301
-/docs/ides-and-editors/configure-your-editor-ide /docs/ides-and-editors 301
-/docs/editors /docs/ides-and-editors 301
-/docs/editors/vscode-browser /docs/ides-and-editors/vscode-browser
-/docs/editors/Goland /docs/ides-and-editors/Goland
-/docs/editors/intellij /docs/ides-and-editors/intellij
-/docs/editors/vscode /docs/ides-and-editors/vscode
-/docs/editors/clion /docs/ides-and-editors/clion
-/docs/editors/datagrip /docs/ides-and-editors
-/docs/ides-and-editors/datagrip /docs/ides-and-editors
-/docs/editors/phpstorm /docs/ides-and-editors/phpstorm
-/docs/editors/pycharm /docs/ides-and-editors/pycharm
-/docs/editors/rider /docs/ides-and-editors/rider
-/docs/editors/rubymine /docs/ides-and-editors/rubymine
-/docs/editors/webstorm /docs/ides-and-editors/webstorm
-/docs/develop/local-companion /docs/ides-and-editors/local-companion 301
-/docs/vscode-extensions /docs/ides-and-editors/vscode-extensions 301
+/docs/ides-and-editors/configure-your-editor-ide /docs/references/ides-and-editors 301
+/docs/editors /docs/references/ides-and-editors 301
+/docs/editors/vscode-browser /docs/references/ides-and-editors/vscode-browser
+/docs/editors/Goland /docs/references/ides-and-editors/Goland
+/docs/editors/intellij /docs/references/ides-and-editors/intellij
+/docs/editors/vscode /docs/references/ides-and-editors/vscode
+/docs/editors/clion /docs/references/ides-and-editors/clion
+/docs/editors/datagrip /docs/references/ides-and-editors
+/docs/ides-and-editors/datagrip /docs/references/ides-and-editors
+/docs/editors/phpstorm /docs/references/ides-and-editors/phpstorm
+/docs/editors/pycharm /docs/references/ides-and-editors/pycharm
+/docs/editors/rider /docs/references/ides-and-editors/rider
+/docs/editors/rubymine /docs/references/ides-and-editors/rubymine
+/docs/editors/webstorm /docs/references/ides-and-editors/webstorm
+/docs/develop/local-companion /docs/references/ides-and-editors/local-companion 301
+/docs/vscode-extensions /docs/references/ides-and-editors/vscode-extensions 301
 /docs/index.html /docs 301
 /docs/integrations/jetbrains /docs/editors 301
 /docs/java_in_gitpod /docs/java-in-gitpod 301
@@ -123,3 +123,4 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/quickstart /docs/introduction/getting-started 301
 /docs/browser-bookmarklet /docs/configure/users/browser-bookmarklet 301
 /docs/self-hosted/latest /docs/configure/self-hosted/latest 301
+/docs/ides-and-editors /docs/references/ides-and-editors 301

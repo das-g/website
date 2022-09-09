@@ -54,7 +54,7 @@ Unlike with regular development, JetBrains [Remote development](https://www.jetb
 
 - [**{title} backend plugins**](#install-on-title-backend) - The JetBrains {title} backend runs within the remote Gitpod workspace. Backend plugins contribute functionality for IDE experiences relating to the filesystem, tools or languages and frameworks. When installed, **a backend plugin only applies to the currently running Gitpod workspace** and is not associated with a user. However, a plugin can be [preconfigured for all users of a repository](#preconfigure-for-repository) so that the plugin is enabled with every workspace start. It is not currently possible to install a backend plugin that applies to all workspaces of a Gitpod user or team.
 - [**JetBrains Client plugins**](#install-on-jetbrains-client) - The JetBrains client runs on the users local machine and can be thought of as the user interface to the remote {title} backend. Client plugins are different to backend plugins as they contribute to the user interface aspect of the IDE experience (e.g. keyboard shortcuts and themes). Once installed, **a client plugin is enabled for all Gitpod workspaces the user opens** (if the workspace is running the exact same version of the {title} backend where the plugin was initially installed).
-- [**JetBrains Gateway plugins**](/docs/ides-and-editors/jetbrains-gateway#getting-started) - The JetBrains Gateway is an application downloaded onto a users local machine which allows users to start JetBrains Clients that are compatible with the {title} backend, running in a Gitpod workspace. JetBrains Gateway plugins are installed directly in JetBrains Gateway and contribute to remote development connection experiences (e.g. the [Gitpod JetBrains Gateway](https://plugins.jetbrains.com/plugin/18438-gitpod-gateway) plugin).
+- [**JetBrains Gateway plugins**](/docs/references/ides-and-editors/jetbrains-gateway#getting-started) - The JetBrains Gateway is an application downloaded onto a users local machine which allows users to start JetBrains Clients that are compatible with the {title} backend, running in a Gitpod workspace. JetBrains Gateway plugins are installed directly in JetBrains Gateway and contribute to remote development connection experiences (e.g. the [Gitpod JetBrains Gateway](https://plugins.jetbrains.com/plugin/18438-gitpod-gateway) plugin).
 
 ### Install on JetBrains Client
 
@@ -176,7 +176,7 @@ The remaining metrics you can find in the Backend Control Center regarding the n
 
 ## FAQs
 
-- For the questions about supported IDEs and Editors in Gitpod, refer to [FAQs](/docs/ides-and-editors/faqs).
+- For the questions about supported IDEs and Editors in Gitpod, refer to [FAQs](/docs/references/ides-and-editors/faqs).
 
 - For the general questions about JetBrains Remote Development, refer to refer to the general IDE <a href="https://www.jetbrains.com/help/idea/faq-about-remote-development.html" target="_blank">{title} FAQ</a>.
 
@@ -184,7 +184,7 @@ The remaining metrics you can find in the Backend Control Center regarding the n
 
 Debugging performance can be challenging, as performance issues can depend on many factors such as how Gitpod is configured (if you're operating Gitpod on Self-Hosted). However, there are some ways you can gather performance information and optimise your JetBrains IDE setup with Gitpod:
 
-1. Firstly, to gather information on performance, you can [view workspace performance metrics from within the IDE](/docs/ides-and-editors/intellij#workspace-performance) in the Backend Control Center, or by using [`gp top`](/docs/command-line-interface#top).
+1. Firstly, to gather information on performance, you can [view workspace performance metrics from within the IDE](/docs/references/ides-and-editors/intellij#workspace-performance) in the Backend Control Center, or by using [`gp top`](/docs/command-line-interface#top).
 2. You may also want to try adjusting the Max Heap Size allocated to the JetBrains Backend in the Settings tab of the Backend Control Center. If updating this setting helps your performance, you can set the `vmoptions` value for your JetBrains IDE in your `.gitpod.yml`.
 
 > **Note:** If the performance metrics show that your workspace is hitting its resource limits, and you are using Gitpod Self-Hosted, it might make sense to consider changing the resource configuration for your workspaces. This can be done via a [config-patch](/docs/configure/self-hosted/latest/config-patches). Configuring workspace resources is not yet available on SaaS.

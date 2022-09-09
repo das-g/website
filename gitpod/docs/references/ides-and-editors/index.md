@@ -28,9 +28,9 @@ In line with [our ambition to "remove all friction from the developer experience
 
 The three main ways to edit code or access a Gitpod workspace:
 
-1. **Browser** - Using [VS Code Browser](/docs/ides-and-editors/vscode-browser).
-2. **SSH** - Using an [SSH key](/docs/ides-and-editors/command-line#ssh-key-access) or an [Access Token](/docs/ides-and-editors/command-line#access-token-ssh).
-3. **Desktop** - Using [VS Code Desktop](ides-and-editors/vscode) or [JetBrains Gateway](/docs/ides-and-editors/jetbrains-gateway).
+1. **Browser** - Using [VS Code Browser](/docs/references/ides-and-editors/vscode-browser).
+2. **SSH** - Using an [SSH key](/docs/references/ides-and-editors/command-line#ssh-key-access) or an [Access Token](/docs/references/ides-and-editors/command-line#access-token-ssh).
+3. **Desktop** - Using [VS Code Desktop](ides-and-editors/vscode) or [JetBrains Gateway](/docs/references/ides-and-editors/jetbrains-gateway).
 
 ### Supported IDE/editors
 

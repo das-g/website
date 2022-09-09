@@ -18,7 +18,7 @@ gitpod.example.com
 
 The entry point for all traffic is the `proxy` component which has a service of type `LoadBalancer` that allows inbound traffic on ports 80 (HTTP) and 443 (HTTPS) as well as port 22 (SSH access to the workspaces).
 
-SSH access is required to work with desktop IDEs, such as [VS Code Desktop](/docs/ides-and-editors/vscode) and JetBrains via [JetBrains Gateway](/docs/ides-and-editors/jetbrains-gateway). To enable SSH, your **load balancer** needs to be capable of working with [L4 protocols](https://en.wikipedia.org/wiki/OSI_model#Layer_4:_Transport_layer).
+SSH access is required to work with desktop IDEs, such as [VS Code Desktop](/docs/references/ides-and-editors/vscode) and JetBrains via [JetBrains Gateway](/docs/references/ides-and-editors/jetbrains-gateway). To enable SSH, your **load balancer** needs to be capable of working with [L4 protocols](https://en.wikipedia.org/wiki/OSI_model#Layer_4:_Transport_layer).
 
 <CloudPlatformToggle id="cloud-platform-toggle-networking">
 <div slot="gcp">

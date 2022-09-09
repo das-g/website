@@ -15,4 +15,4 @@ Please refer to the [Gitpod Local Companion - localhost is going remote](/blog/l
 
 ## Connect To VS Code Desktop
 
-Whilst it is possible to use the Gitpod local companion to connect your desktop VS Code application to Gitpod, the best way is to use the Gitpod VSCode Plugin, which you can access directly from the command pallette via any Gitpod the workspace. For more details about VS Code Desktop, please refer to the [VS Code desktop support docs](/docs/ides-and-editors/vscode).
+Whilst it is possible to use the Gitpod local companion to connect your desktop VS Code application to Gitpod, the best way is to use the Gitpod VSCode Plugin, which you can access directly from the command pallette via any Gitpod the workspace. For more details about VS Code Desktop, please refer to the [VS Code desktop support docs](/docs/references/ides-and-editors/vscode).

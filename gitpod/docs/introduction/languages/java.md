@@ -156,7 +156,7 @@ gp stop
 gp tasks
 ```
 
-> **Tip:** If you're using [VS Code Browser](/docs/ides-and-editors/vscode-browser) or [VS Code Desktop](/docs/ides-and-editors/vscode), then your tasks will open as terminal windows. You can configure their layout using the [openMode](/docs/config-start-tasks#openmode) property.
+> **Tip:** If you're using [VS Code Browser](/docs/references/ides-and-editors/vscode-browser) or [VS Code Desktop](/docs/references/ides-and-editors/vscode), then your tasks will open as terminal windows. You can configure their layout using the [openMode](/docs/config-start-tasks#openmode) property.
 
 > **Note:** We are using the `init` property so that we can perform application building during a [prebuild](/docs/configure/projects/prebuilds), for increased performance. We'll discuss prebuilds more later on.
 
@@ -166,7 +166,7 @@ See [start tasks](/docs/config-start-tasks) and [.gitpod.yml reference](/docs/re
 
 To run your application, you have two options:
 
-1. **Update your start task command** - Starting your application using the `command` start task will run the start process on workspace start. With both [VS Code Browser](/docs/ides-and-editors/vscode) and [VS Code Desktop](/docs/ides-and-editors/vscode-browser), tasks are automatically opened in the terminal(s). With [IntelliJ](/docs/ides-and-editors/intellij) / [JetBrains Gateway](/docs/ides-and-editors/jetbrains-gateway), configured tasks can be viewed by running `gp tasks` in the workspace.
+1. **Update your start task command** - Starting your application using the `command` start task will run the start process on workspace start. With both [VS Code Browser](/docs/references/ides-and-editors/vscode) and [VS Code Desktop](/docs/references/ides-and-editors/vscode-browser), tasks are automatically opened in the terminal(s). With [IntelliJ](/docs/references/ides-and-editors/intellij) / [JetBrains Gateway](/docs/references/ides-and-editors/jetbrains-gateway), configured tasks can be viewed by running `gp tasks` in the workspace.
 2. **Use a run / launch configuration** - Alternatively, you can commit a [run/debug configuration in IntelliJ IDEA](/docs/languages/java#configuring-jetbrains-rundebug-configurations) or a [launch configuration in VS Code](/docs/languages/java#configuring-vs-code-launch-configurations) as a way to start your application.
 
 #### Using start tasks to run Java
@@ -246,21 +246,21 @@ tasks:
 
 2. **Setup localhost port forwarding** - Connect your local machine with your running workspace means that you don't need to replace localhost references, to do that you'll need to configure port forwarding. Port forwarding is useful if you're working with a framework that needs localhost, and the application cannot be reconfigured.
 
-With [VS Code Desktop](/docs/ides-and-editors/vscode), local port-forwarding is handled automatically and can be configured via the ports view within VS Code Desktop.
+With [VS Code Desktop](/docs/references/ides-and-editors/vscode), local port-forwarding is handled automatically and can be configured via the ports view within VS Code Desktop.
 
 <figure>
 <img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Port forwarding in VS Code Desktop" src="/images/editors/port-forwarding-vscode-desktop.png">
     <figcaption>Port forwarding in VS Code Desktop</figcaption>
 </figure>
 
-With IntelliJ IDEA using [JetBrains Gateway](/docs/ides-and-editors/jetbrains-gateway) you can setup remote port-forwarding manually.
+With IntelliJ IDEA using [JetBrains Gateway](/docs/references/ides-and-editors/jetbrains-gateway) you can setup remote port-forwarding manually.
 
 <figure>
 <img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Port forwarding in a JetBrains IDE" src="/images/jetbrains-gateway/port-forward-jetbrains.png">
     <figcaption>Port forwarding in a JetBrains IDE</figcaption>
 </figure>
 
-Alternatively, by using [local companion](/docs/ides-and-editors/local-companion) all workspace ports will be forwarded automatically.
+Alternatively, by using [local companion](/docs/references/ides-and-editors/local-companion) all workspace ports will be forwarded automatically.
 
 See [configuring ports](/docs/config-ports) for more.
 
@@ -398,9 +398,9 @@ See [Browser Extension](/docs/browser-extension) for more.
     <figcaption>Updating Gitpod IDE preferences to a JetBrains IDE</figcaption>
 </figure>
 
-With Gitpod, you can work with [VS Code Browser](/docs/ides-and-editors/vscode-browser), [VS Code Desktop](/docs/ides-and-editors/vscode) or [JetBrains](/docs/ides-and-editors/jetbrains-gateway) IDEs, such as [IntelliJ IDEA](/docs/ides-and-editors/intellij). Setting your preference ensures all future workspaces start with the chosen IDE or editor. Visit the [preferences](https://gitpod.io/preferences) page to configure these settings.
+With Gitpod, you can work with [VS Code Browser](/docs/references/ides-and-editors/vscode-browser), [VS Code Desktop](/docs/references/ides-and-editors/vscode) or [JetBrains](/docs/references/ides-and-editors/jetbrains-gateway) IDEs, such as [IntelliJ IDEA](/docs/references/ides-and-editors/intellij). Setting your preference ensures all future workspaces start with the chosen IDE or editor. Visit the [preferences](https://gitpod.io/preferences) page to configure these settings.
 
-See [IDEs & Editors](/docs/ides-and-editors) for more.
+See [IDEs & Editors](/docs/references/ides-and-editors) for more.
 
 ### VS Code Desktop Settings Sync
 
@@ -410,4 +410,4 @@ _Enable Settings Sync with Gitpod_
 
 VS Code Desktop by default is not setup to sync your VS Code settings (e.g. your fonts, layouts, etc) with VS Code running in the browser of Gitpod. You can configure Gitpod to sync settings between browser and desktop by running the command palette action "Settings Sync: Enable signing in with Gitpod" from the Gitpod VS Code extension.
 
-See [VS Code Settings Sync](/docs/ides-and-editors/settings-sync) for more.
+See [VS Code Settings Sync](/docs/references/ides-and-editors/settings-sync) for more.

@@ -32,7 +32,7 @@ If you've been happily working away on Gitpod until now, you might be wondering 
 
 > **Note:** The workspace cluster version e.g. `.ws-eu54.gitpod.io` is currently included in the SSH connection host. On workspace update, you'll still be required to update the SSH string. This is an area of improvement that we will investigate for the future.
 
-2. **Desktop client access** - SSH is used as the protocol for many desktop tools, notably users who like to use local [command line access](https://www.gitpod.io/docs/ides-and-editors/command-line) for editing, connecting to headless testing tools (which connect to processes running in the workspace) and database clients. Not having to jump back and forth to the Gitpod dashboard eliminates some friction for these workflows.
+2. **Desktop client access** - SSH is used as the protocol for many desktop tools, notably users who like to use local [command line access](https://www.gitpod.io/docs/references/ides-and-editors/command-line) for editing, connecting to headless testing tools (which connect to processes running in the workspace) and database clients. Not having to jump back and forth to the Gitpod dashboard eliminates some friction for these workflows.
 
 3. **Port-forwarding** - Whilst, both the VS Code and JetBrains IDEs have [support for port-forwarding](/docs/config-ports), some of our users want to script / automate their port forwarding. Using regular SSH means you can more easily leverage the `-L` and `-R` flags of your SSH client for for port-forwarding without having to go back and forth to the dashboard to copy/paste the SSH string.
 
@@ -60,12 +60,12 @@ So, watch this space for future announcements!
 ![Copy SSH key from modal](/images/docs/ssh-key-modal-dark-light-theme.png)
 ![Copy SSH key from modal](/images/docs/ssh-key-modal-dark-theme.png)
 
-Or, get the SSH connection from the workspace start page (when using a [Desktop IDE or editor](/docs/ides-and-editors))
+Or, get the SSH connection from the workspace start page (when using a [Desktop IDE or editor](/docs/references/ides-and-editors))
 
 ![SSH to a workspace via the workspace splash page](/images/docs/ssh-connect-splash-dark-theme.png)
 ![SSH to a workspace via the workspace splash page](/images/docs/ssh-connect-splash-light-theme.png)
 
-For more information, see the [configuring SSH](/docs/configure/ssh) documentation, and using Gitpod with [command-line](/docs/ides-and-editors/command-line) access. And for any feedback see the related [GitHub issue](https://github.com/gitpod-io/gitpod/issues/9932), or [raise a new one](https://github.com/gitpod-io/gitpod/issues/new/choose).
+For more information, see the [configuring SSH](/docs/configure/ssh) documentation, and using Gitpod with [command-line](/docs/references/ides-and-editors/command-line) access. And for any feedback see the related [GitHub issue](https://github.com/gitpod-io/gitpod/issues/9932), or [raise a new one](https://github.com/gitpod-io/gitpod/issues/new/choose).
 
 ### What's next for SSH in Gitpod?
 

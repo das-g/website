@@ -167,7 +167,7 @@ It is common convention to be asked for a fingerprint when accessing a new SSH s
 
 You should only be presented with a request to trust the Gitpod workspace when using the legacy Local Companion approach of connecting to VS Code Desktop.
 
-By swapping to the SSH Gateway approach of accessing VS Code Desktop, your known hosts file will be updated automatically. See [connecting to VS Code Desktop](/docs/ides-and-editors/vscode#connecting-to-vs-code-desktop-ssh) for more.
+By swapping to the SSH Gateway approach of accessing VS Code Desktop, your known hosts file will be updated automatically. See [connecting to VS Code Desktop](/docs/references/ides-and-editors/vscode#connecting-to-vs-code-desktop-ssh) for more.
 
 ### Workspace Trust
 
@@ -244,7 +244,7 @@ _Passphrase prompt from VS Code requiring the SSH key passphrase_
 If you are still having issues connecting to VS Code Desktop from Gitpod, try:
 
 1. Checking your Gitpod VS Code Desktop extension version is using the latest version.
-2. Attempt to directly connect via SSH using the `-v` to show verbose SSH logs. For example: `ssh -v workspacename@hostname`. You can find the `ssh` command in the workspace list on your Gitpod dashboard, see the [command-line](/docs/ides-and-editors/command-line) docs for more.
+2. Attempt to directly connect via SSH using the `-v` to show verbose SSH logs. For example: `ssh -v workspacename@hostname`. You can find the `ssh` command in the workspace list on your Gitpod dashboard, see the [command-line](/docs/references/ides-and-editors/command-line) docs for more.
 3. If you're a self-hosted customer, ensure [SSH Gateway](/docs/configure/ssh) is configured correctly.
 
 If you are still experiencing issues using VS Code Desktop and Gitpod, please [contact support](/support) with any related [troubleshooting logs](/docs/troubleshooting#gitpod-logs-in-vs-code-web-and-desktop)

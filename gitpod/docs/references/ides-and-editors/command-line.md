@@ -9,7 +9,7 @@ title: Command Line (SSH)
 
 # {title}
 
-You can directly access your workspace via SSH for editing code directly using a [command-line editor](/docs/ides-and-editors/command-line), such as Vim & Emacs or for connecting SSH supported applications such as a database client.
+You can directly access your workspace via SSH for editing code directly using a [command-line editor](/docs/references/ides-and-editors/command-line), such as Vim & Emacs or for connecting SSH supported applications such as a database client.
 
 ## Workspace SSH approaches
 
@@ -75,4 +75,4 @@ You can also access the SSH connection string from the workspace start page, whi
 
 ## SSH via Local Companion
 
-> **Note:** It is possible to access your Gitpod workspaces via the command line using [local companion](/docs/ides-and-editors/local-companion), however access using an SSH key is the preferred approach.
+> **Note:** It is possible to access your Gitpod workspaces via the command line using [local companion](/docs/references/ides-and-editors/local-companion), however access using an SSH key is the preferred approach.

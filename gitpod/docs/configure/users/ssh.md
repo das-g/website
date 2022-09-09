@@ -9,9 +9,9 @@ title: SSH
 
 # {title}
 
-Secure Shell Protocol (SSH) is the basis for connecting to your Gitpod workspace when using [VS Code Desktop](/docs/ides-and-editors/vscode), [JetBrains Gateway](/docs/ides-and-editors/jetbrains-gateway), or accessing via the [command-line](/docs/ides-and-editors/command-line) from a local machine.
+Secure Shell Protocol (SSH) is the basis for connecting to your Gitpod workspace when using [VS Code Desktop](/docs/references/ides-and-editors/vscode), [JetBrains Gateway](/docs/references/ides-and-editors/jetbrains-gateway), or accessing via the [command-line](/docs/references/ides-and-editors/command-line) from a local machine.
 
-See [command-line](/docs/ides-and-editors/command-line) editors & IDEs documentation for more.
+See [command-line](/docs/references/ides-and-editors/command-line) editors & IDEs documentation for more.
 
 ## Manage your SSH Keys
 
@@ -94,7 +94,7 @@ To delete an SSH key, click the kebab menu to the right of the SSH key in the da
 
 ## SSH Gateway
 
-SSH Gateway facilitates connection via SSH for direct SSH access using uploaded public keys, and using the workspace owner token. Both the [VS Code Desktop](/docs/ides-and-editors/vscode) and [JetBrains](/docs/ides-and-editors/jetbrains-gateway) integrations use SSH Gateway to connect to Gitpod workspaces.
+SSH Gateway facilitates connection via SSH for direct SSH access using uploaded public keys, and using the workspace owner token. Both the [VS Code Desktop](/docs/references/ides-and-editors/vscode) and [JetBrains](/docs/references/ides-and-editors/jetbrains-gateway) integrations use SSH Gateway to connect to Gitpod workspaces.
 
 ### What is SSH Gateway?
 

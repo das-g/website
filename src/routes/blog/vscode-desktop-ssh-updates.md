@@ -15,7 +15,7 @@ title: "VS Code Desktop and SSH explained"
 
 You might have seen we recently announced [SSH public key upload for Gitpod](https://www.gitpod.io/blog/ssh-key-upload), and in the announcement, we mentioned: "SSH key upload also gives our users more stable, performant and secure connections" which might have left you wondering what this statement means in practice.
 
-A lot of the changes we made to our SSH approach applies to our [VS Code Desktop](/docs/ides-and-editors/vscode) users. In this article we will take a deeper look at: how SSH connections work with VS Code Desktop, the pros/cons of the different approaches, and cover some common gotchas and questions.
+A lot of the changes we made to our SSH approach applies to our [VS Code Desktop](/docs/references/ides-and-editors/vscode) users. In this article we will take a deeper look at: how SSH connections work with VS Code Desktop, the pros/cons of the different approaches, and cover some common gotchas and questions.
 
 ## TL;DR; benefits of SSH improvements for VS Code Desktop
 
@@ -168,7 +168,7 @@ See [configuring SSH](/docs/configure/ssh) for details on creating and uploading
 ### What if I'm still having issues with SSH connections?
 
 1. Check that your Gitpod VS Code Desktop extension version is using the latest stable version (`0.40` or above).
-2. Attempt to directly connect via SSH using the `-v` to show verbose SSH logs. For example: `ssh -v workspacename@hostname`. You can find the `ssh` command in the workspace list on your Gitpod dashboard, see the [command-line](/docs/ides-and-editors/command-line) docs for more.
+2. Attempt to directly connect via SSH using the `-v` to show verbose SSH logs. For example: `ssh -v workspacename@hostname`. You can find the `ssh` command in the workspace list on your Gitpod dashboard, see the [command-line](/docs/references/ides-and-editors/command-line) docs for more.
 3. If you're a self-hosted customer, ensure [SSH Gateway](/docs/configure/ssh) is configured correctly.
 
 If you are still experiencing issues using VS Code Desktop and Gitpod, please [contact support](/support) with any related [troubleshooting logs](/docs/troubleshooting#gitpod-logs-in-vs-code-web-and-desktop)
@@ -176,4 +176,4 @@ If you are still experiencing issues using VS Code Desktop and Gitpod, please [c
 For more details on VS Code Destkop and SSH setup with Gitpod, see:
 
 1. [Configuring SSH](/docs/configure/ssh) with Gitpod
-2. Working with [VS Code Desktop](https://www.gitpod.io/docs/ides-and-editors/vscode) and Gitpod
+2. Working with [VS Code Desktop](https://www.gitpod.io/docs/references/ides-and-editors/vscode) and Gitpod

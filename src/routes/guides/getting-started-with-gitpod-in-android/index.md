@@ -30,7 +30,7 @@ To get started, all you need is a browser. I use the [Kiwi](https://kiwibrowser.
 
 ![conversation 1](../../../../static/images/guides/getting-started-with-gitpod-in-android/convo.svg "kumquat asks")
 
-- Some shortcuts like **Windows/Meta + Key**, **Control + Space** and etc. will not work on Gitpod as Android captures them for its internal shortcuts. Unfortunately, you can not disable or remap them easily. To workaround, you will have to remap some of your conflicting IDE shortcuts from the [VS Code Browser](https://www.gitpod.io/docs/ides-and-editors/vscode-browser) settings.
+- Some shortcuts like **Windows/Meta + Key**, **Control + Space** and etc. will not work on Gitpod as Android captures them for its internal shortcuts. Unfortunately, you can not disable or remap them easily. To workaround, you will have to remap some of your conflicting IDE shortcuts from the [VS Code Browser](https://www.gitpod.io/docs/references/ides-and-editors/vscode-browser) settings.
 
 ##### Kiwi tips:
 

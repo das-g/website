@@ -545,7 +545,7 @@ Define what to do when Gitpod detects a given port is being listened on.
 
 </div>
 
-**Please note:** For JetBrains IDEs connected to Gitpod via [JetBrains Gateway](/docs/ides-and-editors/jetbrains-gateway) `open-preview` will behave exactly the same as `open-browser`, as there is no functionality for a web preview in the JetBrains IDE.
+**Please note:** For JetBrains IDEs connected to Gitpod via [JetBrains Gateway](/docs/references/ides-and-editors/jetbrains-gateway) `open-preview` will behave exactly the same as `open-browser`, as there is no functionality for a web preview in the JetBrains IDE.
 
 ### `ports[n].port`
 
