@@ -9,7 +9,7 @@ title: VS Code Desktop
 
 # {title}
 
-> VS Code Desktop is currently in [Beta](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/5712).
+> VS Code Desktop is currently in [Beta](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/5712).
 
 With VS Code Desktop Support, you keep your local editor configurations<sup>1</sup> and benefit from Gitpod's high-spec servers & automated prebuilds. As usual, your code executes in an ephemeral Gitpod workspace, keeping each of your projects isolated from one another.
 

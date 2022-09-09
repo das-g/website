@@ -24,7 +24,7 @@ RUN sudo apt-get -q update && \
     sudo rm -rf /var/lib/apt/lists/*
 ```
 
-Next, create a file called [.gitpod.yml](/docs/config-gitpod-file) and add the following to it:
+Next, create a file called [.gitpod.yml](/docs/configure/projects/gitpod-yaml) and add the following to it:
 
 ```YAML
 image:

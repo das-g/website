@@ -15,7 +15,7 @@ title: GoLand
 <!-- prettier-ignore -->
 # GoLand
 
-> {title} is currently in [Beta](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
+> {title} is currently in [Beta](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
 
 ## Getting Started
 
@@ -94,9 +94,9 @@ You can install a plugin only for **your current workspace** following these ste
 
 #### Preconfigure for repository
 
-> JetBrains plugin support is currently in [Beta](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
+> JetBrains plugin support is currently in [Beta](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
 
-You can share a plugin on **{title} backend** with everybody working on the repository by adding it to [.gitpod.yml](/docs/config-gitpod-file) and pushing to your Git repository.
+You can share a plugin on **{title} backend** with everybody working on the repository by adding it to [.gitpod.yml](/docs/configure/projects/gitpod-yaml) and pushing to your Git repository.
 Each workspace is preconfigured with plugins from the `gitpod.yml` configuration file. For example:
 
 ```yaml
@@ -119,7 +119,7 @@ It is not yet possible to install plugins on **{title} backend** for your user t
 
 ## Indexing using Prebuilds
 
-> JetBrains Prebuilds is currently in [Alpha](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
+> JetBrains Prebuilds is currently in [Alpha](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
 
 When you open the project {title} starts indexing to load modules and
 enable the core functionality like code completion and navigation.
@@ -131,7 +131,7 @@ Gitpod prebuilds allow you to improve it further by indexing before you start a 
 To leverage it:
 
 - configure prebuilds for your repository, refer to [Prebuilds](/docs/configure/projects/prebuilds);
-- enable indexing for {title} in prebuilds by editing [.gitpod.yml](/docs/config-gitpod-file) in your repository:
+- enable indexing for {title} in prebuilds by editing [.gitpod.yml](/docs/configure/projects/gitpod-yaml) in your repository:
 
 ```yaml
 jetbrains:
@@ -147,7 +147,7 @@ Users can switch between `stable` and `latest` versions of {title} on the [user 
 
 ## Configure JVM options
 
-> Configuration of JVM options is currently in [Alpha](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/8704).
+> Configuration of JVM options is currently in [Alpha](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/8704).
 
 You can adjust JVM options for {title} backend, especially if you want to increase the `-Xmx` memory size. For example:
 
@@ -170,7 +170,7 @@ In your JetBrains IDE within the JetBrains Gateway [Backend Control Center](http
 
 The remaining metrics you can find in the Backend Control Center regarding the node that your workspace is running on, and not the workspace itself.
 
-> **Note:** Performance information shown in the Backend Control Center is the same as the information that is shown when running the command [`gp top`](/docs/command-line-interface#top) in your workspace, see the [Command Line Interface](/docs/command-line-interface) documentation for more.
+> **Note:** Performance information shown in the Backend Control Center is the same as the information that is shown when running the command [`gp top`](/docs/references/gp-cli#top) in your workspace, see the [Command Line Interface](/docs/references/gp-cli) documentation for more.
 
 ![jetbrains performance](/images/jetbrains-gateway/jetbrains-performance-center.png)
 
@@ -184,7 +184,7 @@ The remaining metrics you can find in the Backend Control Center regarding the n
 
 Debugging performance can be challenging, as performance issues can depend on many factors such as how Gitpod is configured (if you're operating Gitpod on Self-Hosted). However, there are some ways you can gather performance information and optimise your JetBrains IDE setup with Gitpod:
 
-1. Firstly, to gather information on performance, you can [view workspace performance metrics from within the IDE](/docs/references/ides-and-editors/intellij#workspace-performance) in the Backend Control Center, or by using [`gp top`](/docs/command-line-interface#top).
+1. Firstly, to gather information on performance, you can [view workspace performance metrics from within the IDE](/docs/references/ides-and-editors/intellij#workspace-performance) in the Backend Control Center, or by using [`gp top`](/docs/references/gp-cli#top).
 2. You may also want to try adjusting the Max Heap Size allocated to the JetBrains Backend in the Settings tab of the Backend Control Center. If updating this setting helps your performance, you can set the `vmoptions` value for your JetBrains IDE in your `.gitpod.yml`.
 
 > **Note:** If the performance metrics show that your workspace is hitting its resource limits, and you are using Gitpod Self-Hosted, it might make sense to consider changing the resource configuration for your workspaces. This can be done via a [config-patch](/docs/configure/self-hosted/latest/config-patches). Configuring workspace resources is not yet available on SaaS.

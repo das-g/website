@@ -9,7 +9,7 @@ title: Teams
 
 # {title}
 
-> {title} is currently in [Beta](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/5095).
+> {title} is currently in [Beta](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/5095).
 
 When you sign up for Gitpod the first time, you automatically gain access to a **Personal Account** where you can also add projects.
 To collaborate with others on projects you can create a **Team** and invite others as team members.

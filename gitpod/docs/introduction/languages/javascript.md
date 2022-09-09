@@ -29,7 +29,7 @@ Here are a few JavaScript example projects that are automated with Gitpod:
 
 Many JavaScript projects these days use some sort of build tool for things like bundling, linting, code-splitting and so on and they also use a package manager, typically either npm or Yarn for managing dependencies.
 
-You can automate the process of installing dependencies and starting any tasks like `build`, `lint`, `test` and so on at the workspace startup, for doing so please create a [.gitpod.yml](/docs/config-gitpod-file) file in the root of your project and add the tasks you want to be automated. An example might look like this:
+You can automate the process of installing dependencies and starting any tasks like `build`, `lint`, `test` and so on at the workspace startup, for doing so please create a [.gitpod.yml](/docs/configure/projects/gitpod-yaml) file in the root of your project and add the tasks you want to be automated. An example might look like this:
 
 ```yaml
 tasks:
@@ -55,7 +55,7 @@ RUN bash -c 'VERSION="14.8.0" \
 RUN echo "nvm use default &>/dev/null" >> ~/.bashrc.d/51-nvm-fix
 ```
 
-and then in your [.gitpod.yml](/docs/config-gitpod-file) reference your [.gitpod.Dockerfile](/docs/config-docker) as shown below:
+and then in your [.gitpod.yml](/docs/configure/projects/gitpod-yaml) reference your [.gitpod.Dockerfile](/docs/config-docker) as shown below:
 
 ```yaml
 image:
@@ -66,7 +66,7 @@ Then, after committing your changes, start a new workspace, the version for that
 
 ## Using ESLint for linting
 
-If your project's `package.json` does not mention ESLint as a dependency then you have to install it first. For installing it add the following to the end of the `init` phase of your [.gitpod.yml](/docs/config-gitpod-file) as shown:
+If your project's `package.json` does not mention ESLint as a dependency then you have to install it first. For installing it add the following to the end of the `init` phase of your [.gitpod.yml](/docs/configure/projects/gitpod-yaml) as shown:
 
 ```yaml
 tasks:

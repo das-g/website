@@ -114,7 +114,7 @@ By default, Gitpod prepares prebuilt workspaces for all changes on the default b
 > **Note**: Prebuilds are executed as the user who enabled them. This means that if you want to use
 > prebuilds on a private repository, you must give Gitpod access to private repositories.
 
-Prebuilds are configured in your repository's [`.gitpod.yml`](/docs/config-gitpod-file) file with the following start tasks:
+Prebuilds are configured in your repository's [`.gitpod.yml`](/docs/configure/projects/gitpod-yaml) file with the following start tasks:
 
 - `before`
 - `init`

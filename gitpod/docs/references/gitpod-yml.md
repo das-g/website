@@ -57,7 +57,7 @@ Below is a full reference of all available properties. To see the underlying sch
 
 ## `additionalRepositories`
 
-> additionalRepositories is currently in [Beta](/docs/references/gitpod-releases). [Send feedback](https://github.com/gitpod-io/gitpod/issues/8623).
+> additionalRepositories is currently in [Beta](/docs/support/release-cycle). [Send feedback](https://github.com/gitpod-io/gitpod/issues/8623).
 
 Defines additional source control repositories to clone and where the repository is cloned under `/workspaces`
 
@@ -355,7 +355,7 @@ Optionally, you can set the `image.context`. This is useful when you want to cop
 
 ## `jetbrains`
 
-> JetBrains is currently in [Beta](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
+> JetBrains is currently in [Beta](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
 
 Define the integration between Gitpod and JetBrains IDEs.
 
@@ -369,7 +369,7 @@ Define the integration between Gitpod and JetBrains IDEs.
 
 ### `jetbrains.plugins`
 
-> JetBrains plugin support (via gitpod.yml) is currently in [Beta](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
+> JetBrains plugin support (via gitpod.yml) is currently in [Beta](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
 
 Define a list of plugins which should be installed for all compatible JetBrains IDEs when starting a workspace. To find the plugin identifier, from the [JetBrains Marketplace](https://plugins.jetbrains.com), find the desired plugin, open the 'Versions' tab, select any version and copy the 'Plugin ID' (like `${publisher}.${name}`).
 
@@ -383,7 +383,7 @@ Define a list of plugins which should be installed for all compatible JetBrains 
 
 ### `jetbrains.[product]`
 
-> JetBrains is currently in [Beta](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
+> JetBrains is currently in [Beta](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
 
 Define the integration between Gitpod and a specific JetBrains IDE. Install plugins and configure prebuilds to speed up the IDE indexing.
 
@@ -404,7 +404,7 @@ Specify the 'product' with one of the following values:
 
 ### `jetbrains.[product].plugins`
 
-> JetBrains plugin support (via gitpod.yml) is currently in [Beta](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
+> JetBrains plugin support (via gitpod.yml) is currently in [Beta](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
 
 Define a list of plugins which should be installed for the given JetBrains IDE when starting a workspace. To find the plugin identifier, from the [JetBrains Marketplace](https://plugins.jetbrains.com), find the desired plugin, open the 'Versions' tab, select any version and copy the 'Plugin ID' (like `${publisher}.${name}`).
 
@@ -428,7 +428,7 @@ jetbrains:
 
 ### `jetbrains.[product].prebuilds`
 
-> JetBrains prebuilds support (via gitpod.yml) is currently in [Alpha](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
+> JetBrains prebuilds support (via gitpod.yml) is currently in [Alpha](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
 
 Define whether Gitpod enables prebuilds for a specific JetBrains IDE.
 
@@ -461,7 +461,7 @@ The `version` is defined as follows:
 
 ### `jetbrains.[product].vmoptions`
 
-> Configuration of JVM options (via gitpod.yml) is currently in [Alpha](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/8704).
+> Configuration of JVM options (via gitpod.yml) is currently in [Alpha](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/8704).
 
 Configure JVM options for a specific JetBrains IDE.
 
@@ -696,7 +696,7 @@ Deprecated. Please use the [`init`](#tasksninit) task instead.
 
 ### `mainConfiguration`
 
-> mainConfiguration is currently in [Beta](/docs/references/gitpod-releases). [Send feedback](https://github.com/gitpod-io/gitpod/issues/8623).
+> mainConfiguration is currently in [Beta](/docs/support/release-cycle). [Send feedback](https://github.com/gitpod-io/gitpod/issues/8623).
 
 Defines the repository with the main `.gitpod.yml` file and makes it possible to open the same workspace from any issue, branch or other context URL from any repository defined in a multi repository configuration.
 

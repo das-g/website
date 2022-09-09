@@ -150,7 +150,7 @@ fi
 
 # 🚀 Usage
 
-Now we have the whole [AWS Configuration shell script](https://github.com/gitpod-io/demo-aws-with-gitpod/blob/HEAD/configure_aws_with_gitpod.sh) ready. To execute this script at the start of your workspace, you need to add a [command task](https://www.gitpod.io/docs/config-start-tasks#:~:text=compiling%20source%20code.-,command,-%3A%20Use%20this%20to) in your [`.gitpod.yml`](https://www.gitpod.io/docs/config-gitpod-file/#gitpodyml) file.
+Now we have the whole [AWS Configuration shell script](https://github.com/gitpod-io/demo-aws-with-gitpod/blob/HEAD/configure_aws_with_gitpod.sh) ready. To execute this script at the start of your workspace, you need to add a [command task](https://www.gitpod.io/docs/config-start-tasks#:~:text=compiling%20source%20code.-,command,-%3A%20Use%20this%20to) in your [`.gitpod.yml`](https://www.gitpod.io/docs/configure/projects/gitpod-yaml/#gitpodyml) file.
 
 ```yml
 tasks:
@@ -176,7 +176,7 @@ Congratulations 🎉 Now, you are ready to use AWS CLI to access AWS ECR through
 - [One workspace per task](https://www.gitpod.io/docs/workspaces)
 - [Environment variables](https://www.gitpod.io/docs/environment-variables#using-the-account-settings)
 - [Custom Docker Image](https://www.gitpod.io/docs/config-docker)
-- [Config `.gitpod.yml`](https://www.gitpod.io/docs/config-gitpod-file)
+- [Config `.gitpod.yml`](https://www.gitpod.io/docs/configure/projects/gitpod-yaml)
 
 ### AWS
 

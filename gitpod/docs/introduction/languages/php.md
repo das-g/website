@@ -54,7 +54,7 @@ image:
   file: .gitpod.Dockerfile
 ```
 
-Now you can [See it in action on a new workspace](/docs/config-gitpod-file#see-it-in-action)
+Now you can [See it in action on a new workspace](/docs/configure/projects/gitpod-yaml#see-it-in-action)
 
 ## Debugging PHP in Gitpod
 
@@ -72,7 +72,7 @@ FROM gitpod/workspace-full:2022-05-08-14-31-53
 RUN sudo install-packages php-xdebug
 ```
 
-Second, reference the above Dockerfile in a [.gitpod.yml](/docs/config-gitpod-file) file, and then also install the extension, like so:
+Second, reference the above Dockerfile in a [.gitpod.yml](/docs/configure/projects/gitpod-yaml) file, and then also install the extension, like so:
 
 ```yaml
 image:
@@ -83,7 +83,7 @@ vscode:
     - felixfbecker.php-debug
 ```
 
-Now you can [See it in action on a new workspace](/docs/config-gitpod-file#see-it-in-action)
+Now you can [See it in action on a new workspace](/docs/configure/projects/gitpod-yaml#see-it-in-action)
 
 Later, you can head over to `Run and Debug` on the left hand side and have fun debugging PHP! You can also create a `launch.json` file.
 

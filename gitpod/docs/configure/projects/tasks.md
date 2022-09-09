@@ -144,7 +144,7 @@ tasks:
 
 ### Wait for commands to complete
 
-When working with multiple terminals, you may have a situation where terminal 1 runs build scripts and terminal 2 and 3 require that these scripts complete first. This can be achieved with [`gp sync-await`](/docs/command-line-interface#sync-await) and [`gp sync-done`](/docs/command-line-interface#sync-done).
+When working with multiple terminals, you may have a situation where terminal 1 runs build scripts and terminal 2 and 3 require that these scripts complete first. This can be achieved with [`gp sync-await`](/docs/references/gp-cli#sync-await) and [`gp sync-done`](/docs/references/gp-cli#sync-done).
 
 ```yaml
 tasks:

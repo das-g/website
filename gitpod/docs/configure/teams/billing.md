@@ -9,7 +9,7 @@ title: Billing
 
 # {title}
 
-> Team Billing is part of [Teams & Projects](/docs/teams-and-projects), currently in [Beta](/docs/references/gitpod-releases).
+> Team Billing is part of [Teams & Projects](/docs/teams-and-projects), currently in [Beta](/docs/support/release-cycle).
 
 > **NOTE**
 > This first iteration of Team Billing improves Team Plans by:

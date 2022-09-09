@@ -150,7 +150,7 @@ tasks:
 gp stop
 ```
 
-3. **Optional:** Validate your commands by running [`gp tasks`](/docs/command-line-interface#tasks)
+3. **Optional:** Validate your commands by running [`gp tasks`](/docs/references/gp-cli#tasks)
 
 ```shell
 gp tasks
@@ -195,7 +195,7 @@ tasks:
 gp stop
 ```
 
-3. **Optional:** Validate your commands by running [`gp tasks`](/docs/command-line-interface#tasks)
+3. **Optional:** Validate your commands by running [`gp tasks`](/docs/references/gp-cli#tasks)
 
 ```shell
 gp tasks
@@ -324,7 +324,7 @@ See [prebuilds](/docs/configure/projects/prebuilds) and [start tasks](/docs/conf
 
 ### Optimising JetBrains indexing
 
-> JetBrains prebuilds support (via gitpod.yml) is currently in [Alpha](/docs/references/gitpod-releases) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
+> JetBrains prebuilds support (via gitpod.yml) is currently in [Alpha](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
 
 Gitpod currently has early support for improved indexing performance with JetBrains IDEs that works out-of-the-box. You can enable this setting via the `.gitpod.yml`.
 

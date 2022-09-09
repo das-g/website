@@ -46,7 +46,7 @@ export const screencasts: Screencast[] = [
     youtubeId: "fA2fpqP1xaM",
     relatedDocs: [
       { path: "/docs/configure", title: "Configure Your Project" },
-      { path: "/docs/config-gitpod-file", title: ".gitpod.yml" },
+      { path: "/docs/configure/projects/gitpod-yaml", title: ".gitpod.yml" },
       { path: "/docs/config-docker", title: "Docker Configuration" },
       { path: "/docs/config-start-tasks", title: "Start Tasks" },
     ],

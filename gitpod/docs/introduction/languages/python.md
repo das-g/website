@@ -38,7 +38,7 @@ You can switch between Python versions using `pyenv local <VERSION>`. For exampl
 
 ## [Start tasks](/docs/config-start-tasks)
 
-You can start building your project when, or even [before](/docs/configure/projects/prebuilds) you start your Gitpod workspace. Are you using a `requirements.txt` file to manage dependencies? If so, add this to your [.gitpod.yml](/docs/config-gitpod-file) to automatically pre-install all dependencies when starting a workspace:
+You can start building your project when, or even [before](/docs/configure/projects/prebuilds) you start your Gitpod workspace. Are you using a `requirements.txt` file to manage dependencies? If so, add this to your [.gitpod.yml](/docs/configure/projects/gitpod-yaml) to automatically pre-install all dependencies when starting a workspace:
 
 ```yaml
 tasks:
@@ -67,7 +67,7 @@ While the most popular Python VSCode extensions are built into Gitpod, here are 
 
 ![ARepl extension example](../../../static/images/docs/AReplExample.gif)
 ARepl for Python is helpful for constantly checking your code and debugging.
-To install this extension for your repository, add the following to your [.gitpod.yml](/docs/config-gitpod-file):
+To install this extension for your repository, add the following to your [.gitpod.yml](/docs/configure/projects/gitpod-yaml):
 
 ```yaml
 vscode:
@@ -79,7 +79,7 @@ vscode:
 
 ![Python test explorer example](../../../static/images/docs/python_Test_In_Gitpod.png)
 Easily test your python extensions with the Python Test Explorer.
-To add this to your repository add the following to your [.gitpod.yml](/docs/config-gitpod-file)
+To add this to your repository add the following to your [.gitpod.yml](/docs/configure/projects/gitpod-yaml)
 
 ```yaml
 vscode:
@@ -89,7 +89,7 @@ vscode:
 
 ## GUI Applications with wxPython
 
-To install wxPython to your repository please add the following to your [.gitpod.Dockerfile](/docs/config-docker). If you don't have one, simply run [`gp init`](/docs/command-line-interface) and commit the two generated files.
+To install wxPython to your repository please add the following to your [.gitpod.Dockerfile](/docs/config-docker). If you don't have one, simply run [`gp init`](/docs/references/gp-cli) and commit the two generated files.
 
 ```dockerfile
 # This will pull the official Gitpod `vnc` image
@@ -107,7 +107,7 @@ RUN sudo apt-get -q update && \
 RUN pip3 install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/ wxPython
 ```
 
-Here is a corresponding [.gitpod.yml](/docs/config-gitpod-file) example:
+Here is a corresponding [.gitpod.yml](/docs/configure/projects/gitpod-yaml) example:
 
 ```yaml
 image:

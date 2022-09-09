@@ -9,7 +9,7 @@ title: Workspace Classes
 
 # {title}
 
-> {title} are currently in [Beta](/docs/references/gitpod-releases) and only available for selected customers · [Send feedback](https://github.com/gitpod-io/gitpod/issues/12473).
+> {title} are currently in [Beta](/docs/support/release-cycle) and only available for selected customers · [Send feedback](https://github.com/gitpod-io/gitpod/issues/12473).
 
 Workspace classes allow you to select the resources that are assigned to your workspace.
 

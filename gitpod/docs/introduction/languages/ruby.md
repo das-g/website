@@ -59,7 +59,7 @@ Here are a few useful extensions that you'll likely want to install in your Ruby
 
 With the Ruby test explorer, you can run unit tests from within the Gitpod UI.
 ![Ruby test explorer example](../../../static/images/docs/ruby_test_ui.png)
-To add this extension to your repository, simply add these lines to your [.gitpod.yml](/docs/config-gitpod-file) configuration file:
+To add this extension to your repository, simply add these lines to your [.gitpod.yml](/docs/configure/projects/gitpod-yaml) configuration file:
 
 ```YAML
 vscode:
