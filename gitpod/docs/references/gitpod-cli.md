@@ -1,6 +1,6 @@
 ---
 section: gp-cli
-title: gp CLI
+title: Gitpod CLI
 ---
 
 <script context="module">

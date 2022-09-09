@@ -142,7 +142,7 @@ export const MENU: MenuEntry[] = [
     M("Docker", "integrations/docker"),
     M("JetBrains Gateway", "integrations/jetbrains-gateway", [], "beta"),
   ]),
-  M("gp CLI", "references/gp-cli"),
+  M("Gitpod CLI", "references/gitpod-cli"),
   M("Compatibility", "references/compatibility"),
   // M("Custom Docker image", "references/gitpod-dockerfile"),
   // M("Architecture", "references/architecture"),
