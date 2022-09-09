@@ -143,6 +143,7 @@ export const MENU: MenuEntry[] = [
     M("JetBrains Gateway", "integrations/jetbrains-gateway", [], "beta"),
   ]),
   M("gp CLI", "references/gp-cli"),
+  M("Compatibility", "references/compatibility"),
   // M("Custom Docker image", "references/gitpod-dockerfile"),
   // M("Architecture", "references/architecture"),
   M("Contribute", "support/contribute", [
