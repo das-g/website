@@ -17,7 +17,6 @@ Below is a list of language specific tips & tricks
 - [Java](/docs/languages/java)
 - [C++](/docs/languages/cpp)
 - [Golang](/docs/languages/go)
-- [Bash](/docs/languages/bash)
 - [Ruby](/docs/languages/ruby)
 - [PHP](/docs/languages/php)
 - [Vue](/docs/languages/vue)

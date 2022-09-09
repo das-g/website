@@ -171,6 +171,28 @@ Alternatively, specify the `Terminal ID` that you can see with `gp tasks list`:
 gp tasks attach <id>
 ```
 
+### stop
+
+Interrupts one or more running tasks and automatically closes their terminals. Useful when you don't need a certain task anymore, when authoring the [.gitpod.yml](/docs/references/gitpod-yml) file or when you start a workspace for projects with several tasks but you don't need them and want to save time and resources.
+
+Run without arguments to get a selection prompt. Only running tasks will be offered as a choice.
+
+```sh
+gp tasks stop
+```
+
+Specify the `Terminal ID` that you can see with `gp tasks list`.
+
+```sh
+gp tasks stop <id>
+```
+
+Run with the `--all` flag to stop all running tasks.
+
+```sh
+gp tasks stop --all
+```
+
 ## timeout
 
 Interact with workspace timeout configuration. You can learn more in [Life of a Workspace](/docs/life-of-workspace#timeouts).

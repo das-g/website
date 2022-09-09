@@ -3,7 +3,6 @@
   import LinkButton from "$lib/components/ui-library/link-button";
   export let image: ImageBox;
   const { src, alt, text, btnText, imgClass } = image;
-  export let stroked: boolean = false;
 </script>
 
 <div

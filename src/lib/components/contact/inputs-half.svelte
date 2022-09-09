@@ -14,6 +14,6 @@
   }
 </style>
 
-<div>
+<div class={className}>
   <slot />
 </div>

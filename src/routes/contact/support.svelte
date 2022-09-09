@@ -31,7 +31,7 @@
   const otherSubject = "Other";
   const subjects = [
     "Question",
-    "Issue",
+    "Technical Support",
     "Billing",
     studentUnlimitedSubject,
     selfHostingSubject,
@@ -138,6 +138,21 @@
       "message_submitted",
       {
         subject: formData.selectedSubject.value,
+        full_name: formData.name.value,
+        email: formData.email.value,
+        infrastructure:
+          formData.selectedSubject.value == selfHostingSubject
+            ? formData.cloudInfrastructure.value
+            : undefined,
+        company_engineers:
+          formData.selectedSubject.value == selfHostingSubject
+            ? formData.noOfEngineers.value
+            : undefined,
+        company:
+          formData.selectedSubject.value == selfHostingSubject
+            ? formData.company.value
+            : undefined,
+        messsage: formData.message.value,
       },
       true
     );

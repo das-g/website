@@ -56,6 +56,8 @@
   on:click={() => (shown = !shown)}
   class="flex items-center text-base transition-all duration-200 hover:text-important focus:text-important"
   bind:this={buttonEl}
+  aria-expanded={shown}
+  aria-haspopup="menu"
 >
   Resources
   <Arrow
@@ -77,14 +79,15 @@
       {#each links as { href, text, description }}
         <a
           class="
-            py-micro 
-            pl-xx-small 
-            pr-medium 
-            text-p-small 
+            py-micro
+            pl-xx-small
+            pr-medium
+            text-p-small
             rounded-lg
             border
             border-transparent
 		      "
+          aria-selected={false}
           on:click={() => (shown = false)}
           {href}
         >

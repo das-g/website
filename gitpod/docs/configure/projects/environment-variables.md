@@ -144,3 +144,11 @@ https://gitpod.io/#var=value,var2=value2/https://github.com/my-org/repo-to-work-
 
 The values are [URL encoded](https://www.w3schools.com/tags/ref_urlencode.asp) to allow any non-ascii characters in values.
 In case of a conflict, e.g. in the example above if the user already had a variable `var2` set, the user's value would be used.
+
+## Exporting all the Gitpod environment variables that you created
+
+You can run the following command in your Gitpod Workspace terminal to save your environment variables (which you have configured in [Gitpod Environment Variables](https://gitpod.io/variables)) in a different file (e.g.: gitpod.env):
+
+```bash
+gp env > gitpod.env
+```

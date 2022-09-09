@@ -77,6 +77,11 @@
       valid: false,
       value: "",
     },
+    number: {
+      el: null,
+      valid: true,
+      value: "",
+    },
     message: {
       el: null,
       valid: false,
@@ -125,6 +130,15 @@
       "message_submitted",
       {
         subject: formData.selectedSubject.value,
+        infrastructure:
+          formData.selectedSubject.value == selfHostingSubject
+            ? formData.cloudInfrastructure.value
+            : undefined,
+        full_name: formData.name.value,
+        email: formData.workEmail.value,
+        company_website: formData.companyWebsite.value,
+        company_engineers: formData.noOfEngineers.value,
+        message: formData.message.value,
       },
       true
     );
@@ -152,6 +166,7 @@
             ? `Total number of engineers: ${formData.noOfEngineers.value}`
             : ""
         }
+        ${formData.number.value ? `Phone Number: ${formData.number.value}` : ""}
         Message: ${formData.message.value}
       `,
     };
@@ -202,10 +217,6 @@
 </script>
 
 <style lang="postcss">
-  .h3 {
-    @apply mb-small;
-  }
-
   .link {
     @apply underline;
   }
@@ -379,6 +390,25 @@
                         formData.noOfEngineers.el.checkValidity();
                     }}
                     options={noOfEngineers}
+                  />
+                </div>
+              </InputsHalf>
+              <InputsHalf>
+                <div>
+                  <Input
+                    label="Phone number"
+                    hasError={isFormDirty && !formData.companyWebsite.valid}
+                    id="phone-number"
+                    name="phone-number"
+                    bind:value={formData.number.value}
+                    bind:element={formData.number.el}
+                    on:change={() => {
+                      formData.number.valid =
+                        formData.number.value &&
+                        formData.number.el.checkValidity();
+                    }}
+                    type="tel"
+                    autocomplete="tel"
                   />
                 </div>
               </InputsHalf>

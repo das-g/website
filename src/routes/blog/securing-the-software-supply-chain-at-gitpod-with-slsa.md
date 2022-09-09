@@ -184,7 +184,7 @@ Lastly, the materials section describes the inputs to the build. In this example
 We publish the provenance bundle as part of the [versions and installer images](https://werft.gitpod-dev.com/job/gitpod-build-main.3532). Those files can be extracted using the [oci-tool](https://github.com/csweichel/oci-tool), or using a container runtime. See below for a demo of this process:
 
 <p align="center">
-    <iframe width="640" height="360" src="https://www.loom.com/embed/49cc504d3ffb436f8680ab0030eb8896" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe title="loom video" width="640" height="360" src="https://www.loom.com/embed/49cc504d3ffb436f8680ab0030eb8896" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </p>
 
 In addition to just printing it and looking at the provenance data manually, you can use leeway to make assertions against this data. For example:

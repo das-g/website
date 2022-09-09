@@ -19,7 +19,7 @@ Still, you may wish to customize Gitpod, or to extend it with new features. You 
 
 To install a VS Code extension in Gitpod, simply go to the left vertical menu, and open the Extensions view. There you can search for an extension and install it with one click.
 
-For [VS Code Web](vscode-browser), we use the [Open VSX](https://open-vsx.org/) registry. If you can't find an extension you use in your local VS Code, please read the "[Where do I find extensions?](#where-do-i-find-extensions)" section below.
+For [VS Code Browser](vscode-browser), we use the [Open VSX](https://open-vsx.org/) registry. If you can't find an extension you use in your local VS Code, please read the "[Where do I find extensions?](#where-do-i-find-extensions)" section below.
 
 If the extension is helpful to anyone who works on the project, you can add it to the `.gitpod.yml` configuration file so that it gets installed for anyone who works on the project. To do that:
 
@@ -60,7 +60,7 @@ You can view all pre-installed extensions by navigating to VS Code's Extensions 
 
 ## Where do I find extensions?
 
-If you cannot find an extension by searching in Gitpod using [VS Code Web](vscode-browser), it probably means that the extension hasn't been added to the [Open VSX](https://open-vsx.org/) registry yet.
+If you cannot find an extension by searching in Gitpod using [VS Code Browser](vscode-browser), it probably means that the extension hasn't been added to the [Open VSX](https://open-vsx.org/) registry yet.
 
 In that case, please reach out to the extension author and politely ask them to publish their extension to the vendor-neutral, open source Open VSX registry. The "[How to Publish an Extension](https://github.com/eclipse/openvsx/wiki/Publishing-Extensions)" docs provide step-by-step instructions.
 

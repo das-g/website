@@ -16,7 +16,7 @@
     secondary:
       "text-black bg-salmon hover:bg-salmon-hover dark:text-black focus:bg-salmon-hover",
     tertiary:
-      "bg-important dark:bg-primary text-white dark:text-black hover:text-white hover:bg-less-important dark:hover:bg-quaternary",
+      "bg-important dark:bg-primary text-white dark:text-black hover:text-white hover:bg-less-important focus:text-white dark:hover:bg-quaternary",
     cta: "text-black bg-sand-dark dark:bg-light-black dark:text-sand-dark hover:bg-sand-dark-hover hover:dark:bg-light-black-hover focus:dark:bg-light-black-hover focus:bg-sand-dark-hover",
     gray: "bg-sand-dark dark:bg-light-black text-important dark:text-important hover:bg-sand-dark-hover focus:bg-sand-dark-hover focus:dark:bg-light-black-hover hover:text-important focus:text-important dark:hover:bg-light-black-hover",
     white:
@@ -54,6 +54,7 @@
   "
   class:text-center={textAlign === "center"}
   class:text-left={textAlign === "left"}
+  target={href.includes("https://") ? "_blank" : ""}
   {...$$restProps}
 >
   <slot name="image" />

@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-  const url = "/api/banner";
+  const url = "/api/layout";
   export const load: Load = async ({ fetch }) => {
     const res = await fetch(url, {
       headers: { "content-type": "application/json" },
@@ -8,7 +8,8 @@
       const data = await res.clone().json();
       return {
         props: {
-          bannerData: data,
+          bannerData: data.banner,
+          stars: data.stars,
         },
       };
     }
@@ -35,15 +36,19 @@
   import Cookies from "js-cookie";
   import { cookies } from "$lib/constants";
   import ContactWidget from "$lib/components/contact-widget.svelte";
+  import { key as starsKey } from "$lib/components/main-nav/github-stars.svelte";
 
   export let bannerData: BannerData;
 
+  export let stars: number;
+
+  setContext(starsKey, stars);
   setContext(key, bannerData);
 
   onMount(() => {
     Cookies.set(cookies.NECESSARY, "true", { expires: 365 });
 
-    if (Cookies.get(cookies.ANALYTICAL) !== undefined && !isEurope()) {
+    if (Cookies.get(cookies.ANALYTICAL) !== "false" && !isEurope()) {
       Cookies.set(cookies.ANALYTICAL, "true", { expires: 365 });
     }
 

@@ -1,6 +1,6 @@
 <style lang="postcss">
   a {
-    @media (min-width: 1090px) {
+    @media (min-width: 1190px) {
       @apply hidden;
     }
   }
@@ -10,5 +10,5 @@
   href="https://gitpod.io/workspaces/"
   on:click
   data-analytics={`{"context":"dashboard"}`}
-  class="hidden sm:inline no-underline text-sm mr-micro">Sign Up</a
+  class="hidden sm:inline no-underline text-sm">Sign Up</a
 >

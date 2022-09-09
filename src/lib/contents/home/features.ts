@@ -1,4 +1,4 @@
-import type { Feature } from "$lib/types/feature.type";
+import type { Feature, verticalFeature } from "$lib/types/feature.type";
 import { terminalSource, linuxSource } from "../terminal";
 // @ts-ignore
 import Workspaces from "$lib/components/workspaces.svelte";
@@ -94,6 +94,17 @@ export const otherFeatures: Feature[] = [
     },
   },
 ];
+
+export const carbonNeutralFeature: verticalFeature = {
+  title: "Code in a carbon-neutral workspace",
+  paragraph:
+    "Not only is Gitpod more resource-efficient but it also runs on 100% carbon-neutral cloud servers (GCP). All the power, with a lower cost to our planet.",
+  moreButton: {
+    href: "https://cloud.google.com/sustainability",
+    text: "More on GCP carbon neutral",
+    type: "secondary",
+  },
+};
 
 export const secondaryFeatures: Card[] = [
   {

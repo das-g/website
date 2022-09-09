@@ -36,7 +36,7 @@
 
   // Code blocks
   :not(pre) > code {
-    padding: 0.3rem 0.5rem;
+    padding: 0.15rem 0.5rem;
     border-radius: 0.75rem;
     background: var(--brand-light);
     white-space: break-spaces;
@@ -151,8 +151,12 @@ body.dark {
   }
 
   thead {
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--divider);
     border-color: var(--divider);
+
+    th {
+      border-color: var(--light-grey);
+    }
   }
 }
 

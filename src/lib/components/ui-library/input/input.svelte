@@ -46,6 +46,17 @@
     class="bg-card text-important box-border w-full rounded-lg py-2 px-4 border-[1px] border-divider placeholder:text-body {className}"
     type="email"
     {...$$restProps}
+  />
+{:else if type === "tel"}
+  <input
+    {id}
+    class:error={hasError}
+    on:change
+    bind:value
+    bind:this={element}
+    class="bg-card text-important box-border w-full rounded-lg py-2 px-4 border-[1px] border-divider placeholder:text-body {className}"
+    type="tel"
+    {...$$restProps}
   />{/if}
 {#if hasError}
   <legend class:error={hasError} class="text-xs block mt-1 mb-2">

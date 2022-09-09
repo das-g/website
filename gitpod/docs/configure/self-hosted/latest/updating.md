@@ -42,4 +42,6 @@ In this strategy, you run the newest version of Gitpod on a secondary (staging) 
 
 ### Live update (No downtime, higher risk, low cost)
 
+> **Important:** Updating Gitpod while workspaces are running can lead to data loss in certain edge cases. Please keep this in mind when utilising this update strategy.
+
 In this strategy, an update is applied to the live cluster hosting your production Gitpod installation. This incurs no downtime and no complexities around having to install Gitpod on two clusters, however, if something does go wrong you will need to be able to roll back (this is possible via the installation admin console). This strategy may not work if there are breaking changes that need to be addressed by you from one release to the next (see [Update Guides](../latest/upgrade-guides)).

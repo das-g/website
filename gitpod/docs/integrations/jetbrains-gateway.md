@@ -80,7 +80,7 @@ You can also start, and connect to Gitpod workspaces directly from JetBrains Gat
     <figcaption>Opening a JetBrains IDE from Gateway</figcaption>
 </figure>
 
-### Configuring the JetBrains Gateway Host
+## Configuring the JetBrains Gateway Host
 
 By default the JetBrains Gateway Gitpod plugin points to `gitpod.io` as the default host for listing, opening and managing Gitpod workspaces.
 
@@ -96,7 +96,7 @@ If you're using Gitpod [Self-Hosted](/docs/self-hosted/latest), to update the ho
     <figcaption>Setting the Gitpod host in the JetBrains Gateway plugin (OSX)</figcaption>
 </figure>
 
-### Configuring JetBrains Gateway Networking
+## Configuring JetBrains Gateway Networking
 
 The following diagram details how the JetBrains Gateway client connects and communicates with Gitpod workspaces, for situations such as configuring corporate networking requirements.
 

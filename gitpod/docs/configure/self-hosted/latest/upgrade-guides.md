@@ -10,7 +10,18 @@ title: Upgrade Guides and Breaking Changes
 
 # Upgrade Guides and Breaking Changes
 
-This page informs you if there are specific considerations to take into account when upgrading to a specific version. If no breaking changes and thus specific recommendations when updating are mentioned here, please follow the normal upgrade procedure mentioned on the [Updating your Gitpod Installation](../latest/updating) page.
+This page informs you if there are specific considerations to take into account when upgrading to a specific version. If no breaking changes and thus specific recommendations when updating are mentioned here (or if they do not apply to you), please follow the normal upgrade procedure mentioned on the [Updating your Gitpod Installation](../latest/updating) page.
+
+## 2022.08
+
+> There is no expected impact from these changes if using KOTS. These are documented for transparency purposes only.
+> **Custom labels from the pod selector labels removed**
+
+[11954](https://github.com/gitpod-io/gitpod/pull/11954): remove custom labels from the pod selector labels. This removes this [limitation](https://www.gitpod.io/docs/self-hosted/latest/advanced/customization#limitations) so this is a long-term improvement. The impact of this should be handled transparently for you by the KOTS installer.
+
+**Usage of PodSecurityPolicies removed**
+
+[12336](https://github.com/gitpod-io/gitpod/pull/12336): Removal of PodSecurityPolicies. These were deprecated from Kubernetes 1.21 and removed from 1.25. This allows Gitpod to run on Kubernetes 1.25+, which is scheduled for imminent release. If you have PodSecurityPolicies enabled on your cluster, we suggest you disable them as soon as possible. If an installation is deployed to a cluster with PSPs enabled, you will need to add `experimental.common.usePodSecurityPolicies = true` to a [config-patch file](./config-patches) - however, do note that this is deprecated and exists to ease the transition away from PSPs.
 
 ## 2022.07
 

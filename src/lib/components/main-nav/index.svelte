@@ -8,10 +8,11 @@
   import DemoButton from "./demo-button.svelte";
   import DashboardButton from "./dashboard-button.svelte";
   import Logo from "../svgs/logo.svelte";
-  import { showHideOverflowY } from "$lib/utils/helpers";
   import SignUpButtonTablet from "./sign-up-button-tablet.svelte";
   import AnnouncementBanner from "$lib/components/banners/announcement.svelte";
   import SkipToContent from "../skip-to-content.svelte";
+  import GithubStars from "./github-stars.svelte";
+
   import Dropdown from "./dropdown.svelte";
   // import { session } from "$app/stores";
 
@@ -48,7 +49,7 @@
     backdrop-filter: saturate(0.5) blur(5px);
   }
 
-  @media (min-width: 1090px) {
+  @media (min-width: 1190px) {
     .wrapper {
       @apply h-20;
     }
@@ -59,16 +60,10 @@
     }
   }
 
-  button {
-    @apply outline-none py-2;
-
-    @media (min-width: 1090px) {
-      @apply py-1;
+  .stars {
+    @media (min-width: 1190px) {
+      @apply hidden;
     }
-  }
-
-  button::-moz-focus-inner {
-    @apply border-0;
   }
 </style>
 
@@ -79,24 +74,21 @@
   class="fixed z-40 mx-auto w-full border-b border-solid border-transparent border-t-0"
   class:scrolled-out={scroll > 0}
   class:bg-open-state={$menuState}
+  aria-label="Main"
 >
   <SkipToContent />
   <AnnouncementBanner />
   <div
     class="wrapper flex items-center justify-between mx-auto h-16 md:h-20 px-micro md:px-x-small"
   >
-    <button
+    <a
       on:contextmenu|preventDefault={() => goto("/media-kit")}
       aria-label="Home"
-      on:click={() => {
-        $menuState = !menuState;
-        showHideOverflowY(false);
-        goto("/");
-      }}
+      href="/"
     >
       <Logo class="h-8 w-28 lgx:h-10 lgx:w-32" />
-    </button>
-    <div
+    </a>
+    <ul
       class="nav-items mx-auto hidden px-2 space-x-6 items-center md:space-x-12"
     >
       <NavItem
@@ -105,7 +97,9 @@
           label: "Docs",
         }}
       />
-      <Dropdown />
+      <li>
+        <Dropdown />
+      </li>
       <NavItem
         navItem={{
           href: "/for/enterprise",
@@ -125,8 +119,9 @@
           label: "Pricing",
         }}
       />
-    </div>
+    </ul>
     <div class="login-wrapper items-center hidden space-x-x-small">
+      <GithubStars />
       {#if isLoggedIn}
         <DashboardButton />
       {:else}
@@ -134,7 +129,10 @@
         <DemoButton />
       {/if}
     </div>
-    <div class="flex items-center">
+    <div class="flex items-center space-x-micro">
+      <div class="stars">
+        <GithubStars />
+      </div>
       {#if !$menuState && !isLoggedIn}
         <SignUpButtonTablet />
       {/if}

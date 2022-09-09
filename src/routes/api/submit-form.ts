@@ -126,6 +126,8 @@ export const post: RequestHandler = async ({ request }) => {
       email.data.company,
       email.data.noOfEngineers,
       email.data.cloudInfrastructure,
+      email.data.referrer,
+      email.data.number,
       email.data.message,
     ];
 

@@ -8,8 +8,10 @@
   import CalloutSecondary from "$lib/components/callout-secondary.svelte";
   import CompareFeatures from "$lib/components/jetbrains-space/compare-features.svelte";
   import OpenGraph from "$lib/components/open-graph.svelte";
-  import SectionFeatures from "$lib/components/section-features.svelte";
   import Feature from "$lib/components/feature.svelte";
+  import FeatureBoxes from "$lib/components/vs/feature-boxes.svelte";
+  import FeatureBox from "$lib/components/feature-box.svelte";
+  import Section from "$lib/components/section.svelte";
 </script>
 
 <style lang="postcss">
@@ -52,7 +54,11 @@
   }}
   btnPrimary={{
     href: "https://www.gitpod.io/docs/ides-and-editors/jetbrains-gateway",
-    text: "Try Now",
+    text: "Try now",
+  }}
+  btnSecondary={{
+    href: "/contact/sales?get-a-demo",
+    text: "Get a demo",
   }}
 />
 
@@ -76,7 +82,13 @@
   />
 </div>
 
-<SectionFeatures title="View the differences" {features} type="box" />
+<Section>
+  <FeatureBoxes title="View the Features">
+    {#each features as feature}
+      <FeatureBox {feature} />
+    {/each}
+  </FeatureBoxes>
+</Section>
 
 <CompareFeatures />
 

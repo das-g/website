@@ -11,7 +11,7 @@ title: Troubleshooting
 
 If you cannot find your issue here or in the documentation, please contact Gitpod via our [Support page](/support).
 
-## Gitpod logs in VS Code Web and Desktop
+## Gitpod logs in VS Code Browser and Desktop
 
 These logs contain information about the workspace, the session, and the Visual Studio Code environment. They are useful for diagnosing connection issues and other unexpected behavior.
 

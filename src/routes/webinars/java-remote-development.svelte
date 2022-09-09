@@ -53,7 +53,7 @@
 
 <Articles
   title="Additional resources"
-  text="If you are curious to learn more on remote development, 
+  text="If you are curious to learn more on remote development,
   have a read through these blog posts."
   textMaxW="max-w-2xl"
   slugs={[

@@ -151,6 +151,54 @@ Which should return something like:
 ]
 ```
 
+Store this hosted zone in a variable for later use by external-dns and cert-manager:
+
+```bash
+HOSTED_ZONE_ID="$(aws route53 list-hosted-zones-by-name \
+    --dns-name "$DOMAIN_NAME." \
+    --query "HostedZones[0].Id" \
+    --output json \
+    --out text)"
+```
+
+Then install external-dns so that DNS records will be automatically created for Gitpod services. This can be ignored if you are managing DNS records yourself.
+
+<!--
+external-dns helm chart notes:
+
+- `eksctl` is responsible for creating the external-dns Kubernetes service account and attaching
+  an AWS IAM role to to the external-dns service account. The helm chart assumes that the service
+  account has been pre-created (`--set serviceAccount.create=false`)
+- For security purposes external-dns runs with a [UID of 65534](https://github.com/kubernetes-sigs/external-dns/blob/v0.12.2/Dockerfile#L35-L37)
+- EKS IAM roles for service accounts expose AWS token files into the container; as external-dns
+  is running as a non-root user the `fsGroup` setting must be set to change the ownership of the
+  AWS token file to match the UID of the external-dns process.
+
+See also: https://aws.amazon.com/premiumsupport/knowledge-center/eks-set-up-externaldns/
+-->
+
+```bash
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm upgrade \
+    --atomic \
+    --cleanup-on-fail \
+    --create-namespace \
+    --install \
+    --namespace external-dns \
+    --reset-values \
+    --wait \
+    --set provider=aws \
+    --set aws.zoneType=public \
+    --set txtOwnerId="$HOSTED_ZONE_ID" \
+    --set "domainFilters[0]=$DOMAIN_NAME" \
+    --set serviceAccount.create=false \
+    --set serviceAccount.name=external-dns \
+    --set podSecurityContext.fsGroup=65534 \
+    external-dns \
+    bitnami/external-dns
+```
+
 With Route53 created, you can now proceed to install cert-manager. Cert-manager is needed for Gitpod's internal networking even if you are managing DNS yourself.
 
 </div>

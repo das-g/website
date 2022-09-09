@@ -2,6 +2,7 @@
 import awsSvelte from "$lib/components/svgs/aws.svelte";
 // @ts-ignore
 import githubMarkSvelte from "$lib/components/svgs/github-mark.svelte";
+import type { verticalFeature } from "$lib/types/feature.type";
 import type {
   FeatureTable,
   FeatureTableColumn,
@@ -314,6 +315,16 @@ export const codespacesColumn: FeatureTableColumn = {
       ],
     },
   ],
+};
+
+export const automationFirstFeature: verticalFeature = {
+  title: "Automation-first",
+  paragraph:
+    "Simply add your build command into a .gitpod.yml file and let Gitpod do the heavy-lifting. Once you’ve experienced the freedom of ephemeral workspaces, you’ll never want to go back to long-lived manually-maintained environments.",
+  moreButton: {
+    href: "https://gitpod.io/workspaces/",
+    text: "Try Now",
+  },
 };
 
 export const codespacesComparison: FeatureTable = {

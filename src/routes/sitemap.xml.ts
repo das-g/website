@@ -10,6 +10,7 @@ export const get: RequestHandler = async () => {
       const filters = [
         "/src/routes/index.svelte",
         "_",
+        "404",
         "slug]",
         "title]",
         "src/routes/docs/quickstart",

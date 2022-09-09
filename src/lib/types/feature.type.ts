@@ -1,9 +1,15 @@
 import type { Lottie } from "./lottie.type";
 
+interface moreButton {
+  text: string;
+  href: string;
+  type?: "secondary" | "tertiary";
+}
+
 export type Feature = {
   title: string;
   paragraph: string;
-  moreButton?: { text: string; href: string; type?: "secondary" | "tertiary" };
+  moreButton?: moreButton;
   secondaryButton?: { text: string; href: string };
   featureList?: string[];
   image?: {
@@ -32,5 +38,6 @@ export type Feature = {
 export type verticalFeature = {
   title: string;
   paragraph: string;
+  moreButton?: moreButton;
   previewComponent?: any;
 };

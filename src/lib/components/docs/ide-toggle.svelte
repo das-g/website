@@ -5,7 +5,7 @@
 
   export let items: comparisonItem[] = [
     {
-      mobileTitle: "VS Code Web",
+      mobileTitle: "VS Code Browser",
       title: "VS Code Browser",
       value: 1,
       slotName: "vscodebrowser",
@@ -90,8 +90,6 @@
         break;
     }
   };
-
-  export let id = "ide-toggle";
 </script>
 
 <style lang="postcss">

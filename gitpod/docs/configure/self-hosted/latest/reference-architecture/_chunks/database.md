@@ -10,6 +10,8 @@ Gitpod uses a **relational database management system** to store structural data
 
 In this reference architecture, we use managed MYSQL databases provided by cloud providers.
 
+> Gitpod requires your database instance to have a database named `gitpod` in it.
+
 <CloudPlatformToggle id="cloud-platform-toggle-database">
 <div slot="gcp">
 

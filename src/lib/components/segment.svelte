@@ -10,7 +10,16 @@
   }
 
   const allowsAnalytics = () => {
-    return !!Cookies.get(cookies.ANALYTICAL);
+    //isDoNotTrack is adopted from Segment snippet, see https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/quickstart/#step-2-add-the-segment-snippet
+    const isDoNotTrack = () =>
+      typeof navigator !== "undefined" &&
+      (parseInt(navigator.doNotTrack) === 1 ||
+        parseInt(window.doNotTrack) === 1 ||
+        // @ts-ignore
+        parseInt(navigator.msDoNotTrack) === 1 ||
+        navigator.doNotTrack === "yes");
+
+    return !!Cookies.get(cookies.ANALYTICAL) && !isDoNotTrack();
   };
 
   export const trackEvent = (
@@ -204,14 +213,6 @@
       ? "5aJzy2ASNbqx8I0kwppRflDZpL7pS1GO" // Website Production
       : "Xe5zR3MbnyxHsveZr4HvrY35PL9iT0EH"; // Website Staging
 
-  const isDoNotTrack = () =>
-    typeof navigator !== "undefined" &&
-    (parseInt(navigator.doNotTrack) === 1 ||
-      parseInt(window.doNotTrack) === 1 ||
-      // @ts-ignore
-      parseInt(navigator.msDoNotTrack) === 1 ||
-      navigator.doNotTrack === "yes");
-
   onMount(async () => {
     // Override anonymous ID in local storage if it exists in Cookie
     // This is done in order to guarantee the same anonymous_id is used by dashboard and website
@@ -291,14 +292,7 @@
     // Add a version to keep track of what's in the wild.
     analytics.SNIPPET_VERSION = "4.13.2";
 
-    if (isDoNotTrack()) {
-      analytics.initialize = true;
-      // All tracking calls will only trigger a stub.
-    } else {
-      // Load Analytics.js with your key, which will automatically
-      // load the tools you've enabled for your account. Boosh!
-      analytics.load(writeKey);
-    }
+    analytics.load(writeKey);
 
     // Track first page
     trackPage({});

@@ -55,7 +55,7 @@
 />
 <article class="max-w-[94vw] mt-20 mx-auto mb-8 leading-7 lg:w-[50rem]">
   <h1>Privacy Policy</h1>
-  <p class="mb-4">Effective Date: 9th of June, 2022</p>
+  <p class="mb-4">Effective Date: 31st of August, 2022</p>
   <p class="mb-4">
     Below we provide you with an overview of what data we collect for what
     purpose and how we ensure the protection of the data <a href="#short"
@@ -317,6 +317,17 @@
         a. GDPR or fulfilling your request based on Art. 6 (1) b. GDPR.
       </p>
 
+      <p class="mb-4" id="front">
+        <strong> Use of Front: </strong> The mail provider
+        <strong>"Front"</strong> by Frontapp, Inc., 1455 Market St Fl 19, San
+        Francisco, California, 94102, United States receives and processes on
+        our behalf the data necessary to manage client inquiries and emails. For
+        more information refer to
+        <a href="https://front.com/privacy-policy">
+          https://front.com/privacy-policy</a
+        >.
+      </p>
+
       <h3 class="mx-0 my-4">Emails and Newsletters</h3>
       <p class="mb-4">
         With the newsletter we inform the user about the Website, our Service
@@ -398,6 +409,26 @@
         For further information on the cookies in use by the Website and the
         Service please see our separate
         <a href="http://www.gitpod.io/cookies">Cookies Policy. </a>
+      </p>
+
+      <h3 class="mx-0 my-4">Salesforce</h3>
+      <p class="mb-4">
+        We use Salesforce, provided by Salesforce, Inc. as our Customer
+        Relationship Management System, which is also integrated with the
+        contact forms on this website. The information stored in this system
+        includes contact data such as your name, email or phone number and
+        associated organisation (where applicable). You can also find more
+        information in Salesforce's privacy policy: <a
+          href="https://www.salesforce.com/eu/company/privacy/full_privacy/"
+          >https://www.salesforce.com/eu/company/privacy/full_privacy/</a
+        >
+      </p>
+
+      <h3 class="mx-0 my-4">Front</h3>
+      <p class="mb-4">
+        We use the services by Frontapp, Inc. for managing client inquiries and
+        emails. For details on Front please refer to the
+        <a href="#front">respective section above</a>.
       </p>
 
       <h3 class="mx-0 my-4">Customer.io</h3>
@@ -732,6 +763,17 @@
         party providers as set forth in this privacy policy. For details please
         refer to <a href="#details-III">III</a> above as well as
         <a href="#details-VI">VI</a> and <a href="#details-VII">VIII</a> below.
+      </p>
+
+      <p class="mb-4">
+        When registering for a Gitpod account, we use Twilio Verify, provided by
+        Twilio, Inc. as our phone number and user account verification service
+        to detect fraud and abuse, which is integrated with the SaaS version of
+        our product. The information processed in this system includes your
+        phone number. For more information, you can refer to Twilio’s privacy
+        policy at <a href="https://www.twilio.com/legal/privacy"
+          >https://www.twilio.com/legal/privacy</a
+        >
       </p>
 
       <p class="mb-4">

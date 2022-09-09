@@ -117,6 +117,7 @@
     href: "/screencasts",
     text: "View all screencasts",
   }}
+  isGetADemoLinkShown={false}
 />
 
 <Explore />

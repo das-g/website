@@ -36,6 +36,7 @@ export declare interface Feedback {
   emotion: number;
   note?: string;
   url: string;
+  email?: string;
   type: "docs" | "guides";
 }
 

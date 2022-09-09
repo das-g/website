@@ -20,7 +20,7 @@
       }
     };
 
-    let query = window.matchMedia("(min-width: 1090px)");
+    let query = window.matchMedia("(min-width: 1190px)");
     query.addEventListener("change", handleTabletChange);
   });
 
@@ -55,7 +55,7 @@
   }
 
   /* Always make sure to keep the media query intact with one specified above in the matchMedia call. */
-  @media (min-width: 1090px) {
+  @media (min-width: 1190px) {
     .nav-items {
       @apply hidden;
     }

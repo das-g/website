@@ -159,11 +159,35 @@ jetbrains:
 
 For more detailed information on JVM options, refer to [Common JVM Options](https://www.jetbrains.com/help/__productDocCode__/tuning-the-ide.html#common-jvm-options) from JetBrains documentation.
 
-## FAQ
+## Workspace performance
+
+When using a Gitpod workspace you might experience performance issues caused by:
+
+- An application using more resources than expected
+- Resource consumption in adjacent containers running on the workspace node.
+
+In your JetBrains IDE within the JetBrains Gateway [Backend Control Center](https://www.jetbrains.com/help/idea/work-inside-remote-project.html#control_center) you can find two metrics relating to your running workspace: `Workspace CPU` and `Workspace Memory`.
+
+The remaining metrics you can find in the Backend Control Center regarding the node that your workspace is running on, and not the workspace itself.
+
+> **Note:** Performance information shown in the Backend Control Center is the same as the information that is shown when running the command [`gp top`](/docs/command-line-interface#top) in your workspace, see the [Command Line Interface](/docs/command-line-interface) documentation for more.
+
+![jetbrains performance](/images/jetbrains-gateway/jetbrains-performance-center.png)
+
+## FAQs
 
 - For the questions about supported IDEs and Editors in Gitpod, refer to [FAQs](/docs/ides-and-editors/faqs).
 
-- For the general questions about JetBrains Remote Development, refer to refer to <a href="https://www.jetbrains.com/help/__productDocCode__/faq-about-remote-development.html" target="_blank">{title} FAQ</a>.
+- For the general questions about JetBrains Remote Development, refer to refer to the general IDE <a href="https://www.jetbrains.com/help/__productDocCode__/faq-about-remote-development.html" target="_blank">{title} FAQ</a>.
+
+### Are there any JetBrains optimizations I can make if my workspace is slow?
+
+Debugging performance can be challenging, as performance issues can depend on many factors such as how Gitpod is configured (if you're operating Gitpod on Self-Hosted). However, there are some ways you can gather performance information and optimise your JetBrains IDE setup with Gitpod:
+
+1. Firstly, to gather information on performance, you can [view workspace performance metrics from within the IDE](/docs/ides-and-editors/intellij#workspace-performance) in the Backend Control Center, or by using [`gp top`](/docs/command-line-interface#top).
+2. You may also want to try adjusting the Max Heap Size allocated to the JetBrains Backend in the Settings tab of the Backend Control Center. If updating this setting helps your performance, you can set the `vmoptions` value for your JetBrains IDE in your `.gitpod.yml`.
+
+> **Note:** If the performance metrics show that your workspace is hitting its resource limits, and you are using Gitpod Self-Hosted, it might make sense to consider changing the resource configuration for your workspaces. This can be done via a [config-patch](/docs/self-hosted/latest/config-patches). Configuring workspace resources is not yet available on SaaS.
 
 ## Troubleshooting
 

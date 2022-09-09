@@ -67,7 +67,7 @@ This loading procedure will be repeated each time you create a new Gitpod Worksp
 The following video shows an example of how to setup Dotfiles, by configuring [`deno`](https://deno.land/) in our Gitpod Workspace.
 
 <p align="center">
-    <iframe width="640" height="360" src="https://www.loom.com/embed/d7185cfb6ca54fdeb521073057dc2715" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe title="loom" width="640" height="360" src="https://www.loom.com/embed/d7185cfb6ca54fdeb521073057dc2715" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </p>
 
 > **Important:** Your installation script should be executable. Enter `chmod 755 <install-script-name>.sh` before committing and pushing it to your dotfiles repository.

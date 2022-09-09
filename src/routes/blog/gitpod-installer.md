@@ -61,11 +61,11 @@ We often merge the infrastructure and application concerns when we think of requ
 
 ### Scalability within the Gitpod organisation
 
-The Gitpod Installer sits horizontally across all teams at Gitpod and built it with scalability across teams in mind. The Installer comprises building blocks called components that are strongly cohesive and independent of others. Each component is responsible for managing a single service in the Gitpod installation. Teams take complete ownership of their respective components and are free to evolve along with their services.
+The Gitpod Installer sits horizontally across all teams at Gitpod and it was built with scalability across teams in mind. The Installer comprises building blocks called components that are strongly cohesive and independent of others. Each component is responsible for managing a single service in the Gitpod installation. Teams take complete ownership of their respective components and are free to evolve along with their services.
 
 ## Technical differences from Helm charts
 
-While developing the Gitpod Installer, we took a call to be opinionated at times to build something that just works. This allows us to provide our experience of running Gitpod SaaS to owners of self-hosted implementations.. Being opinionated provides stability and keeps everything on a standards track. It reaps immense benefits while troubleshooting when something goes wrong. We enforced these decisions as validation constraints for the Gitpod Installer at config and cluster levels. These are some of the decisions we took,
+While developing the Gitpod Installer, we made the decision to be opinionated at times to build something that just works. This allows us to provide our experience of running Gitpod SaaS to owners of self-hosted implementations. Being opinionated provides stability and keeps everything on a standards track. It reaps immense benefits while troubleshooting when something goes wrong. We enforced these decisions as validation constraints for the Gitpod Installer at config and cluster levels. These are some of the decisions we took,
 
 1. There can be only one installation per cluster which is due to
    - Fixed node affinities for services.

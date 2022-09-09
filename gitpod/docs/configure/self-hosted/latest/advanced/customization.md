@@ -9,9 +9,9 @@ title: Applying custom annotations, labels and environment variables
 
 # Applying custom annotations, labels and environment variables
 
-In this guide, we expect you to have a cluster up and running that [meets the requirements](../cluster-set-up) and has the [required components](../required-components) installed and configured (at least cert-manager is needed).
+In this guide, we expect you to have a cluster up and running that [meets the requirements](../cluster-requirements) and has the [required components](../required-components) installed and configured (at least cert-manager is needed).
 
-This guide assumes that you are using our default installation method from our [getting started guide](../getting-started).
+This guide assumes that you are using our default installation method from our [installation guide](../installing-gitpod).
 
 ## Rationale
 
@@ -143,6 +143,8 @@ customization:
 ```
 
 ## Limitations
+
+> This limitation has been removed as of [`2022.08.0`](https://github.com/gitpod-io/gitpod/releases/tag/2022.08.0).
 
 Labels are immutable on some Kubernetes resources, such as `Deployments`, `DaemonSets` and `StatefulSets`.
 

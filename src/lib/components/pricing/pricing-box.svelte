@@ -22,10 +22,6 @@
 </script>
 
 <style lang="postcss">
-  .h1 {
-    margin-bottom: 0.25rem;
-  }
-
   .learn-more {
     @apply underline;
   }

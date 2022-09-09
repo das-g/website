@@ -40,7 +40,8 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/60_dashboard /docs/dashboard 301
 /docs/70_subscription /docs/subscription 301
 /docs/80_release_notes /docs/release-notes 301
-/docs/bash-in-gitpod /docs/languages/bash 301
+/docs/bash-in-gitpod /docs 301
+/docs/languages/bash /docs 301
 /docs/changelog /changelog 301
 /docs/configuration /docs/configure 301
 /docs/cpp-in-gitpod /docs/languages/cpp 301
@@ -114,3 +115,6 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /customers/bruno-rocha /for/education/bruno-rocha 301
 /docs/self-hosted/latest/reference-architecture/production-ready-single-cluster /docs/self-hosted/latest/reference-architecture/single-cluster-ref-arch 301
 /docs/self-hosted/latest/support-patches /docs/self-hosted/latest/config-patches 301
+/docs/self-hosted/latest/getting-started#step-4-install-gitpod /docs/self-hosted/latest/installing-gitpod#install-gitpod 301
+/docs/self-hosted/latest/getting-started /docs/self-hosted/latest/installing-gitpod 301
+/docs/self-hosted/latest/resource-configuration /docs/self-hosted/latest/advanced/resource-configuration 301

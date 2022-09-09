@@ -1,4 +1,6 @@
 <script lang="ts">
+  import External from "../svgs/external.svelte";
+
   export let href: string;
   export let icon: string;
   export let size: "small" | "big" = "small";
@@ -14,17 +16,10 @@
     /* Move to markup once src/lib/assets/markdown-commons.scss is gone */
     @apply leading-4;
   }
-
-  :global(body.dark) .link-icon-external {
-    img {
-      filter: invert(80%) grayscale(80%);
-      @apply transition-all duration-200;
-    }
-  }
 </style>
 
 <a
-  class="link-icon-external inline-flex px-4 text-center leading-4 shadow-light dark:shadow-none font-semibold {variant ===
+  class="inline-flex px-4 text-center leading-4 shadow-light dark:shadow-none font-semibold {variant ===
   'white'
     ? 'bg-card'
     : 'bg-sand-dark dark:bg-light-black'} hover:bg-white focus:bg-tertiary dark:hover:bg-light-black-hover {size ===
@@ -35,9 +30,6 @@
   target="_blank"
   rel="noopener"
   ><span class="">{icon}</span>
-  <img
-    class="inline-block my-0 mx-2 h-3 w-3"
-    src="/svg/external.svg"
-    alt="External"
-  /><slot /></a
->
+  <External class="inline-block my-0 mx-2 h-3 w-3" />
+  <slot />
+</a>

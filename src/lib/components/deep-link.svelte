@@ -10,21 +10,15 @@
 {#if headingLevel === "h3"}
   <h3>
     {text}
-    <a
-      href="#{target}"
-      id={target}
-      class="icon icon-link"
-      aria-label="{text} permalink"
-    />
+    <a href="#{target}" id={target} aria-label="{text} permalink"
+      ><span class="icon icon-link" /></a
+    >
   </h3>
 {:else}
   <h2>
     {text}
-    <a
-      href="#{target}"
-      id={target}
-      class="icon icon-link"
-      aria-label="{text} permalink"
-    />
+    <a href="#{target}" id={target} aria-label="{text} permalink"
+      ><span class="icon icon-link" /></a
+    >
   </h2>
 {/if}
