@@ -110,4 +110,4 @@ If you are running a [Self-Hosted](https://www.gitpod.io/self-hosted) Gitpod ins
 1. The installation has the SSH Gateway component configured and deployed
 2. Your networking and firewalls are configured to allow SSH traffic via port `22`.
 
-See the [Self-Hosted Reference Architectures](/docs/self-hosted/latest/reference-architecture) for more.
+See the [Self-Hosted Reference Architectures](/docs/configure/self-hosted/latest/reference-architecture) for more.

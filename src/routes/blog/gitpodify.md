@@ -146,7 +146,7 @@ github:
     addComment: false
 ```
 
-To see all configuration options for the Gitpod app, please visit [the docs](docs/configure/projects/prebuilds).
+To see all configuration options for the Gitpod app, please visit [the docs](/docs/configure/projects/prebuilds).
 
 ## Installing missing packages
 

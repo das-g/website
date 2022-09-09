@@ -8,7 +8,7 @@ title: Install Gitpod Self-Hosted on Amazon Elastic Kubernetes Service (EKS)
   export const load = () => {
     return {
       status: 301,
-      redirect: "/docs/self-hosted/latest/reference-architecture"
+      redirect: "/docs/configure/self-hosted/latest/reference-architecture"
     }
   };
 </script>

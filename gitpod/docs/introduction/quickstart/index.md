@@ -44,7 +44,7 @@ The Gitpod extension adds a Gitpod button on every project and branch across Git
 
 ![Browser Extension](../../../static/images/docs/browser-extension-lense.png)
 
-If you prefer to not install browser extensions then you can use the Gitpod [browser bookmarklet](/docs/browser-bookmarklet) instead.
+If you prefer to not install browser extensions then you can use the Gitpod [browser bookmarklet](/docs/configure/users/browser-bookmarklet) instead.
 
 ## Next Steps
 

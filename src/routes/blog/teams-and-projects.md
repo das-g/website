@@ -26,7 +26,7 @@ So, Gitpod provides your team with consistent, standardized and fully-automated 
 But before you and your team can get there, there have always been a few caveats, a few obstacles standing annoyingly between you and that frictionless dev experience:
 
 - It's complicated to describe your project's setup in the [.gitpod.yml](/docs/config-gitpod-file/) syntax
-- It's complicated to enable [Prebuilds](docs/configure/projects/prebuilds/) for your project—you never know if they're running, or when they fail, and you can't get the build logs anywhere
+- It's complicated to enable [Prebuilds](/docs/configure/projects/prebuilds/) for your project—you never know if they're running, or when they fail, and you can't get the build logs anywhere
 - It's complicated to create a Team in Gitpod and to invite your team members
 
 **All this changes today.**

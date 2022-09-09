@@ -11,7 +11,7 @@ title: Collaboration & Sharing
 
 There are two ways to share your workspaces:
 
-- [Collaboration \& Sharing of Workspaces](#collaboration--sharing-of-workspaces)
+- [Collaboration & Sharing of Workspaces](#collaboration--sharing-of-workspaces)
   - [Sharing Snapshots](#sharing-snapshots)
     - [How To Take a Snapshot URL](#how-to-take-a-snapshot-url)
   - [Sharing Running Workspaces](#sharing-running-workspaces)

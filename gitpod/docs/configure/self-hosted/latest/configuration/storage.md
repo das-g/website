@@ -8,7 +8,7 @@ title: Configure the storage used by your Gitpod installation
   export const load = () => {
     return {
       status: 301,
-      redirect: "/docs/self-hosted/latest"
+      redirect: "/docs/configure/self-hosted/latest"
     }
   };
 </script>

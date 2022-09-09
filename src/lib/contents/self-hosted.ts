@@ -73,7 +73,7 @@ export const communityPlanTableData: FeatureTableColumn = {
   },
   link: {
     label: "Install now",
-    href: "/docs/self-hosted/latest",
+    href: "/docs/configure/self-hosted/latest",
   },
   enteries: [
     {
@@ -407,7 +407,7 @@ export const selfHostedToc: FeatureTableToc[] = [
     data: {
       text: "Prebuilds",
       tooltip:
-        "Enable prebuilds to continuously build your Git branches, so you and your team can always start coding right away. More on <a href='docs/configure/projects/prebuilds'>prebuilds</a>.",
+        "Enable prebuilds to continuously build your Git branches, so you and your team can always start coding right away. More on <a href='/docs/configure/projects/prebuilds'>prebuilds</a>.",
     },
   },
   {
@@ -546,7 +546,7 @@ export const selfhostedFAQ: FAQ = {
     {
       title: "How can I install Self-Hosted?",
       content:
-        '<p> You can either install <strong>Gitpod Self-Hosted</strong> on Google GKE, Amazon EKS, Azure AKS, or K3s. See <a href="/docs/self-hosted/latest">Self-Hosted Docs</a> for more information. </p>',
+        '<p> You can either install <strong>Gitpod Self-Hosted</strong> on Google GKE, Amazon EKS, Azure AKS, or K3s. See <a href="/docs/configure/self-hosted/latest">Self-Hosted Docs</a> for more information. </p>',
     },
     {
       title: "How can I pay?",

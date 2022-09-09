@@ -130,7 +130,7 @@ Gitpod prebuilds allow you to improve it further by indexing before you start a 
 
 To leverage it:
 
-- configure prebuilds for your repository, refer to [Prebuilds](docs/configure/projects/prebuilds);
+- configure prebuilds for your repository, refer to [Prebuilds](/docs/configure/projects/prebuilds);
 - enable indexing for {title} in prebuilds by editing [.gitpod.yml](/docs/config-gitpod-file) in your repository:
 
 ```yaml
@@ -187,7 +187,7 @@ Debugging performance can be challenging, as performance issues can depend on ma
 1. Firstly, to gather information on performance, you can [view workspace performance metrics from within the IDE](/docs/ides-and-editors/intellij#workspace-performance) in the Backend Control Center, or by using [`gp top`](/docs/command-line-interface#top).
 2. You may also want to try adjusting the Max Heap Size allocated to the JetBrains Backend in the Settings tab of the Backend Control Center. If updating this setting helps your performance, you can set the `vmoptions` value for your JetBrains IDE in your `.gitpod.yml`.
 
-> **Note:** If the performance metrics show that your workspace is hitting its resource limits, and you are using Gitpod Self-Hosted, it might make sense to consider changing the resource configuration for your workspaces. This can be done via a [config-patch](/docs/self-hosted/latest/config-patches). Configuring workspace resources is not yet available on SaaS.
+> **Note:** If the performance metrics show that your workspace is hitting its resource limits, and you are using Gitpod Self-Hosted, it might make sense to consider changing the resource configuration for your workspaces. This can be done via a [config-patch](/docs/configure/self-hosted/latest/config-patches). Configuring workspace resources is not yet available on SaaS.
 
 ## Troubleshooting
 

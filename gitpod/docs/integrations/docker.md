@@ -87,7 +87,7 @@ RUN sudo install-packages \
 # Apply user-specific settings
 ```
 
-Once committed and pushed, Gitpod will automatically build this Dockerfile when (or [before](docs/configure/projects/prebuilds)) new workspaces are created.
+Once committed and pushed, Gitpod will automatically build this Dockerfile when (or [before](/docs/configure/projects/prebuilds)) new workspaces are created.
 
 See also [Gero's blog post](/blog/docker-in-gitpod) running through an example.
 

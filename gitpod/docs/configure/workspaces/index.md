@@ -8,3 +8,7 @@ title: Workspaces
 </script>
 
 # {title}
+
+<!-- TODO: Add Some Description here -->
+
+- [Collaboration & Sharing of Workspaces](/docs/configure/workspaces/collaboration)

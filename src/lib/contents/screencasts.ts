@@ -79,7 +79,7 @@ export const screencasts: Screencast[] = [
     youtubeId: "ZtlJ0PakUHQ",
     relatedDocs: [
       {
-        path: "docs/configure/projects/prebuilds",
+        path: "/docs/configure/projects/prebuilds",
         title: "Prebuilt Workspaces",
       },
     ],
@@ -108,7 +108,7 @@ export const screencasts: Screencast[] = [
     youtubeId: "TrY15zN98p8",
     relatedDocs: [
       {
-        path: "/docs/sharing-and-collaboration",
+        path: "/docs/configure/workspaces/collaboration",
         title: "Collaboration & Sharing",
       },
     ],

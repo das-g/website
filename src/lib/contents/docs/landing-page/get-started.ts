@@ -11,7 +11,7 @@ export const getStartedItems: GetStartedItem[] = [
     label: "Watch video",
   },
   {
-    href: "/docs/quickstart",
+    href: "/docs/introduction/getting-started",
     label: "Use Quickstart",
   },
 ];

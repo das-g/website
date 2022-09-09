@@ -111,7 +111,7 @@ For example, the `.gitpod.yml` saves 41 minutes of installation and building tim
 
 <figure class="flex flex-col items-center text-center">
   <img src="/images/guides/guide-ephemeral-dev-environment-on-gitpod/tweet-image.png" alt="This is tweet about of Node.js project. With Gitpod Prebuilds it got even faster" width="400" />
-   <figcaption class="w-full">This is <a href="https://twitter.com/Siddhant_K_code/status/1548143768301318144">tweet</a> about Node.js project. With <a href="https://www.gitpod.iodocs/configure/projects/prebuilds">Gitpod Prebuilds</a> it got even faster.</figcaption>
+   <figcaption class="w-full">This is <a href="https://twitter.com/Siddhant_K_code/status/1548143768301318144">tweet</a> about Node.js project. With <a href="https://www.gitpod.io/docs/configure/projects/prebuilds">Gitpod Prebuilds</a> it got even faster.</figcaption>
 </figure>
 
 <figure class="flex flex-col items-center text-center">
@@ -121,7 +121,7 @@ For example, the `.gitpod.yml` saves 41 minutes of installation and building tim
 
 ### How to get started with Prebuilds
 
-Prebuilds work for GitHub, Gitlab and Bitbucket repositories (see our [Prebuilds documentation](https://www.gitpod.iodocs/configure/projects/prebuilds#configuring-prebuilds-manually) for more). To give you a real example, though, let's take a look at how you can enable Prebuilds for GitHub:
+Prebuilds work for GitHub, Gitlab and Bitbucket repositories (see our [Prebuilds documentation](https://www.gitpod.io/docs/configure/projects/prebuilds#configuring-prebuilds-manually) for more). To give you a real example, though, let's take a look at how you can enable Prebuilds for GitHub:
 
 1. To enable Gitpod Prebuilds for a repository, you must install the [Gitpod GitHub App](https://github.com/apps/gitpod-io) for your repository.
 2. Click 'Configure' and choose the repository where you wish to install the Gitpod App.
@@ -150,7 +150,7 @@ GitHub:
 
 > **Important:** Prebuilds only save the workspace directory. Any file changes made outside of `/workspace` file hierarchy from `init` tasks will be lost on workspace start when prebuilds are enabled.
 
-You can read more about prebuilds in the [following doc](https://www.gitpod.iodocs/configure/projects/prebuilds).
+You can read more about prebuilds in the [following doc](https://www.gitpod.io/docs/configure/projects/prebuilds).
 
 # Persisting environment variables and files
 

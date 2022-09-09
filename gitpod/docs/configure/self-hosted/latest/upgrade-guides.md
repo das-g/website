@@ -17,7 +17,7 @@ This page informs you if there are specific considerations to take into account 
 > There is no expected impact from these changes if using KOTS. These are documented for transparency purposes only.
 > **Custom labels from the pod selector labels removed**
 
-[11954](https://github.com/gitpod-io/gitpod/pull/11954): remove custom labels from the pod selector labels. This removes this [limitation](https://www.gitpod.io/docs/self-hosted/latest/advanced/customization#limitations) so this is a long-term improvement. The impact of this should be handled transparently for you by the KOTS installer.
+[11954](https://github.com/gitpod-io/gitpod/pull/11954): remove custom labels from the pod selector labels. This removes this [limitation](https://www.gitpod.io/docs/configure/self-hosted/latest/advanced/customization#limitations) so this is a long-term improvement. The impact of this should be handled transparently for you by the KOTS installer.
 
 **Usage of PodSecurityPolicies removed**
 

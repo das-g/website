@@ -158,7 +158,7 @@ gp tasks
 
 > **Tip:** If you're using [VS Code Browser](/docs/ides-and-editors/vscode-browser) or [VS Code Desktop](/docs/ides-and-editors/vscode), then your tasks will open as terminal windows. You can configure their layout using the [openMode](/docs/config-start-tasks#openmode) property.
 
-> **Note:** We are using the `init` property so that we can perform application building during a [prebuild](docs/configure/projects/prebuilds), for increased performance. We'll discuss prebuilds more later on.
+> **Note:** We are using the `init` property so that we can perform application building during a [prebuild](/docs/configure/projects/prebuilds), for increased performance. We'll discuss prebuilds more later on.
 
 See [start tasks](/docs/config-start-tasks) and [.gitpod.yml reference](/docs/references/gitpod-yml) for more.
 
@@ -320,7 +320,7 @@ Gitpod prebuilds reduce wait time by installing dependencies or running builds b
 
 `youtube: ZtlJ0PakUHQ`
 
-See [prebuilds](docs/configure/projects/prebuilds) and [start tasks](/docs/config-start-tasks) for more.
+See [prebuilds](/docs/configure/projects/prebuilds) and [start tasks](/docs/config-start-tasks) for more.
 
 ### Optimising JetBrains indexing
 
@@ -357,7 +357,7 @@ mkdir /home/gitpod/.m2
 printf '<settings>\n  <localRepository>/workspace/m2-repository/</localRepository>\n</settings>\n' > /home/gitpod/.m2/settings.xml
 ```
 
-See [prebuilds](docs/configure/projects/prebuilds) for more.
+See [prebuilds](/docs/configure/projects/prebuilds) for more.
 
 ### Caching Gradle dependencies
 
@@ -371,7 +371,7 @@ To configure Gradle caching, add the following to your custom [Dockerfile](/docs
 ENV GRADLE_USER_HOME=/workspace/.gradle/
 ```
 
-See [prebuilds](docs/configure/projects/prebuilds) for more.
+See [prebuilds](/docs/configure/projects/prebuilds) for more.
 
 ## Personalizing Gitpod
 

@@ -79,7 +79,7 @@ tasks:
     command: npm run dev
 ```
 
-She also enables Gitpod [Prebuilds](docs/configure/projects/prebuilds) - telling Gitpod to continuously create new developer environments as soon as her project’s source code changes! This significantly reduces the startup time when she or anyone who works on her project needs a developer environment.
+She also enables Gitpod [Prebuilds](/docs/configure/projects/prebuilds) - telling Gitpod to continuously create new developer environments as soon as her project’s source code changes! This significantly reduces the startup time when she or anyone who works on her project needs a developer environment.
 
 ![Set up a new project](../../../static/images/blog/i-said-goodbye-to-local-development-and-so-can-you/set-up-a-new-project-light-theme.png)
 ![Set up a new project](../../../static/images/blog/i-said-goodbye-to-local-development-and-so-can-you/set-up-a-new-project-dark-theme.png)

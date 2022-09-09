@@ -27,7 +27,7 @@ For example, you could try opening this Spring PetClinic (Java) repository in Gi
 
 https://gitpod.io/#https://bitbucket.org/gitpod/spring-petclinic
 
-For more convenience, you can also install Gitpod's browser extension (for [Chrome](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki) and [Firefox](https://addons.mozilla.org/firefox/addon/gitpod/)), which will add a `Gitpod` button to all Bitbucket projects or alternatively use our [browser bookmarklet](/docs/browser-bookmarklet).
+For more convenience, you can also install Gitpod's browser extension (for [Chrome](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki) and [Firefox](https://addons.mozilla.org/firefox/addon/gitpod/)), which will add a `Gitpod` button to all Bitbucket projects or alternatively use our [browser bookmarklet](/docs/configure/users/browser-bookmarklet).
 
 Gitpod also supports other types of Bitbucket URLs, like:
 
@@ -66,7 +66,7 @@ There is much more you can do to make sure every team member gets a ready-to-cod
 
 ### Prebuilds
 
-Gitpod’s [prebuilt workspaces](docs/configure/projects/prebuilds) are key to providing ephemeral, ready-to-code dev environments for your branches and projects. You can configure Gitpod to run your project's build asynchronously every time someone pushes new commits or branches to your repository. So when a developer wants to start coding, she can start immediately, because everything is already prepared.
+Gitpod’s [prebuilt workspaces](/docs/configure/projects/prebuilds) are key to providing ephemeral, ready-to-code dev environments for your branches and projects. You can configure Gitpod to run your project's build asynchronously every time someone pushes new commits or branches to your repository. So when a developer wants to start coding, she can start immediately, because everything is already prepared.
 
 Enabling prebuilds on your Bitbucket project is done by configuring a Webhook. This can be done automatically: Just trigger the first prebuild on your project manually, and Gitpod will take it from there. To do that, use the prefix `https://gitpod.io/#prebuild/`, as in
 

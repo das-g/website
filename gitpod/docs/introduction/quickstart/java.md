@@ -36,7 +36,7 @@ For simplicity we use a GitHub template, but Gitpod works similarly with GitLab 
 
 The revised URL is: `https://gitpod.io/#prebuild/https://github.com/<github_username>/spring-petclinic`
 
-Gitpod displays the prebuild progress status by running the `init` commands in the _.gitpod.yml_ file before you even start a workspace. Later, when you create a new workspace on a branch, or pull/merge request the workspace loads much faster, because all dependencies are already downloaded and the code is compiled. For more information see [prebuilds](docs/configure/projects/prebuilds).
+Gitpod displays the prebuild progress status by running the `init` commands in the _.gitpod.yml_ file before you even start a workspace. Later, when you create a new workspace on a branch, or pull/merge request the workspace loads much faster, because all dependencies are already downloaded and the code is compiled. For more information see [prebuilds](/docs/configure/projects/prebuilds).
 
 ## Step 4: Enjoy being ready-to-code 🤙
 
@@ -52,7 +52,7 @@ The extension simply adds a Gitpod button on every project and branch across Git
 
 ![Browser Extension](../../../static/images/docs/browser-extension-lense.png)
 
-If you prefer to not install browser extensions then you can use the Gitpod [browser bookmarklet](/docs/browser-bookmarklet) instead.
+If you prefer to not install browser extensions then you can use the Gitpod [browser bookmarklet](/docs/configure/users/browser-bookmarklet) instead.
 
 For our partner GitLab we have a native integration into their UI that you can enable here.
 

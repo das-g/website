@@ -8,7 +8,7 @@ title: Configure the Kubernetes nodes in your Gitpod Self-Hosted installation
   export const load = () => {
     return {
       status: 301,
-      redirect: "/docs/self-hosted/latest"
+      redirect: "/docs/configure/self-hosted/latest"
     }
   };
 </script>

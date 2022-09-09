@@ -8,7 +8,7 @@ title: Install Gitpod Self-Hosted on Microsoft Azure Kubernetes Service (AKS)
   export const load = () => {
     return {
       status: 301,
-      redirect: "/docs/self-hosted/latest/cluster-set-up/on-microsoft-aks"
+      redirect: "/docs/configure/self-hosted/latest/cluster-set-up/on-microsoft-aks"
     }
   };
 </script>
