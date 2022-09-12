@@ -96,6 +96,18 @@ All commands that follow assume you have set an environment variable of `AWS_REG
 
 <div slot="azure">
 
+To deploy Gitpod on [Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes), you must have an Azure subscription and account with permission deploy AKS clusters and associated component services, including the following:
+
+- AKS Clusters
+- Virtual networks
+- MySQL Databases
+- Storage accounts
+- Azure Container Registries
+- Load balancers
+- Azure DNS managed domains (and rights to assign roles on managed zones)
+
+Make sure your credentials are available by running `az login`. If you're authenticating to Azure in an environment that doesn't have a browser you can login with the [Azure device authorization flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-device-code) by running `az login --use-device-code`.
+
 **Tools**
 
 This guide uses the following tools:
@@ -103,22 +115,11 @@ This guide uses the following tools:
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli)
 - [kubelogin](https://github.com/Azure/kubelogin)
 
-If `kubectl` is not present the Azure CLI can be used to install `kubectl`  and `kubelogin`.
+If `kubectl` is not present the Azure CLI can be used to install `kubectl` and `kubelogin`.
 
 ```bash
 sudo az aks install-cli
 ```
-
-**Credentials**
-
-To deploy Gitpod on [Azure Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes), you must have an Azure subscription and account with permission deploy AKS clusters and associated component services, including the following:
-
-- MySQL Databases
-- Storage accounts
-- Azure Container Registries
-- Load balancers
-
-Make sure your credentials are available by running `az login`. If you're authenticating to Azure in an environment that doesn't have a browser you can login with the [Azure device authorization flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-device-code) by running `az login --use-device-code`.
 
 **Service Principal**
 
