@@ -16,12 +16,6 @@
   import { featureTitles } from "$lib/contents/team";
 </script>
 
-<style lang="postcss">
-  iframe {
-    @apply w-full max-w-5xl h-[300px] sm:h-[400px] md:h-[580px] xl:h-[630px] 2xl:h-[660px];
-  }
-</style>
-
 <OpenGraph
   data={{
     title: "",
@@ -42,7 +36,7 @@
     frameborder="0"
     style="border:0"
     allowfullscreen
-    class="mx-auto mt-x-small md:mt-small"
+    class="mx-auto mt-x-small md:mt-small w-full max-w-5xl aspect-[64/50]"
   />
 </Header>
 
