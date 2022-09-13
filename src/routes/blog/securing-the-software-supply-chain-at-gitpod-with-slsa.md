@@ -1,5 +1,5 @@
 ---
-author: csweichel, mircoatgitpod, nancy-chauhan
+author: csweichel, securitymirco, nancy-chauhan
 date: Tuesday, 21 Jun 2022 11:00:00 UTC
 excerpt: Gitpod takes a central position in the software development lifecycle. As such, the security of our product is paramount; not only at runtime, but also as we build and deliver Gitpod.
 image: teaser.png

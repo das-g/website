@@ -20,7 +20,7 @@ Our Gitpod community has grown from 500 to 5000 in just under a year! In this bl
 
 ## Humble beginnings 🤲
 
-Back in July 2021, our community was scattered across different platforms with no central place where Gitpod users and champions could exist. There was no consistent place to not only to ask questions about our product but to also connect with other professional developers who also saw the future of remote, developer environments. 💭
+Back in July 2021, our community was scattered across different platforms with no central place where Gitpod users and champions could exist. There was no consistent place to not only ask questions about our product but to also connect with other professional developers who also saw the future of remote, developer environments. 💭
 
 Other challenges we faced in the early days was that we just didn’t have a dedicated community team that ensured community queries were answered in a timely manner and that community felt seen, heard and cared for. 🧡 Before this team existed, our engineers jumped in when they could but it was unsustainable and came at the expense of preventing them from [getting into flow state](https://www.gitpod.io/blog/psychology-of-devx#the-psychology-of-developer-experience).
 
@@ -73,7 +73,7 @@ Last October, we launched the [Community Heroes program](https://www.gitpod.io/c
 
 [![Julien Lengrand on Twitter](../../../../../static/images/blog/what-we-learned-growing-a-community-from-500-5000/Julien_Lengrand-Lambert_on_Twitter.png "Julien Lengrand on Twitter")](https://twitter.com/jlengrand/status/1522865269986799616)
 
-Our Heroes play a huge role in the success of Gitpod by shaping our the community culture, supporting our growing user base and being the advocates for the future of ephemeral dev environments worldwide.
+Our Heroes play a huge role in the success of Gitpod by shaping our community culture, supporting our growing user base and being the advocates for the future of ephemeral dev environments worldwide.
 
 Bottom line is I truly believe that we wouldn't be where we are without their daily Gitpod love! 🧡
 

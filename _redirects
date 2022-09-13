@@ -133,3 +133,4 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/gitlab-integration /docs/configure/authentication/gitlab 301
 /docs/github-integration /docs/configure/authentication/github 301
 /docs/github-enterprise-integration /docs/configure/authentication/github-enterprise 301
+/blog/gitpodify /guides/gitpodify 301

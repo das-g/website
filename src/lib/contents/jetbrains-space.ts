@@ -94,6 +94,10 @@ export const gitpodTableData: FeatureTableColumn = {
           availability: true,
         },
         {
+          term: "Self-Host on AKS",
+          availability: true,
+        },
+        {
           term: "Self-Host on Kubernetes",
           availability: true,
         },
@@ -164,6 +168,10 @@ export const jetbrainsTableData: FeatureTableColumn = {
         {
           term: "Self-Host on AWS",
           availability: false,
+        },
+        {
+          term: "Self-Host on AKS",
+          availability: true,
         },
         {
           term: "Self-Host on Kubernetes",
@@ -253,6 +261,16 @@ export const JetbraisSpaceToc: FeatureTableToc[] = [
     data: {
       text: "Self-Host on AWS",
       image: awsSvelte,
+    },
+  },
+  {
+    type: "image",
+    data: {
+      text: "Self-Host on AKS",
+      image: {
+        alt: "Azure Logo",
+        path: "/svg/brands/azure.svg",
+      },
     },
   },
   {

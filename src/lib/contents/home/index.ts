@@ -5,7 +5,7 @@ import type { Ide } from "$lib/types/ide.type";
 import GitlabLogo from "$lib/components/svgs/brands/gitlab-logo.svelte";
 import FreecodecampLogo from "$lib/components/svgs/brands/freecodecamp.svelte";
 import Google from "$lib/components/svgs/brands/google.svelte";
-import Uber from "$lib/components/svgs/brands/uber.svelte";
+import Factorial from "$lib/components/svgs/brands/factorial.svelte";
 import Datastax from "$lib/components/svgs/brands/datastax.svelte";
 import Amazon from "$lib/components/svgs/brands/amazon.svelte";
 import Shares from "$lib/components/svgs/brands/shares.svelte";
@@ -33,10 +33,9 @@ export const google: Brand = {
   transform: "scale(0.9)",
 };
 
-export const uber: Brand = {
-  alt: "Uber",
-  logo: Uber,
-  transform: "scale(.8)",
+export const factorial: Brand = {
+  alt: "Factorial",
+  logo: Factorial,
 };
 
 export const dataStax: Brand = {
@@ -88,7 +87,7 @@ export const brands: Brand[] = [
   gitlab,
   freeCodeCamp,
   google,
-  uber,
+  factorial,
   dataStax,
   amazon,
   shares,
@@ -98,18 +97,18 @@ export const brands: Brand[] = [
 ];
 
 export const logosAnimated: Brand[] = [
+  freeCodeCamp,
   gitlab,
   jetbrains,
-  google,
   redwood,
-  uber,
-  shares,
-  dataStax,
-  freeCodeCamp,
+  google,
   amazon,
-  astrato,
-  fourGeeks,
   codeInstitute,
+  fourGeeks,
+  dataStax,
+  shares,
+  astrato,
+  factorial,
 ];
 
 export const projects: Project[] = [

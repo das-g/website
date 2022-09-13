@@ -57,6 +57,7 @@ export const MENU: MenuEntry[] = [
     M("SSH", "configure/users/ssh"),
     M("Browser bookmarklet", "configure/users/browser-bookmarklet"),
     M("Browser extension", "configure/users/browser-extension"),
+    M("Usage-based Billing", "usage-based-billing", [], "beta"),
   ]),
 
   M("Workspaces", "configure/workspaces", [

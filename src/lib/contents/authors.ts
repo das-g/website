@@ -348,10 +348,10 @@ export const authors: { [idx: string]: Author } = {
     },
     description: "",
   },
-  mircoatgitpod: {
+  securitymirco: {
     name: "Mirco Kater",
     socialProfiles: {
-      github: "MircoatGitpod",
+      github: "securitymirco",
       twitter: "securitymirco",
       linkedin: "",
     },
