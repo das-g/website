@@ -106,7 +106,7 @@ Subsequently `*/*` makes that variable available in every workspace.
 
 ## Project-Specific Environment Variables
 
-Environment variables which are defined in [project](/docs/teams-and-projects#projects) settings will be visible in prebuilds, and optionally also in workspaces. This is useful for prebuilds to access restricted services.
+Environment variables which are defined in [project](/docs/configure/projects) settings will be visible in prebuilds, and optionally also in workspaces. This is useful for prebuilds to access restricted services.
 
 Important notes:
 

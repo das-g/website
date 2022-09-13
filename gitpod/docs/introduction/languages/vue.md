@@ -39,7 +39,7 @@ To install globally across all workspaces add the following to your [.gitpod.Doc
 RUN npm i -g vue-cli
 ```
 
-> Please note: If you don't already have one please run [`gp init`](/docs/references/gp-cli#init) which should generate two files [.gitpod.yml](/docs/configure/projects/gitpod-yaml) and [.gitpod.Dockerfile](/docs/config-docker)
+> Please note: If you don't already have one please run [`gp init`](/docs/references/gitpod-cli#init) which should generate two files [.gitpod.yml](/docs/configure/projects/gitpod-yaml) and [.gitpod.Dockerfile](/docs/config-docker)
 
 ## VSCode Extensions
 

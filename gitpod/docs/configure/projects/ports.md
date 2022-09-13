@@ -35,9 +35,9 @@ You can access the dedicated port URL by pre-pending the port number to the work
 
 e.g `3000-yourworkspace.ws-eu45.gitpod.io`
 
-You can also print the port URL using the [gp url](/docs/references/gp-cli) command (e.g. `gp url 3000`).
+You can also print the port URL using the [gp url](/docs/references/gitpod-cli) command (e.g. `gp url 3000`).
 
-And if you prefer listing all open ports URLs at once, use [gp ports list](/docs/references/gp-cli) command.
+And if you prefer listing all open ports URLs at once, use [gp ports list](/docs/references/gitpod-cli) command.
 
 ## Configuring port behaviors
 
@@ -74,7 +74,7 @@ ports:
 
 You can give ports a `name` and a `description` (both optional). These properties will help you to add context about what the port is being used for.
 
-You can execute [`gp ports list`](/docs/references/gp-cli#list-1) to output a table-formatted list of ports along with their status, URL, name and description.
+You can execute [`gp ports list`](/docs/references/gitpod-cli#list-1) to output a table-formatted list of ports along with their status, URL, name and description.
 
 <figure>
     <img class="shadow-medium w-full rounded-xl max-w-3xl mt-x-small" alt="Display port name and description on vscode Remote Explorer" src="/images/docs/ports-with-name-cmd.png" />

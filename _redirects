@@ -11,12 +11,12 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/20_browser_extension /docs/browser-extension 301
 /docs/20_Browser_Extension /docs/browser-extension 301
 /docs/30_workspaces /docs/workspaces 301
-/docs/31_context_urls /docs/context-urls 301
+/docs/31_context_urls /docs/introduction/learn-gitpod/context-url 301
 /docs/32_life_of_workspace /docs/life-of-workspace 301
 /docs/32_Life_of_Workspace /docs/life-of-workspace 301
 /docs/33_sharing_and_collaboration /docs/configure/workspaces/collaboration 301
 /docs/33_Sharing_and_Collaboration /docs/configure/workspaces/collaboration 301
-/docs/34_command_line_interface /docs/references/gp-cli 301
+/docs/34_command_line_interface /docs/references/gitpod-cli 301
 /docs/40_configuration /docs/configure 301
 /docs/40_Configuration /docs/configure 301
 /docs/41_config_gitpod_file /docs/configure/projects/gitpod-yaml 301
@@ -125,7 +125,7 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/self-hosted/latest /docs/configure/self-hosted/latest 301
 /docs/ides-and-editors /docs/references/ides-and-editors 301
 /docs/references/ides-and-editors/jetbrains-gateway /docs/integrations/jetbrains-gateway 301
-/docs/command-line-interface /docs/references/gp-cli 301
+/docs/command-line-interface /docs/references/gitpod-cli 301
 /docs/config-gitpod-file /docs/configure/projects/gitpod-yaml 301
 /docs/references/gitpod-releases /docs/support/release-cycle 301
 /docs/bitbucket-server-integration /docs/configure/authentication/bitbucket-server 301
@@ -134,3 +134,6 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/github-integration /docs/configure/authentication/github 301
 /docs/github-enterprise-integration /docs/configure/authentication/github-enterprise 301
 /blog/gitpodify /guides/gitpodify 301
+/docs/references/gp-cli /docs/references/gitpod-cli 301
+/docs/context-urls /docs/introduction/learn-gitpod/context-url 301
+/docs/config-dotfiles /docs/configure/users/dotfiles 301

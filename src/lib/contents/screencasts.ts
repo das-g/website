@@ -20,7 +20,10 @@ export const screencasts: Screencast[] = [
     relatedDocs: [
       { path: "/docs/", title: "Introduction to Gitpod" },
       { path: "/docs/getting-started", title: "Getting Started" },
-      { path: "/docs/context-urls", title: "Context URLs" },
+      {
+        path: "/docs/introduction/learn-gitpod/context-url",
+        title: "Context URLs",
+      },
     ],
     tags: ["Getting started"],
   },

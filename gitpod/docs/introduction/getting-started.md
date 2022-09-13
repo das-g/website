@@ -153,7 +153,7 @@ Imagine this common workflow where Nina and Paul work on the same project:
 1. Nina opens a pull request where she developed a feature that requires a new dependency.
 1. _Gitpod notices the new code and kicks off a prebuild by cloning the source code and executing the `init` task. The result is saved as a prebuilt workspace._
 1. Some time later, Paul opens the pull request to start his code review.
-1. He opens a Gitpod workspace for that given pull request (learn more about [contexts](/docs/context-urls)).
+1. He opens a Gitpod workspace for that given pull request (learn more about [contexts](/docs/introduction/learn-gitpod/context-url)).
 1. _Gitpod recognizes it already ran the `init` task and loads the prebuilt workspace_
 1. By the time the workspace starts, Paul sees the development server starting up and the application's preview is ready for review.
 

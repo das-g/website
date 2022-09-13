@@ -89,7 +89,7 @@ vscode:
 
 ## GUI Applications with wxPython
 
-To install wxPython to your repository please add the following to your [.gitpod.Dockerfile](/docs/config-docker). If you don't have one, simply run [`gp init`](/docs/references/gp-cli) and commit the two generated files.
+To install wxPython to your repository please add the following to your [.gitpod.Dockerfile](/docs/config-docker). If you don't have one, simply run [`gp init`](/docs/references/gitpod-cli) and commit the two generated files.
 
 ```dockerfile
 # This will pull the official Gitpod `vnc` image

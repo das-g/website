@@ -69,7 +69,7 @@ For more information, see the [configuring SSH](/docs/configure/ssh) documentati
 
 ### What's next for SSH in Gitpod?
 
-1. **Easier copying of SSH credentials** - We want to make it easier for you to access your SSH credentials, either through direct IDE or editor integration, or via the [gp CLI](/docs/references/gp-cli).
+1. **Easier copying of SSH credentials** - We want to make it easier for you to access your SSH credentials, either through direct IDE or editor integration, or via the [gp CLI](/docs/references/gitpod-cli).
 2. **Integration with third-parties** - We're investigating integration with other 3rd party services which hold users public keys, such as [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), to avoid duplicate upload of SSH keys.
 3. **Improvement to desktop editing experiences** - For users who prefer desktop for editing, either in VS Code Desktop or JetBrains—as opposed to editing in-browser—we will continue to investigate ways to improve the experience, for example with desktop-first editing experiences.
 

@@ -170,7 +170,7 @@ In your JetBrains IDE within the JetBrains Gateway [Backend Control Center](http
 
 The remaining metrics you can find in the Backend Control Center regarding the node that your workspace is running on, and not the workspace itself.
 
-> **Note:** Performance information shown in the Backend Control Center is the same as the information that is shown when running the command [`gp top`](/docs/references/gp-cli#top) in your workspace, see the [Command Line Interface](/docs/references/gp-cli) documentation for more.
+> **Note:** Performance information shown in the Backend Control Center is the same as the information that is shown when running the command [`gp top`](/docs/references/gitpod-cli#top) in your workspace, see the [Command Line Interface](/docs/references/gitpod-cli) documentation for more.
 
 ![jetbrains performance](/images/jetbrains-gateway/jetbrains-performance-center.png)
 
@@ -184,7 +184,7 @@ The remaining metrics you can find in the Backend Control Center regarding the n
 
 Debugging performance can be challenging, as performance issues can depend on many factors such as how Gitpod is configured (if you're operating Gitpod on Self-Hosted). However, there are some ways you can gather performance information and optimise your JetBrains IDE setup with Gitpod:
 
-1. Firstly, to gather information on performance, you can [view workspace performance metrics from within the IDE](/docs/references/ides-and-editors/intellij#workspace-performance) in the Backend Control Center, or by using [`gp top`](/docs/references/gp-cli#top).
+1. Firstly, to gather information on performance, you can [view workspace performance metrics from within the IDE](/docs/references/ides-and-editors/intellij#workspace-performance) in the Backend Control Center, or by using [`gp top`](/docs/references/gitpod-cli#top).
 2. You may also want to try adjusting the Max Heap Size allocated to the JetBrains Backend in the Settings tab of the Backend Control Center. If updating this setting helps your performance, you can set the `vmoptions` value for your JetBrains IDE in your `.gitpod.yml`.
 
 > **Note:** If the performance metrics show that your workspace is hitting its resource limits, and you are using Gitpod Self-Hosted, it might make sense to consider changing the resource configuration for your workspaces. This can be done via a [config-patch](/docs/configure/self-hosted/latest/config-patches). Configuring workspace resources is not yet available on SaaS.

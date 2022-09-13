@@ -116,7 +116,7 @@ For example, opening: `gitpod.io/#https://github.com/gitpod-io/gitpod`
 sdk current
 ```
 
-> **Note:** If your changes are not taking effect, ensure your workspace is building from the correct [context](/docs/context-urls), where your `gitpod.yml` or `gitpod.Dockerfile` are checked in to version control and are on the branch or commit that you are opening.
+> **Note:** If your changes are not taking effect, ensure your workspace is building from the correct [context](/docs/introduction/learn-gitpod/context-url), where your `gitpod.yml` or `gitpod.Dockerfile` are checked in to version control and are on the branch or commit that you are opening.
 
 See [configure Docker](/docs/config-docker) for more.
 
@@ -150,7 +150,7 @@ tasks:
 gp stop
 ```
 
-3. **Optional:** Validate your commands by running [`gp tasks`](/docs/references/gp-cli#tasks)
+3. **Optional:** Validate your commands by running [`gp tasks`](/docs/references/gitpod-cli#tasks)
 
 ```shell
 gp tasks
@@ -195,7 +195,7 @@ tasks:
 gp stop
 ```
 
-3. **Optional:** Validate your commands by running [`gp tasks`](/docs/references/gp-cli#tasks)
+3. **Optional:** Validate your commands by running [`gp tasks`](/docs/references/gitpod-cli#tasks)
 
 ```shell
 gp tasks
@@ -375,13 +375,13 @@ See [prebuilds](/docs/configure/projects/prebuilds) for more.
 
 ## Personalizing Gitpod
 
-All settings introduced so far, such as `.gitpod.yml` and `Dockerfile` apply for all users using of the gitpod project. To apply personalisation, consider setting up [dotfiles](/docs/config-dotfiles), the Gitpod [Browser Extension](/docs/browser-extension),
+All settings introduced so far, such as `.gitpod.yml` and `Dockerfile` apply for all users using of the gitpod project. To apply personalisation, consider setting up [dotfiles](/docs/configure/users/dotfiles), the Gitpod [Browser Extension](/docs/browser-extension),
 
 ### Dotfiles
 
 Dotfiles allow you to setup per-user configurations in your Gitpod workspace, such as modifying your shell and adding command aliases. To configure Gitpod to use your own dotfiles for all your workspaces, enter the URL of a public dotfiles repository in your Gitpod [preferences](https://gitpod.io/preferences).
 
-See [dotfiles](/docs/config-dotfiles) for more.
+See [dotfiles](/docs/configure/users/dotfiles) for more.
 
 ### Browser Extension
 

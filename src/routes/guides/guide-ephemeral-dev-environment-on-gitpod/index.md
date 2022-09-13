@@ -180,7 +180,7 @@ You can read more about environment variables in [Environment Variables on Gitpo
 
 ### Persisting files between workspace restarts
 
-> For those of you who are looking to persist personal configurations with non-sensitive data, such as bash or zsh configs, you can use [dotfiles](https://www.gitpod.io/docs/config-dotfiles). For sensitive information, an option (outside of introducing your secret store, such as [vault](https://www.vaultproject.io/)) is to leverage: [environment variables](https://www.gitpod.io/docs/environment-variables) and consider encoding, e.g. with base64. See blog posts[[1]](https://www.gitpod.io/blog/personalize-your-gitpod-workspace-environment) [[2]](https://www.gitpod.io/guides/automate-env-files-with-gitpod-environment-variables) .
+> For those of you who are looking to persist personal configurations with non-sensitive data, such as bash or zsh configs, you can use [dotfiles](https://www.gitpod.io/docs/configure/users/dotfiles). For sensitive information, an option (outside of introducing your secret store, such as [vault](https://www.vaultproject.io/)) is to leverage: [environment variables](https://www.gitpod.io/docs/environment-variables) and consider encoding, e.g. with base64. See blog posts[[1]](https://www.gitpod.io/blog/personalize-your-gitpod-workspace-environment) [[2]](https://www.gitpod.io/guides/automate-env-files-with-gitpod-environment-variables) .
 
 There would be some use cases where we would want to persist some files between workspace starts. For example, `.bash_history` refers to previously used history commands.
 
@@ -195,7 +195,7 @@ Inside your workspace, Open the terminal & run the following steps:
 
 # Recommended Reading
 
-- [Docs: Config Dotfiles](https://www.gitpod.io/docs/config-dotfiles)
+- [Docs: Config Dotfiles](https://www.gitpod.io/docs/configure/users/dotfiles)
 - [GitHub Repository: Bring your own Dotfiles to Gitpod | dotfiles on Gitpod](https://github.com/gitpod-io/demo-dotfiles-with-gitpod)
 - [GitHub Repository: AWS Single Sign-On (SSO) and Amazon Elastic Container Registry (ECR) with Gitpod](https://github.com/gitpod-io/demo-aws-with-gitpod)
 - [Guide: Gitpodifying — The Ultimate Guide](https://www.gitpod.io/guides/gitpodify)
