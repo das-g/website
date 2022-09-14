@@ -51,6 +51,6 @@ Gitpod provides auto-complete, hover info and validation for the `.gitpod.yml` f
 
 ## See it in action
 
-To test your `.gitpod.yml` file, you need to commit and push the file to your repository and open a new workspace either by using the [Gitpod extension](/docs/browser-extension#browser-extension) or prefixing your repo URL with `https://gitpod.io/#`.
+To test your `.gitpod.yml` file, you need to commit and push the file to your repository and open a new workspace either by using the [Gitpod extension](/docs/configure/users/browser-extension#browser-extension) or prefixing your repo URL with `https://gitpod.io/#`.
 
 If you don't want to have multiple commits as you're testing and making changes to your `.gitpod.yml`, you can make changes from a new branch.

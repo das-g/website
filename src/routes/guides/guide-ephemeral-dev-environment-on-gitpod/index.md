@@ -99,7 +99,7 @@ image:
 3. You can start using the lightweight base image [gitpod/workspace-base](https://github.com/gitpod-io/workspace-images) for your custom Docker image. The `workspace-base` image has some default tooling, whereas `gitpod/workspace-full` already has a lot of pre-installed installed tools.
 4. Start adding the commands you need for your dev environment.
 
-Read more about how to [configure a custom Dockerfile](https://www.gitpod.io/docs/config-docker#configure-a-custom-dockerfile).
+Read more about how to [configure a custom Dockerfile](https://www.gitpod.io/docs/integrations/docker#configure-a-custom-dockerfile).
 
 # Faster startup by enabling prebuilds
 
@@ -176,11 +176,11 @@ You can use a wildcard (denoted with a `*`) to match either the `owner` or `repo
   <img src="/images/guides/guide-ephemeral-dev-environment-on-gitpod/scope.png" alt="Scope of each variable determines in what workspaces it will be available" width="500" />
 </figure>
 
-You can read more about environment variables in [Environment Variables on Gitpod](https://www.gitpod.io/docs/environment-variables).
+You can read more about environment variables in [Environment Variables on Gitpod](https://www.gitpod.io/docs/configure/projects/environment-variables).
 
 ### Persisting files between workspace restarts
 
-> For those of you who are looking to persist personal configurations with non-sensitive data, such as bash or zsh configs, you can use [dotfiles](https://www.gitpod.io/docs/configure/users/dotfiles). For sensitive information, an option (outside of introducing your secret store, such as [vault](https://www.vaultproject.io/)) is to leverage: [environment variables](https://www.gitpod.io/docs/environment-variables) and consider encoding, e.g. with base64. See blog posts[[1]](https://www.gitpod.io/blog/personalize-your-gitpod-workspace-environment) [[2]](https://www.gitpod.io/guides/automate-env-files-with-gitpod-environment-variables) .
+> For those of you who are looking to persist personal configurations with non-sensitive data, such as bash or zsh configs, you can use [dotfiles](https://www.gitpod.io/docs/configure/users/dotfiles). For sensitive information, an option (outside of introducing your secret store, such as [vault](https://www.vaultproject.io/)) is to leverage: [environment variables](https://www.gitpod.io/docs/configure/projects/environment-variables) and consider encoding, e.g. with base64. See blog posts[[1]](https://www.gitpod.io/blog/personalize-your-gitpod-workspace-environment) [[2]](https://www.gitpod.io/guides/automate-env-files-with-gitpod-environment-variables) .
 
 There would be some use cases where we would want to persist some files between workspace starts. For example, `.bash_history` refers to previously used history commands.
 

@@ -20,8 +20,8 @@ The chapters in this section provide details on what you can configure. -->
 Lorem Ipsum
 
 - [Teams](/docs/configure/teams)
-- [Billing](/docs/configure/teams/billing)
-- [Plans](/docs/configure/teams/plans)
+- [Billing](/docs/support/billing/team-billing)
+- [Plans](/docs/support/billing/team-billing)
 
 ## Projects
 
@@ -51,5 +51,5 @@ Lorem Ipsum
 
 Lorem Ipsum
 
-- [Workspaces](/docs/configure/workspaces/index)
+- [Workspaces](/docs/configure/workspaces)
 - [collaboration](/docs/configure/workspaces/collaboration)

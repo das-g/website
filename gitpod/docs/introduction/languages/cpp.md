@@ -31,7 +31,7 @@ Here are a few C++ example projects that are already automated with Gitpod:
 
 All Gitpod workspaces come with the latest available `clang`, `gcc`, `cmake`, `gdb`, and other useful C++ tools pre-installed by default.
 
-However, if you're missing some additional tools, you can simply run `brew install <tool_name>` to install it in the current workspace or [write your own .gitpod.Dockerfile](/docs/config-docker#creating-docker-images-for-gitpod) to install it across all workspaces for your repository.
+However, if you're missing some additional tools, you can simply run `brew install <tool_name>` to install it in the current workspace or [write your own .gitpod.Dockerfile](/docs/integrations/docker#creating-docker-images-for-gitpod) to install it across all workspaces for your repository.
 
 ## IDE Features
 

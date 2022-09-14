@@ -31,7 +31,7 @@ When the above configuration is defined then the following additional steps happ
 1. The contents of `https://github.com/gitpod-io/demo-multi-repo-frontend` is cloned to `/workspaces/demo-multi-repo-frontend`
 1. The contents of `https://github.com/gitpod-io/demo-multi-repo-backend` is cloned to `/workspaces/backend`
 
-After all of the source control repositories have been cloned then the `before`, `init` and `command` [tasks](https://www.gitpod.io/docs/config-start-tasks) are executed as per normal. If you need to run commands (such as package installation or compilation) on the source control repositories which have been cloned then change your working directory the `checkoutLocation` location using the `before` task.
+After all of the source control repositories have been cloned then the `before`, `init` and `command` [tasks](https://www.gitpod.io/docs/configure/projects/tasks) are executed as per normal. If you need to run commands (such as package installation or compilation) on the source control repositories which have been cloned then change your working directory the `checkoutLocation` location using the `before` task.
 
 ```yaml
 # example .gitpod.yml from https://github.com/gitpod-io/demo-multi-repo-frontend

@@ -35,7 +35,10 @@ export const screencasts: Screencast[] = [
     tile: "screencast-2.jpg",
     youtubeId: "4495YOMhhgo",
     relatedDocs: [
-      { path: "/docs/life-of-workspace", title: "Life of a Workspace" },
+      {
+        path: "/docs/introduction/learn-gitpod/the-life-of-a-workspace",
+        title: "Life of a Workspace",
+      },
     ],
     tags: ["Getting started"],
   },
@@ -50,8 +53,8 @@ export const screencasts: Screencast[] = [
     relatedDocs: [
       { path: "/docs/configure", title: "Configure Your Project" },
       { path: "/docs/references/gitpod-yml", title: ".gitpod.yml" },
-      { path: "/docs/config-docker", title: "Docker Configuration" },
-      { path: "/docs/config-start-tasks", title: "Start Tasks" },
+      { path: "/docs/integrations/docker", title: "Docker Configuration" },
+      { path: "/docs/configure/projects/tasks", title: "Start Tasks" },
     ],
     tags: ["Getting started"],
   },
@@ -68,7 +71,10 @@ export const screencasts: Screencast[] = [
         path: "/docs/references/ides-and-editors/vscode-extensions",
         title: "VS Code Extensions",
       },
-      { path: "/docs/environment-variables", title: "Environment Variables" },
+      {
+        path: "/docs/configure/projects/environment-variables",
+        title: "Environment Variables",
+      },
     ],
     tags: ["Customisations"],
   },
@@ -97,7 +103,10 @@ export const screencasts: Screencast[] = [
     tile: "screencast-6.jpg",
     youtubeId: "n7Ca3jHFtZg",
     relatedDocs: [
-      { path: "/docs/life-of-workspace", title: "Life of a Workspace" },
+      {
+        path: "/docs/introduction/learn-gitpod/the-life-of-a-workspace",
+        title: "Life of a Workspace",
+      },
     ],
     tags: ["Advanced"],
   },
@@ -135,7 +144,10 @@ export const screencasts: Screencast[] = [
     tile: "screencast-9.jpg",
     youtubeId: "dehln1E8ylY",
     relatedDocs: [
-      { path: "/docs/environment-variables", title: "Environment Variables" },
+      {
+        path: "/docs/configure/projects/environment-variables",
+        title: "Environment Variables",
+      },
     ],
     tags: ["Customisations"],
   },
@@ -204,7 +216,7 @@ export const screencasts: Screencast[] = [
     tile: "screencast-14.jpg",
     youtubeId: "jFsbmcXCRf8",
     relatedDocs: [
-      { path: "/docs/config-docker", title: "Custom Docker Image" },
+      { path: "/docs/integrations/docker", title: "Custom Docker Image" },
     ],
     tags: ["Advanced"],
   },

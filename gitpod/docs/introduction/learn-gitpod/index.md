@@ -9,6 +9,6 @@ title: Learn Gitpod
 
 # {title}
 
-- [One workspace per task](/docs/workspaces)
-- [The Life of a workspace](/docs/the-life-of-workspace)
-- [Context URL](/docs/context-url)
+- [One workspace per task](/docs/introduction/learn-gitpod/one-workspace-per-task)
+- [The Life of a workspace](/docs/introduction/learn-gitpod/the-life-of-a-workspace)
+- [Context URL](/docs/introduction/learn-gitpod/the-life-of-a-workspace)

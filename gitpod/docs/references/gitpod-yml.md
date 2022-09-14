@@ -89,7 +89,7 @@ When the above configuration is defined then the following additional steps happ
 1. The contents of the branch is cloned under `/workspaces/`
 1. The contents of `https://github.com/gitpod-io/demo-multi-repo-backend` is cloned to `/workspaces/backend`
 
-After all of the source control repositories have been cloned then the `before`, `init` and `command` [tasks](https://www.gitpod.io/docs/config-start-tasks) are executed as per normal.
+After all of the source control repositories have been cloned then the `before`, `init` and `command` [tasks](https://www.gitpod.io/docs/configure/projects/tasks) are executed as per normal.
 
 If you need to run commands (such as package installation or compilation) on the source control repositories which have been cloned then change your working directory to the use configured or default `checkoutLocation` location using the `before` task.
 
@@ -128,7 +128,7 @@ tasks:
 
 Define where Gitpod checks out the project's code, relative to `/workspace`.
 
-In most cases, this is not needed. If you work on an older Go project, please see [Checkout and Workspace Location](/docs/checkout-location) for more details.
+In most cases, this is not needed. If you work on an older Go project, please see [Checkout and Workspace Location](/docs/configure/projects/workspace-location) for more details.
 
 <div class="overflow-x-auto">
 
@@ -290,7 +290,7 @@ Define whether Gitpod creates prebuilds for pull requests from forks.
 
 ## `image`
 
-Define a custom Docker image to be used for workspaces. To learn more, please review [Custom Docker Image](/docs/config-docker).
+Define a custom Docker image to be used for workspaces. To learn more, please review [Custom Docker Image](/docs/integrations/docker).
 
 Public images are hosted on [Docker Hub](https://hub.docker.com/u/gitpod/) and can be referenced by their name, e.g. `ubuntu:latest`.
 
@@ -483,7 +483,7 @@ jetbrains:
 
 ## `ports`
 
-Configure how Gitpod treats various ports your application may listen on. You can learn more about this in the [Exposing Ports](/docs/config-ports) documentation.
+Configure how Gitpod treats various ports your application may listen on. You can learn more about this in the [Exposing Ports](/docs/configure/projects/ports) documentation.
 
 <div class="overflow-x-auto">
 
@@ -511,7 +511,7 @@ ports:
 
 ### `ports[n].name`
 
-Define a name for the port, will be shown as a column in the output of `gp ports list` and as a title of port in the `Remote Explorer` under the VS Code Browser sidebar. [More detail](/docs/config-ports#specifying-port-names--descriptions)
+Define a name for the port, will be shown as a column in the output of `gp ports list` and as a title of port in the `Remote Explorer` under the VS Code Browser sidebar. [More detail](/docs/configure/projects/ports#specifying-port-names--descriptions)
 
 <div class="overflow-x-auto">
 
@@ -575,7 +575,7 @@ A public port allows you to share a URL for a given port with team members, for 
 
 ## `tasks`
 
-Define how Gitpod prepares & builds your project and how it can start the project's development server(s). To learn more, please visit [Start Tasks](/docs/config-start-tasks). Each array element opens in its own terminal.
+Define how Gitpod prepares & builds your project and how it can start the project's development server(s). To learn more, please visit [Start Tasks](/docs/configure/projects/tasks). Each array element opens in its own terminal.
 
 <div class="overflow-x-auto">
 
@@ -604,7 +604,7 @@ tasks:
 
 A shell command to run before `init` and the main `command`. This command is executed on every start and is expected to terminate. If it fails, the following commands will not be executed.
 
-Learn more about [Start Tasks](/docs/config-start-tasks) in the docs.
+Learn more about [Start Tasks](/docs/configure/projects/tasks) in the docs.
 
 <div class="overflow-x-auto">
 
@@ -618,7 +618,7 @@ Learn more about [Start Tasks](/docs/config-start-tasks) in the docs.
 
 The main shell command to run after `before` and `init`. This command is executed last on every start and doesn't have to terminate.
 
-Learn more about [Start Tasks](/docs/config-start-tasks) in the docs.
+Learn more about [Start Tasks](/docs/configure/projects/tasks) in the docs.
 
 <div class="overflow-x-auto">
 
@@ -632,7 +632,7 @@ Learn more about [Start Tasks](/docs/config-start-tasks) in the docs.
 
 Define environment variables that will be available in the workspace.
 
-Learn more about [Environment Variables](/docs/environment-variables) in the docs.
+Learn more about [Environment Variables](/docs/configure/projects/environment-variables) in the docs.
 
 <div class="overflow-x-auto">
 
@@ -650,7 +650,7 @@ This task is executed only once. When you start a workspace that does not have a
 
 This task is expected to terminate. If it fails, the `command` property will not be executed.
 
-Learn more about [Start Tasks](/docs/config-start-tasks) in the docs.
+Learn more about [Start Tasks](/docs/configure/projects/tasks) in the docs.
 
 <div class="overflow-x-auto">
 
@@ -760,7 +760,7 @@ vscode:
 
 Define which path Gitpod considers the project's workspace directory, relative to `/workspace`.
 
-In most cases, this is not needed. If you work on an older Go project, please see [Checkout and Workspace Location](/docs/checkout-location) for more details.
+In most cases, this is not needed. If you work on an older Go project, please see [Checkout and Workspace Location](/docs/configure/projects/workspace-location) for more details.
 
 <div class="overflow-x-auto">
 

@@ -15,14 +15,14 @@ It's relatively easy to set up your Ruby project in Gitpod.
 
 As of this writing, Gitpod comes with Ruby 2.7.6 pre-installed in the [gitpod/workspace-full](https://hub.docker.com/r/gitpod/workspace-full).
 
-To use a more recent Ruby version, you can [change the base image](https://www.gitpod.io/docs/config-docker#configure-a-public-docker-image) to one of the following:
+To use a more recent Ruby version, you can [change the base image](https://www.gitpod.io/docs/integrations/docker#configure-a-public-docker-image) to one of the following:
 
 - [gitpod/workspace-ruby-3.0](https://hub.docker.com/r/gitpod/workspace-ruby-3.0)
 - [gitpod/workspace-ruby-3.1](https://hub.docker.com/r/gitpod/workspace-ruby-3.1)
 
 These images are automatically updated every week with the latest ruby patch versions (3.0.x and 3.1.x).
 
-To use another version, you may use a [custom Dockerfile](https://www.gitpod.io/docs/config-docker#configure-a-custom-dockerfile).
+To use another version, you may use a [custom Dockerfile](https://www.gitpod.io/docs/integrations/docker#configure-a-custom-dockerfile).
 
 ```dockerfile
 FROM gitpod/workspace-full

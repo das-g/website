@@ -13,7 +13,7 @@ Welcome, Scala programmer. Today we will show you how to configure Gitpod for yo
 
 ## Installing Scala
 
-First, you'll probably want to install Scala. To do this, add a new file to your repository called [.gitpod.Dockerfile](/docs/config-docker), and add the following content to it:
+First, you'll probably want to install Scala. To do this, add a new file to your repository called [.gitpod.Dockerfile](/docs/integrations/docker), and add the following content to it:
 
 ```dockerfile
 FROM gitpod/workspace-full
@@ -44,7 +44,7 @@ Finally, please note that these changes will only take effect in new workspaces.
 
 ![The Ammonite REPL in action](../../../static/images/docs/AmmoniteRepl.png)
 
-To install the [Ammonite REPL](https://ammonite.io/) in Gitpod, you must add the following to our previously-created [.gitpod.Dockerfile](/docs/config-docker):
+To install the [Ammonite REPL](https://ammonite.io/) in Gitpod, you must add the following to our previously-created [.gitpod.Dockerfile](/docs/integrations/docker):
 
 ```dockerfile
 RUN sudo sh -c '(echo "#!/usr/bin/env sh" && curl -L https://github.com/lihaoyi/Ammonite/releases/download/2.0.4/2.13-2.0.4) > /usr/local/bin/amm && chmod +x /usr/local/bin/amm'
@@ -54,7 +54,7 @@ Then commit the changes and push to your repository. Finally, when you open a ne
 
 ## Building projects with sbt
 
-To use [sbt](https://www.scala-sbt.org/) (simple build tool) in Gitpod, you can add the following to that [.gitpod.Dockerfile](/docs/config-docker) we created:
+To use [sbt](https://www.scala-sbt.org/) (simple build tool) in Gitpod, you can add the following to that [.gitpod.Dockerfile](/docs/integrations/docker) we created:
 
 ```dockerfile
 RUN brew install sbt
@@ -64,7 +64,7 @@ As usual, commit and push the changes, and `sbt` will be installed in all future
 
 ## Managing Scala versions with scalaenv
 
-Say your project needs a specific Scala version. You can use [scalaenv](https://github.com/scalaenv/scalaenv), a version manager for Scala, to switch between different Scala versions. But first, we must install `scalaenv`. As usual, we need to change our [.gitpod.Dockerfile](/docs/config-docker), by adding this to it:
+Say your project needs a specific Scala version. You can use [scalaenv](https://github.com/scalaenv/scalaenv), a version manager for Scala, to switch between different Scala versions. But first, we must install `scalaenv`. As usual, we need to change our [.gitpod.Dockerfile](/docs/integrations/docker), by adding this to it:
 
 ```dockerfile
 RUN brew install scalaenv
@@ -88,7 +88,7 @@ RUN brew install coursier/formulas/coursier
 
 ## Formatting Scala code with scalafmt
 
-To install [scalafmt](https://scalameta.org/scalafmt/) for your repository, add the following to your [.gitpod.Dockerfile](/docs/config-docker):
+To install [scalafmt](https://scalameta.org/scalafmt/) for your repository, add the following to your [.gitpod.Dockerfile](/docs/integrations/docker):
 
 ```dockerfile
 RUN sudo env "PATH=$PATH" coursier bootstrap org.scalameta:scalafmt-cli_2.12:2.4.2 \
@@ -100,7 +100,7 @@ Then to format your code simply run `scalafmt`!
 
 ## Putting it all together
 
-A full example of a [.gitpod.Dockerfile](/docs/config-docker) configured for Scala could look something like:
+A full example of a [.gitpod.Dockerfile](/docs/integrations/docker) configured for Scala could look something like:
 
 ```dockerfile
 FROM gitpod/workspace-full
@@ -165,4 +165,4 @@ If you are having trouble and need help please find us in the [Gitpod community]
 
 ## Feedback
 
-We love feedback and want to continuously improve all of our guides and documentation. If you found a grammar mistake, or we left out your favorite Scala tool, or you just have general feedback on the guide, please feel free to [edit this guide](https://gitpod.io/#https://github.com/gitpod-io/website/blob/master/src/docs/languages/scala.md) or to [file a website issue on GitHub](https://github.com/gitpod-io/website/issues/new/choose).
+We love feedback and want to continuously improve all of our guides and documentation. If you found a grammar mistake, or we left out your favorite Scala tool, or you just have general feedback on the guide, please feel free to [edit this guide](https://gitpod.io/#https://github.com/gitpod-io/website/blob/master/src/docs/introduction/languages/scala.md) or to [file a website issue on GitHub](https://github.com/gitpod-io/website/issues/new/choose).

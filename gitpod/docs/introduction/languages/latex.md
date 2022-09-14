@@ -13,7 +13,7 @@ This tutorial will demonstrate how to configure Gitpod to work with [LaTeX](http
 
 ## Installing LaTeX
 
-First, you will probably want to install LaTeX in Gitpod. To do this, add a new file to your repository called [.gitpod.Dockerfile](/docs/config-docker), and add the following content to it:
+First, you will probably want to install LaTeX in Gitpod. To do this, add a new file to your repository called [.gitpod.Dockerfile](/docs/integrations/docker), and add the following content to it:
 
 ```dockerfile
 FROM gitpod/workspace-full

@@ -25,7 +25,7 @@ Here's how Gitpod works: You are on GitHub and want to start working on a projec
 
 ![Gitpod button added by Gitpod browser extension](../../../static/images/blog/gitpod-launch/browser-ext.png)
 
-Don’t see the button on GitHub yet? You need to [install a small browser extension](/docs/browser-extension) to get it. Alternatively, you can just prefix any GitHub URL with “[gitpod.io/#](https://gitpod.io/#)”.
+Don’t see the button on GitHub yet? You need to [install a small browser extension](/docs/configure/users/browser-extension) to get it. Alternatively, you can just prefix any GitHub URL with “[gitpod.io/#](https://gitpod.io/#)”.
 
 You can try Gitpod right now. It's free for public repositories.
 

@@ -36,7 +36,7 @@ The easiest way to install a new Python version is to use `pyenv install <VERSIO
 
 You can switch between Python versions using `pyenv local <VERSION>`. For example, if you wanted to switch to Python version `2.7.17` you would run `pyenv local 2.7.17`. This will create a `.python-version` file that controls which Python version is the default in your project. (Note: When running it in a Dockerfile, replace `local` with `global` to change the system default.)
 
-## [Start tasks](/docs/config-start-tasks)
+## [Start tasks](/docs/configure/projects/tasks)
 
 You can start building your project when, or even [before](/docs/configure/projects/prebuilds) you start your Gitpod workspace. Are you using a `requirements.txt` file to manage dependencies? If so, add this to your [.gitpod.yml](/docs/references/gitpod-yml) to automatically pre-install all dependencies when starting a workspace:
 
@@ -89,7 +89,7 @@ vscode:
 
 ## GUI Applications with wxPython
 
-To install wxPython to your repository please add the following to your [.gitpod.Dockerfile](/docs/config-docker). If you don't have one, simply run [`gp init`](/docs/references/gitpod-cli) and commit the two generated files.
+To install wxPython to your repository please add the following to your [.gitpod.Dockerfile](/docs/integrations/docker). If you don't have one, simply run [`gp init`](/docs/references/gitpod-cli) and commit the two generated files.
 
 ```dockerfile
 # This will pull the official Gitpod `vnc` image

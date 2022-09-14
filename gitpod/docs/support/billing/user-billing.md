@@ -10,12 +10,12 @@ title: User Billing
 # {title}
 
 > **NOTE**
-> You can now configure [Team Billing](/docs/team-billing) directly from Teams & Projects with the following benefits:
+> You can now configure [Team Billing](/docs/support/billing/team-billing) directly from Teams & Projects with the following benefits:
 >
 > 1. Auto-subscribe new members when they join or leave the team.
 > 2. Pro-rata billing for new members who join in the middle of a billing cycle.
 >
-> [Team Billing](/docs/team-billing) will replace the manually managed **Team Plans** described below.
+> [Team Billing](/docs/support/billing/team-billing) will replace the manually managed **Team Plans** described below.
 
 Team Plans allow you to pay for your whole team with a single subscription.
 

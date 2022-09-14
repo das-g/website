@@ -13,7 +13,7 @@ It's easy to set up Deno in Gitpod.
 
 ## Setting up the Dockerfile
 
-Add a Dockerfile to your project as [.gitpod.Dockerfile](/docs/config-docker):
+Add a Dockerfile to your project as [.gitpod.Dockerfile](/docs/integrations/docker):
 
 ```dockerfile
 FROM gitpod/workspace-full

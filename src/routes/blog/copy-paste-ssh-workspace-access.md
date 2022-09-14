@@ -52,7 +52,7 @@ At Gitpod, we’ve been working very closely with our [customers](https://www.gi
 
 Because, not all tech companies are set up with the same architecture or technology. Not all developers work in exactly the same way, using the same tools, languages or frameworks. And not all development work looks exactly the same.
 
-But that’s a good thing. Choice and flexibility to choose the right tool for the job is essential. And that’s precisely why we build Gitpod to be flexible, eg. by [building Gitpod on top of ubiquitous technologies like Docker](https://www.gitpod.io/docs/config-docker). We integrate, we don’t dictate.
+But that’s a good thing. Choice and flexibility to choose the right tool for the job is essential. And that’s precisely why we build Gitpod to be flexible, eg. by [building Gitpod on top of ubiquitous technologies like Docker](https://www.gitpod.io/docs/integrations/docker). We integrate, we don’t dictate.
 
 For editing your code, you can use [VS Code in the browser](https://www.gitpod.io/docs/references/ides-and-editors/vscode-browser), [VS Code on desktop](https://www.gitpod.io/docs/references/ides-and-editors/vscode), and using JetBrains IDE’s via [JetBrains Gateway](https://www.gitpod.io/docs/integrations/jetbrains-gateway). Adding copy/paste SSH support just makes it that little bit easier for developers who prefer to work directly in their terminal, or for those times you need to hop into a Gitpod workspace to execute some commands.
 

@@ -19,7 +19,7 @@ To get the most out of ephemeral developer environments, it is important to let 
 
 > **Note**: In your local developer environment, you likely set up your project only once. If you work in a team, you probably have written instructions on how to get started. With Gitpod, you automate these manual steps so that a new environment can be set up repeatedly by Gitpod.
 
-Tasks are shell scripts that run on top of the Docker image you configure (learn more about [custom Docker images](/docs/config-docker)).
+Tasks are shell scripts that run on top of the Docker image you configure (learn more about [custom Docker images](/docs/integrations/docker)).
 
 `youtube: fA2fpqP1xaM`
 

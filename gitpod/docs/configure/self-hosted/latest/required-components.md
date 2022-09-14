@@ -67,7 +67,7 @@ The secret expects to have two keys:
 
 ## Source Control Management System
 
-Gitpod expects to be connected to a Source Control Management System (SCM) such as GitLab in order to function. You can find out more about which SCMs are supported and how to connect to them in the [Integrations](../../integrations) section. You will also be guided through connecting your SCM once you access your Gitpod installation for the first time.
+Gitpod expects to be connected to a Source Control Management System (SCM) such as GitLab in order to function. You can find out more about which SCMs are supported and how to connect to them in the [Integrations](/docs/integrations) section. You will also be guided through connecting your SCM once you access your Gitpod installation for the first time.
 
 ## Cert Manager
 

@@ -11,7 +11,7 @@ title: Bitbucket
 
 Gitpod works with any public or private repository on [Bitbucket](https://bitbucket.org/).
 
-To start a workspace from a Bitbucket project, prefix the Bitbucket project URL with `gitpod.io/#` as described in [Getting Started](/docs/introduction/getting-started) or use the [browser extension](/docs/browser-extension) to add a convenient Gitpod button to every Bitbucket page.
+To start a workspace from a Bitbucket project, prefix the Bitbucket project URL with `gitpod.io/#` as described in [Getting Started](/docs/introduction/getting-started) or use the [browser extension](/docs/configure/users/browser-extension) to add a convenient Gitpod button to every Bitbucket page.
 
 ## Enable Prebuilds
 

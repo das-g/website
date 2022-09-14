@@ -17,7 +17,7 @@ title: Team Billing
 > 1. Auto-subscribing new members when they join or leave the team.
 > 2. Pro-rata billing for new members who join in the middle of a billing cycle.
 >
-> If you prefer to continue to manage membership of [**Team Plans**](/docs/configure/teamsduction/getting-started) manually, you can.
+> If you prefer to continue to manage membership of [**Team Plans**](/docs/support/billing/team-billing) manually, you can.
 >
 > The next iteration of Team Billing will replace Team Plans with Usage-Based Billing.
 

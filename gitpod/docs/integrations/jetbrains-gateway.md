@@ -33,10 +33,10 @@ JetBrains Gateway is the underlying technology which enables the Gitpod integrat
 
 `youtube: 8djaRYT2FAY`
 
-1. **Install [JetBrains Gateway](https://www.jetbrains.com/help/idea/remote-development-a.html#gateway)** - With the [JetBrains Gateway and Gitpod](jetbrains-gateway) plugin you can create and manage your latest 20 Gitpod workspaces.
+1. **Install [JetBrains Gateway](https://www.jetbrains.com/help/idea/remote-development-a.html#gateway)** - With the [JetBrains Gateway and Gitpod](/docs/integrations/jetbrains-gateway) plugin you can create and manage your latest 20 Gitpod workspaces.
 2. **Install the Gitpod plugin** - Open JetBrains Gateway and you'll see the Gitpod logo on the main page. Click "install" to install the [Gitpod plugin](https://plugins.jetbrains.com/plugin/18438-gitpod-gateway) for JetBrains Gateway.
 3. **Update your Gitpod preferences** - Select your preferred JetBrains IDE on the [Gitpod preferences page](https://gitpod.io/preferences) which will set your default IDE for future workspace starts.
-4. **Start (or restart) your workspace** - Either start a workspace directly from within the [JetBrains Gateway](jetbrains-gateway) via the Gitpod plugin **OR** open a new workspace directly in Gitpod where on workspace start you will be prompted to open your preferred JetBrains IDE for that workspace.
+4. **Start (or restart) your workspace** - Either start a workspace directly from within the [JetBrains Gateway](/docs/integrations/jetbrains-gateway) via the Gitpod plugin **OR** open a new workspace directly in Gitpod where on workspace start you will be prompted to open your preferred JetBrains IDE for that workspace.
 
 ### How does JetBrains and Gitpod work?
 
@@ -109,6 +109,6 @@ The following diagram details how the JetBrains Gateway client connects and comm
 
 ## Troubleshooting
 
-- [What should I do if JetBrains Gateway and Gitpod aren’t working?](/docs/troubleshooting#what-should-i-do-if-jetbrains-gateway-and-gitpod-arent-working)
-- [Gitpod logs in JetBrains Gateway](/docs/troubleshooting#gitpod-logs-in-jetbrains-gateway)
-- [Gitpod logs in JetBrains Client](/docs/troubleshooting#gitpod-logs-in-jetbrains-client)
+- [What should I do if JetBrains Gateway and Gitpod aren’t working?](/docs/support/troubleshooting#what-should-i-do-if-jetbrains-gateway-and-gitpod-arent-working)
+- [Gitpod logs in JetBrains Gateway](/docs/support/troubleshooting#gitpod-logs-in-jetbrains-gateway)
+- [Gitpod logs in JetBrains Client](/docs/support/troubleshooting#gitpod-logs-in-jetbrains-client)

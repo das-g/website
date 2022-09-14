@@ -18,7 +18,7 @@ To collaborate with others on projects you can create a **Team** and invite othe
 
 Teams are used to share projects amongst team members. All users with access to a team can view branches and prebuilds for the projects in the team. They can also open new workspaces directly from a branch in the dashboard.
 
-Owners of a team can manage other members, reset the invite URL, and setup [Team Billing](/docs/team-billing).
+Owners of a team can manage other members, reset the invite URL, and setup [Team Billing](/docs/support/billing/team-billing).
 
 ### View teams
 

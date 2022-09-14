@@ -27,7 +27,7 @@ If you're short of time, here are the improvements:
 4. Fewer requests from VS Code to accept the SSH fingerprint
 5. Improved operating system support via OpenSSH
 
-However, if you're eager to learn more about the details about what has changed with VS Code Desktop and [SSH Gateway](/docs/configure/ssh#ssh-gateway), read on.
+However, if you're eager to learn more about the details about what has changed with VS Code Desktop and [SSH Gateway](/docs/configure/users/ssh#ssh-gateway), read on.
 
 ## The Different Approaches to SSH access in Gitpod
 
@@ -45,7 +45,7 @@ We'll go through all of these approaches in more detail below.
 
 ## Understanding SSH Gateway
 
-You may notice above the mention of the [SSH Gateway](/docs/configure/ssh#ssh-gateway) component. SSH Gateway is an intermediary service within Gitpod that proxies incoming SSH requests to the appropriate running workspaces.
+You may notice above the mention of the [SSH Gateway](/docs/configure/users/ssh#ssh-gateway) component. SSH Gateway is an intermediary service within Gitpod that proxies incoming SSH requests to the appropriate running workspaces.
 
 SSH Gateway for SaaS should be mostly transparent / invisible to the Gitpod experience. However, it is worth noting that SSH Gateway has non-functional benefits for performance and security.
 
@@ -111,7 +111,7 @@ This approach is not recommended because:
 
 If required, you manually can force VS Code Desktop to always fallback to the Local Companion by setting the property `gitpod.remote.useLocalApp` in your user preferences to `true`.
 
-> **Deprecation Notice:** The fallback SSH connection using Local Companion for VS Code Desktop will be deprecated in a future release of Gitpod. If you cannot connect to your workspaces directly via SSH, for example, because your firewall is blocking the SSH connection, please [contact support](https://www.gitpod.io/support) with [troubleshooting logs](https://www.gitpod.io/docs/troubleshooting#gitpod-logs-in-vs-code-web-and-desktop).
+> **Deprecation Notice:** The fallback SSH connection using Local Companion for VS Code Desktop will be deprecated in a future release of Gitpod. If you cannot connect to your workspaces directly via SSH, for example, because your firewall is blocking the SSH connection, please [contact support](https://www.gitpod.io/support) with [troubleshooting logs](https://www.gitpod.io/docs/support/troubleshooting#gitpod-logs-in-vs-code-web-and-desktop).
 
 ## Diagnosing / Fixing common SSH connection issues
 
@@ -163,17 +163,17 @@ _Caption: Passphrase prompt from VS Code requiring the SSH key passphrase._
 
 There is no way to recover passphrases with Gitpod. If you cannot remember your passphrase, consider creating a new SSH key and uploading that new key to Gitpod.
 
-See [configuring SSH](/docs/configure/ssh) for details on creating and uploading SSH keys.
+See [configuring SSH](/docs/configure/users/ssh) for details on creating and uploading SSH keys.
 
 ### What if I'm still having issues with SSH connections?
 
 1. Check that your Gitpod VS Code Desktop extension version is using the latest stable version (`0.40` or above).
 2. Attempt to directly connect via SSH using the `-v` to show verbose SSH logs. For example: `ssh -v workspacename@hostname`. You can find the `ssh` command in the workspace list on your Gitpod dashboard, see the [command-line](/docs/references/ides-and-editors/command-line) docs for more.
-3. If you're a self-hosted customer, ensure [SSH Gateway](/docs/configure/ssh) is configured correctly.
+3. If you're a self-hosted customer, ensure [SSH Gateway](/docs/configure/users/ssh) is configured correctly.
 
-If you are still experiencing issues using VS Code Desktop and Gitpod, please [contact support](/support) with any related [troubleshooting logs](/docs/troubleshooting#gitpod-logs-in-vs-code-web-and-desktop)
+If you are still experiencing issues using VS Code Desktop and Gitpod, please [contact support](/support) with any related [troubleshooting logs](/docs/support/troubleshooting#gitpod-logs-in-vs-code-web-and-desktop)
 
 For more details on VS Code Destkop and SSH setup with Gitpod, see:
 
-1. [Configuring SSH](/docs/configure/ssh) with Gitpod
+1. [Configuring SSH](/docs/configure/users/ssh) with Gitpod
 2. Working with [VS Code Desktop](https://www.gitpod.io/docs/references/ides-and-editors/vscode) and Gitpod

@@ -40,7 +40,7 @@ Along with other languages and tools, this base image includes:
 - [Gradle](https://gradle.org/) `v7.5.1` (`gradle -version`)
 - [Maven](https://maven.apache.org/) `v3.8.6` (`mvn -version`)
 
-> **Note:** We discuss how to set up a [custom base image](/docs/languages/java#setting-up-a-custom-dockerfile) later in the guide.
+> **Note:** We discuss how to set up a [custom base image](/docs/introduction/languages/java#setting-up-a-custom-dockerfile) later in the guide.
 
 ### Updating Java, Maven & Gradle
 
@@ -118,13 +118,13 @@ sdk current
 
 > **Note:** If your changes are not taking effect, ensure your workspace is building from the correct [context](/docs/introduction/learn-gitpod/context-url), where your `gitpod.yml` or `gitpod.Dockerfile` are checked in to version control and are on the branch or commit that you are opening.
 
-See [configure Docker](/docs/config-docker) for more.
+See [configure Docker](/docs/integrations/docker) for more.
 
 ## Build and run your application
 
 ### Building a Java application
 
-To build your application, you'll need to configure a [start task](/docs/config-start-tasks).
+To build your application, you'll need to configure a [start task](/docs/configure/projects/tasks).
 
 Start tasks are processes that are initiated on every workspace start. Depending on your project setup, start tasks can be used to build your application, run your application directly, or start any necessary tools for the application to run, such as starting database processes.
 
@@ -156,18 +156,18 @@ gp stop
 gp tasks
 ```
 
-> **Tip:** If you're using [VS Code Browser](/docs/references/ides-and-editors/vscode-browser) or [VS Code Desktop](/docs/references/ides-and-editors/vscode), then your tasks will open as terminal windows. You can configure their layout using the [openMode](/docs/config-start-tasks#openmode) property.
+> **Tip:** If you're using [VS Code Browser](/docs/references/ides-and-editors/vscode-browser) or [VS Code Desktop](/docs/references/ides-and-editors/vscode), then your tasks will open as terminal windows. You can configure their layout using the [openMode](/docs/configure/projects/tasks#openmode) property.
 
 > **Note:** We are using the `init` property so that we can perform application building during a [prebuild](/docs/configure/projects/prebuilds), for increased performance. We'll discuss prebuilds more later on.
 
-See [start tasks](/docs/config-start-tasks) and [.gitpod.yml reference](/docs/references/gitpod-yml) for more.
+See [start tasks](/docs/configure/projects/tasks) and [.gitpod.yml reference](/docs/references/gitpod-yml) for more.
 
 ### Running a Java application
 
 To run your application, you have two options:
 
 1. **Update your start task command** - Starting your application using the `command` start task will run the start process on workspace start. With both [VS Code Browser](/docs/references/ides-and-editors/vscode) and [VS Code Desktop](/docs/references/ides-and-editors/vscode-browser), tasks are automatically opened in the terminal(s). With [IntelliJ](/docs/references/ides-and-editors/intellij) / [JetBrains Gateway](/docs/integrations/jetbrains-gateway), configured tasks can be viewed by running `gp tasks` in the workspace.
-2. **Use a run / launch configuration** - Alternatively, you can commit a [run/debug configuration in IntelliJ IDEA](/docs/languages/java#configuring-jetbrains-rundebug-configurations) or a [launch configuration in VS Code](/docs/languages/java#configuring-vs-code-launch-configurations) as a way to start your application.
+2. **Use a run / launch configuration** - Alternatively, you can commit a [run/debug configuration in IntelliJ IDEA](/docs/introduction/languages/java#configuring-jetbrains-rundebug-configurations) or a [launch configuration in VS Code](/docs/introduction/languages/java#configuring-vs-code-launch-configurations) as a way to start your application.
 
 #### Using start tasks to run Java
 
@@ -209,7 +209,7 @@ Gitpod supports encrypted, user-specific environment variables.
 
 Environment variables are stored as part of your user settings and can be used to set access tokens, or pass any other kind of user-specific information to your workspaces. You can set environment variables using `gp env`, or in your project and account settings.
 
-See [environment variables](/docs/environment-variables) for more.
+See [environment variables](/docs/configure/projects/environment-variables) for more.
 
 ### Configuring ports
 
@@ -225,7 +225,7 @@ ports:
     onOpen: open-browser
 ```
 
-See [configuring ports](/docs/config-ports) for more
+See [configuring ports](/docs/configure/projects/ports) for more
 
 ### Configuring localhost
 
@@ -233,7 +233,7 @@ Your development application might rely on the `localhost` hostname to effective
 
 To ensure your localhost address works with Gitpod, you have two options:
 
-1. **Replace localhost references** - Swap `localhost` references within the application with the output of `gp url <port>`, typically via an [environment variable](/docs/environment-variables).
+1. **Replace localhost references** - Swap `localhost` references within the application with the output of `gp url <port>`, typically via an [environment variable](/docs/configure/projects/environment-variables).
 
 **Example:** Using the `DEV_ENVIRONMENT_HOST` environment variable instead of localhost within the application, configured in the `command` of the `.gitpod.yml` start tasks.
 
@@ -262,7 +262,7 @@ With IntelliJ IDEA using [JetBrains Gateway](/docs/integrations/jetbrains-gatewa
 
 Alternatively, by using [local companion](/docs/references/ides-and-editors/local-companion) all workspace ports will be forwarded automatically.
 
-See [configuring ports](/docs/config-ports) for more.
+See [configuring ports](/docs/configure/projects/ports) for more.
 
 ### Configuring VS Code Extensions
 
@@ -320,7 +320,7 @@ Gitpod prebuilds reduce wait time by installing dependencies or running builds b
 
 `youtube: ZtlJ0PakUHQ`
 
-See [prebuilds](/docs/configure/projects/prebuilds) and [start tasks](/docs/config-start-tasks) for more.
+See [prebuilds](/docs/configure/projects/prebuilds) and [start tasks](/docs/configure/projects/tasks) for more.
 
 ### Optimising JetBrains indexing
 
@@ -343,7 +343,7 @@ The default cache location for Maven is the `.m2` directory. However, since this
 
 If you are using the [workspace-full](https://github.com/gitpod-io/workspace-images) image, Maven caching configuration is already enabled.
 
-To configure Maven caching, add the following to your custom [Dockerfile](/docs/config-docker).
+To configure Maven caching, add the following to your custom [Dockerfile](/docs/integrations/docker).
 
 1. Create an `.m2` directory in the users (`gitpod`) home directory.
 
@@ -365,7 +365,7 @@ The default location of the gradle home is `$USER_HOME/.gradle`, however, since 
 
 If you are using the [workspace-full](https://github.com/gitpod-io/workspace-images) image, Gradle caching configuration is already enabled.
 
-To configure Gradle caching, add the following to your custom [Dockerfile](/docs/config-docker).
+To configure Gradle caching, add the following to your custom [Dockerfile](/docs/integrations/docker).
 
 ```
 ENV GRADLE_USER_HOME=/workspace/.gradle/
@@ -375,7 +375,7 @@ See [prebuilds](/docs/configure/projects/prebuilds) for more.
 
 ## Personalizing Gitpod
 
-All settings introduced so far, such as `.gitpod.yml` and `Dockerfile` apply for all users using of the gitpod project. To apply personalisation, consider setting up [dotfiles](/docs/configure/users/dotfiles), the Gitpod [Browser Extension](/docs/browser-extension),
+All settings introduced so far, such as `.gitpod.yml` and `Dockerfile` apply for all users using of the gitpod project. To apply personalisation, consider setting up [dotfiles](/docs/configure/users/dotfiles), the Gitpod [Browser Extension](/docs/configure/users/browser-extension),
 
 ### Dotfiles
 
@@ -389,7 +389,7 @@ See [dotfiles](/docs/configure/users/dotfiles) for more.
 
 To make opening Gitpod workspaces easier, install the Gitpod browser extension, which enables an "Open in Gitpod" button on GitHub, GitLab and Bitbucket.
 
-See [Browser Extension](/docs/browser-extension) for more.
+See [Browser Extension](/docs/configure/users/browser-extension) for more.
 
 ### Configure your IDE or editor
 

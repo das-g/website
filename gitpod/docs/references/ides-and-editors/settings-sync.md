@@ -11,7 +11,7 @@ title: VS Code Settings Sync
 
 VS Code is beloved for its endless customization possibilities.
 
-However, you may come across the challenge of having many multiple VS Code instances needing to share the same extensions, themes and settings. Since every start of a [Gitpod workspace](https://www.gitpod.io/docs/workspaces) is a new instance of VS Code, using [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) helps you avoid re-setting your environment for each new workspace and embrace ephemeral Gitpod workspaces.
+However, you may come across the challenge of having many multiple VS Code instances needing to share the same extensions, themes and settings. Since every start of a [Gitpod workspace](https://www.gitpod.io/docs/introduction/learn-gitpod/one-workspace-per-task) is a new instance of VS Code, using [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) helps you avoid re-setting your environment for each new workspace and embrace ephemeral Gitpod workspaces.
 
 ## How VS Code Setting Sync works
 

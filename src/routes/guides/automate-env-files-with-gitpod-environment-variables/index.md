@@ -75,7 +75,7 @@ When a new developer is onboarding to your repository, they won't have a `$DOTEN
 
 Another concern is that if a developer makes local changes to their `.env` but hasn't persisted it yet, a workspace restart (like after a timeout) shouldn't erase their changes. If there is already a `.env` file when a workspace starts, don't try to override it at all.
 
-You can copy the following Gitpod Task directly into your `.gitpod.yml`. For more information, check out the [documentation for Start Tasks](https://www.gitpod.io/docs/config-start-tasks) on Gitpod
+You can copy the following Gitpod Task directly into your `.gitpod.yml`. For more information, check out the [documentation for Start Tasks](https://www.gitpod.io/docs/configure/projects/tasks) on Gitpod
 
 ```yml
 tasks:

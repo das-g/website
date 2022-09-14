@@ -33,13 +33,13 @@ To install the Vue.js command-line interface in your current workspace run the f
 npm i -g vue-cli
 ```
 
-To install globally across all workspaces add the following to your [.gitpod.Dockerfile](/docs/config-docker)
+To install globally across all workspaces add the following to your [.gitpod.Dockerfile](/docs/integrations/docker)
 
 ```dockerfile
 RUN npm i -g vue-cli
 ```
 
-> Please note: If you don't already have one please run [`gp init`](/docs/references/gitpod-cli#init) which should generate two files [.gitpod.yml](/docs/references/gitpod-yml) and [.gitpod.Dockerfile](/docs/config-docker)
+> Please note: If you don't already have one please run [`gp init`](/docs/references/gitpod-cli#init) which should generate two files [.gitpod.yml](/docs/references/gitpod-yml) and [.gitpod.Dockerfile](/docs/integrations/docker)
 
 ## VSCode Extensions
 

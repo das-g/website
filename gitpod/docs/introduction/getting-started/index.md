@@ -32,7 +32,7 @@ The best way to configure Gitpod is by using Gitpod - you could perform the foll
 1. In a browser, navigate to your project's GitHub, GitLab or Bitbucket page.
 1. In the browser's address bar, prefix the entire URL with `gitpod.io/#` and press Enter.
    - For example, `gitpod.io/#https://github.com/gitpod-io/website`
-   - We recommend you [install the Gitpod browser extension](/docs/browser-extension) to make this a one-click operation.
+   - We recommend you [install the Gitpod browser extension](/docs/configure/users/browser-extension) to make this a one-click operation.
 1. Sign in with one of the listed providers and let the workspace start up.
 
 **Congratulations**, you have started your first of many ephemeral developer environments 🎉!
@@ -87,7 +87,7 @@ tasks:
     command: echo 'start script'
 ```
 
-Excellent! To learn more about the difference between `init` and `command`, please have a look at [Start Tasks](/docs/config-start-tasks).
+Excellent! To learn more about the difference between `init` and `command`, please have a look at [Start Tasks](/docs/configure/projects/tasks).
 
 ### Command script
 
@@ -170,4 +170,4 @@ At this point, you have a `.gitpod.yml` configuration file to automate repetitiv
 To explore more of what Gitpod has to offer, we recommend the following next topics:
 
 - [Configure](/docs/configure) to learn more about start tasks, environment variables and how to provide your own custom Docker image as the foundation for workspaces.
-- [Develop](/docs/develop) to learn more about the productivity gains you get with ephemeral workspaces, how contexts assist you and how to collaborate with team members.
+- [Develop](/docs/introduction/learn-gitpod) to learn more about the productivity gains you get with ephemeral workspaces, how contexts assist you and how to collaborate with team members.

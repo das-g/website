@@ -60,7 +60,7 @@ Not sure about ShellCheck? Try it in Gitpod!
 
 Just to name a few things Bash IDE adds: Code completion, hovers, and diagnostic reporting.
 
-To install Bash IDE to your repository add the following to your [.gitpod.Dockerfile](/docs/config-docker)
+To install Bash IDE to your repository add the following to your [.gitpod.Dockerfile](/docs/integrations/docker)
 
 ```dockerfile
 RUN npm i -g bash-language-server

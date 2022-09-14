@@ -89,7 +89,7 @@ For instance:
 gp preview $(gp url 3000)/my/path/index.html
 ```
 
-If you put this into the `.gitpod.yml` to open the a certain page on startup, make sure you [ignore the default action](/docs/config-ports) when the port opens.
+If you put this into the `.gitpod.yml` to open the a certain page on startup, make sure you [ignore the default action](/docs/configure/projects/ports) when the port opens.
 
 ## env
 
@@ -109,7 +109,7 @@ gp env
 
 In situations where you work with multiple terminals and one depends on a task in another terminal to complete, `gp sync-await <name>` waits until you call `gp sync-done <name>` in another terminal.
 
-See [Start Tasks](/docs/config-start-tasks#wait-for-commands-to-complete) for a real-world example.
+See [Start Tasks](/docs/configure/projects/tasks#wait-for-commands-to-complete) for a real-world example.
 
 ## sync-done
 
@@ -121,7 +121,7 @@ A common use case is the following where we have three terminals:
 - Terminal 2: You use `gp sync-await build && npm run start-database` to wait for the build to complete before you start a database
 - Terminal 3: You use `gp sync-await build && npm run dev` to wait for the build to complete before you start the dev server.
 
-See [Start Tasks](/docs/config-start-tasks#wait-for-commands-to-complete) for a real-world example.
+See [Start Tasks](/docs/configure/projects/tasks#wait-for-commands-to-complete) for a real-world example.
 
 ## snapshot
 
@@ -195,7 +195,7 @@ gp tasks stop --all
 
 ## timeout
 
-Interact with workspace timeout configuration. You can learn more in [Life of a Workspace](/docs/life-of-workspace#timeouts).
+Interact with workspace timeout configuration. You can learn more in [Life of a Workspace](/docs/introduction/learn-gitpod/the-life-of-a-workspace#timeouts).
 
 ```sh
 gp timeout

@@ -76,4 +76,4 @@ You've successfully ran your first workspace and experienced first hand what we 
 
 - [Getting started with your own project](/docs/configure)
 - [Git Integrations](/docs/integrations)
-- [.NET in Gitpod](/docs/languages/dotnet)
+- [.NET in Gitpod](/docs/introduction/languages/dotnet)

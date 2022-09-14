@@ -89,7 +89,7 @@ Let’s peek under the hood how the integration works from top to bottom:
 1. DataStax have created self-paced workshops which are [hosted on GitHub](https://github.com/DataStax-Academy?type=source).
 1. These workshops are listed within Astra DB (which is DataStax’s DBaaS offering)
 1. On each workshop, there is a button to launch the workshop on Gitpod.
-1. DataStax prompts the user to select which managed database the workshop should use, and non-sensitive information is passed through to Gitpod [as environment variables](/docs/environment-variables#provide-env-vars-via-url) via the URL:
+1. DataStax prompts the user to select which managed database the workshop should use, and non-sensitive information is passed through to Gitpod [as environment variables](/docs/configure/projects/environment-variables#provide-env-vars-via-url) via the URL:
 
 > https://gitpod.io/#ASTRA_DB_ID=6677d1aa-2a69-4739-ba5d-26fdef15d8ae,ASTRA_DB_KEYSPACE=Workshop,ASTRA_DB_REGION=us-east1,ASTRA_DB_USERNAME=/https://github.com/DataStax-Examples/todo-astra-jamstack-netlify
 

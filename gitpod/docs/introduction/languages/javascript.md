@@ -39,11 +39,11 @@ tasks:
 
 <span aria-hidden="true">👆</span> In the above example, we are telling Gitpod to run what is in the `init` phase at the time of workspace initialization and then afterwards run whatever is in the `command` phase.
 
-Read more about [start tasks](/docs/config-start-tasks).
+Read more about [start tasks](/docs/configure/projects/tasks).
 
 ## Node Versions
 
-Gitpod comes with the latest stable Node.js version pre-installed but let's say your project uses a different version of `node` (say `14.8.0` for example), well the good news is that Gitpod also comes with `nvm` (a tool used to manage multiple active Node.js versions) installed. To install and configure the desired version of node create a [.gitpod.Dockerfile](/docs/config-docker) and add the following to it:
+Gitpod comes with the latest stable Node.js version pre-installed but let's say your project uses a different version of `node` (say `14.8.0` for example), well the good news is that Gitpod also comes with `nvm` (a tool used to manage multiple active Node.js versions) installed. To install and configure the desired version of node create a [.gitpod.Dockerfile](/docs/integrations/docker) and add the following to it:
 
 ```dockerfile
 FROM gitpod/workspace-full:latest
@@ -55,14 +55,14 @@ RUN bash -c 'VERSION="14.8.0" \
 RUN echo "nvm use default &>/dev/null" >> ~/.bashrc.d/51-nvm-fix
 ```
 
-and then in your [.gitpod.yml](/docs/references/gitpod-yml) reference your [.gitpod.Dockerfile](/docs/config-docker) as shown below:
+and then in your [.gitpod.yml](/docs/references/gitpod-yml) reference your [.gitpod.Dockerfile](/docs/integrations/docker) as shown below:
 
 ```yaml
 image:
   file: .gitpod.Dockerfile
 ```
 
-Then, after committing your changes, start a new workspace, the version for that workspace will be what you’ve specified in your [.gitpod.Dockerfile](/docs/config-docker).
+Then, after committing your changes, start a new workspace, the version for that workspace will be what you’ve specified in your [.gitpod.Dockerfile](/docs/integrations/docker).
 
 ## Using ESLint for linting
 
@@ -79,7 +79,7 @@ and then search for `eslint` in the extensions tab and then install it from ther
 
 ## Making Live Reload work in Rollup based projects like Svelte
 
-This section was moved into [Svelte guide](/docs/languages/svelte).
+This section was moved into [Svelte guide](/docs/introduction/languages/svelte).
 
 ## Further Reading
 
