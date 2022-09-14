@@ -552,7 +552,7 @@ export const pricingFAQ: FAQ = {
     {
       title: "Can I create a team plan?",
       content:
-        '<p> Sure, if you would like to manage subscriptions for a whole team on a single invoice, you can create a <a href="https://gitpod.io/teams/">team plan.</a> </p> <p> In case you need more information on how to setup a team subscription, visit <a href="/docs/teams">gitpod.io/docs/teams.</a> </p>',
+        '<p> Sure, if you would like to manage subscriptions for a whole team on a single invoice, you can create a <a href="https://gitpod.io/teams/">team plan.</a> </p> <p> In case you need more information on how to setup a team subscription, visit <a href="/docs/configure/teams">gitpod.io/docs/configure/teams.</a> </p>',
     },
     {
       title: "Can I change my subscription at any time?",

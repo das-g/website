@@ -21,7 +21,7 @@ You can start a Gitpod workspace directly from the web pages of a GitLab reposit
 
 ![GitLab Integration](../../../static/images/docs/beta/integrations/gitpod-button-project-page.png)
 
-To launch new Gitpod workspaces for issues, branches, specific commits, etc. you can also prefix any GitLab URL with `gitpod.io/#` as described in the [Getting Started](/docs/getting-started) page, or use the [browser extension](/docs/browser-extension) to add a convenient _Gitpod_ button to every GitLab page.
+To launch new Gitpod workspaces for issues, branches, specific commits, etc. you can also prefix any GitLab URL with `gitpod.io/#` as described in the [Getting Started](/docs/introduction/getting-started) page, or use the [browser extension](/docs/browser-extension) to add a convenient _Gitpod_ button to every GitLab page.
 
 ## Enabling Prebuilds
 

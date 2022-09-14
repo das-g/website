@@ -24,7 +24,7 @@ RUN /home/gitpod/.deno/bin/deno completions bash > /home/gitpod/.bashrc.d/90-den
     echo 'export PATH="$DENO_INSTALL/bin:$PATH"' >> /home/gitpod/.bashrc.d/90-deno
 ```
 
-And configure this Dockerfile in your [.gitpod.yml](/docs/configure/projects/gitpod-yaml):
+And configure this Dockerfile in your [.gitpod.yml](/docs/references/gitpod-yml):
 
 ```YAML
 image:
@@ -53,4 +53,4 @@ Here is a useful extensions that you'll likely want to install in your Deno proj
 
 To add this extension to your repository, simply open Gitpod's Extensions panel (see left vertical menu in the IDE), then search for "Deno" and install it "for this project".
 
-Next, simply commit the [.gitpod.yml](/docs/configure/projects/gitpod-yaml) configuration file that was automatically created (or updated) by Gitpod.
+Next, simply commit the [.gitpod.yml](/docs/references/gitpod-yml) configuration file that was automatically created (or updated) by Gitpod.

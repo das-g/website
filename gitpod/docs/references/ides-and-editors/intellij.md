@@ -96,7 +96,7 @@ You can install a plugin only for **your current workspace** following these ste
 
 > JetBrains plugin support is currently in [Beta](/docs/support/release-cycle) · [Send feedback](https://github.com/gitpod-io/gitpod/issues/6576).
 
-You can share a plugin on **{title} backend** with everybody working on the repository by adding it to [.gitpod.yml](/docs/configure/projects/gitpod-yaml) and pushing to your Git repository.
+You can share a plugin on **{title} backend** with everybody working on the repository by adding it to [.gitpod.yml](/docs/references/gitpod-yml) and pushing to your Git repository.
 Each workspace is preconfigured with plugins from the `gitpod.yml` configuration file. For example:
 
 ```yaml
@@ -131,7 +131,7 @@ Gitpod prebuilds allow you to improve it further by indexing before you start a 
 To leverage it:
 
 - configure prebuilds for your repository, refer to [Prebuilds](/docs/configure/projects/prebuilds);
-- enable indexing for {title} in prebuilds by editing [.gitpod.yml](/docs/configure/projects/gitpod-yaml) in your repository:
+- enable indexing for {title} in prebuilds by editing [.gitpod.yml](/docs/references/gitpod-yml) in your repository:
 
 ```yaml
 jetbrains:

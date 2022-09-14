@@ -9,7 +9,7 @@ title: Team Billing
 
 # {title}
 
-> Team Billing is part of [Teams & Projects](/docs/teams-and-projects), currently in [Beta](/docs/support/release-cycle).
+> Team Billing is part of [Teams & Projects](/docs/configure), currently in [Beta](/docs/support/release-cycle).
 
 > **NOTE**
 > This first iteration of Team Billing improves Team Plans by:
@@ -17,7 +17,7 @@ title: Team Billing
 > 1. Auto-subscribing new members when they join or leave the team.
 > 2. Pro-rata billing for new members who join in the middle of a billing cycle.
 >
-> If you prefer to continue to manage membership of [**Team Plans**](/docs/teams) manually, you can.
+> If you prefer to continue to manage membership of [**Team Plans**](/docs/configure/teamsduction/getting-started) manually, you can.
 >
 > The next iteration of Team Billing will replace Team Plans with Usage-Based Billing.
 
@@ -37,6 +37,6 @@ Once a plan is active, Team Billing will auto-subscribe new members, and the cou
 
 - A Team can only have one active Team Billing plan.
 - With Team Billing, all team members, including owners, are auto-subscribed to the plan.
-- New members are added using a shared [invite URL](/docs/teams-and-projects#add-members-to-a-team) which can be reset.
+- New members are added using a shared [invite URL](/docs/configure#add-members-to-a-team) which can be reset.
 - When new members join in the middle of a billing period, you will be billed pro-rata for the remaining fraction of the month.
-- See [Teams & Projects](/docs/teams-and-projects) to create a new Team.
+- See [Teams & Projects](/docs/configure) to create a new Team.

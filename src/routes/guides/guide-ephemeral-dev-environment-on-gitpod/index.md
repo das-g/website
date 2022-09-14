@@ -52,7 +52,7 @@ ports:
     onOpen: open-preview
 ```
 
-You can read more about `.gitpod.yml` in [docs: config gitpod file](https://www.gitpod.io/docs/configure/projects/gitpod-yaml)
+You can read more about `.gitpod.yml` in [docs: config gitpod file](https://www.gitpod.io/docs/references/gitpod-yml)
 
 ### Setting up your first `.gitpod.yml` ⚡️
 
@@ -64,7 +64,7 @@ You can read more about `.gitpod.yml` in [docs: config gitpod file](https://www.
 3. For Gitpod to detect configuration changes, push and commit your `gitpod.yml`.
 4. Now open your project in a new workspace by prefixing your repo URL with `gitpod.io/#{your-repository-url}` or using the Gitpod extension.
 
-You can read more about `.gitpod.yml` in the [configure](https://www.gitpod.io/docs/configure/projects/gitpod-yaml) documentation. For information about the `.gitpod.yml` file properties, see the [`.gitpod.yml` reference documentation](https://www.gitpod.io/docs/references/gitpod-yml).
+You can read more about `.gitpod.yml` in the [configure](https://www.gitpod.io/docs/references/gitpod-yml) documentation. For information about the `.gitpod.yml` file properties, see the [`.gitpod.yml` reference documentation](https://www.gitpod.io/docs/references/gitpod-yml).
 
 ## Configure your developer environment based on a Dockerfile
 

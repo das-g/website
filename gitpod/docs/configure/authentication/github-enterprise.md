@@ -38,7 +38,7 @@ Copy the **Client ID** and **Secret** into the corresponding fields in Gitpod an
 
 GHE users connect their Gitpod account to their GHE account by starting a workspace.
 
-To start a workspace, paste the URL of a GHE repository into the New Workspace popup (Cmd+O) in Gitpod, or prefix the repository URL as described in [Getting Started](/docs/getting-started).
+To start a workspace, paste the URL of a GHE repository into the New Workspace popup (Cmd+O) in Gitpod, or prefix the repository URL as described in [Getting Started](/docs/introduction/getting-started).
 
 ![Open in Gitpod form](../../../static/images/integrations/open-in-gitpod.png)
 

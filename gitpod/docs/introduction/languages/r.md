@@ -21,7 +21,7 @@ FROM gitpod/workspace-full
 RUN brew install R
 ```
 
-Next, create a Gitpod configuration file called [.gitpod.yml](/docs/configure/projects/gitpod-yaml) (you can also simply run `gp init` and Gitpod will generate the file), and reference the above Dockerfile in it like so:
+Next, create a Gitpod configuration file called [.gitpod.yml](/docs/references/gitpod-yml) (you can also simply run `gp init` and Gitpod will generate the file), and reference the above Dockerfile in it like so:
 
 ```yml
 image:
@@ -35,7 +35,7 @@ Then commit and push both files to your repository. After that, every new Gitpod
 ### R Extension
 
 ![R extension](../../../static/images/docs/RGitpod.png)
-To install the R extension to your repository, add the following to your [.gitpod.yml](/docs/configure/projects/gitpod-yaml) file:
+To install the R extension to your repository, add the following to your [.gitpod.yml](/docs/references/gitpod-yml) file:
 
 ```yaml
 vscode:

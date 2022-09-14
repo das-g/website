@@ -21,7 +21,7 @@ FROM gitpod/workspace-full
 RUN brew install scala
 ```
 
-Additionally create a file called [.gitpod.yml](/docs/configure/projects/gitpod-yaml) and add the following:
+Additionally create a file called [.gitpod.yml](/docs/references/gitpod-yml) and add the following:
 
 ```YAML
 image:
@@ -118,7 +118,7 @@ RUN scalaenv install scala-2.12.11 && scalaenv global scala-2.12.11
 
 You will notice that all the `brew install` commands are on the same line. We recommend grouping similar commands together to minimize the number of [Docker layers](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#minimize-the-number-of-layers).
 
-Additionally, your [.gitpod.yml](/docs/configure/projects/gitpod-yaml) file should still look like this:
+Additionally, your [.gitpod.yml](/docs/references/gitpod-yml) file should still look like this:
 
 ```YAML
 image:

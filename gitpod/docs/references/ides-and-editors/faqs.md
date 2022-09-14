@@ -24,7 +24,7 @@ Gitpod doesn't currently support settings sync with other hosted VS Code environ
 ## My VS Code extensions are not syncing, what should I do?
 
 1. When installing an extension in Gitpod using the `Install (Do Not Sync)` option.
-2. Extensions defined in [`gitpod.yml`](https://www.gitpod.io/docs/configure/projects/gitpod-yaml/)
+2. Extensions defined in [`gitpod.yml`](https://www.gitpod.io/docs/references/gitpod-yml/)
 3. Extensions manually installed from a `vsix` file
 
 ## Can I use both a desktop IDE and a browser editor in Gitpod?

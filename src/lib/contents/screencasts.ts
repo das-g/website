@@ -19,7 +19,7 @@ export const screencasts: Screencast[] = [
     youtubeId: "w65POyu3ZUQ",
     relatedDocs: [
       { path: "/docs/", title: "Introduction to Gitpod" },
-      { path: "/docs/getting-started", title: "Getting Started" },
+      { path: "/docs/introduction/getting-started", title: "Getting Started" },
       {
         path: "/docs/introduction/learn-gitpod/context-url",
         title: "Context URLs",
@@ -49,7 +49,7 @@ export const screencasts: Screencast[] = [
     youtubeId: "fA2fpqP1xaM",
     relatedDocs: [
       { path: "/docs/configure", title: "Configure Your Project" },
-      { path: "/docs/configure/projects/gitpod-yaml", title: ".gitpod.yml" },
+      { path: "/docs/references/gitpod-yml", title: ".gitpod.yml" },
       { path: "/docs/config-docker", title: "Docker Configuration" },
       { path: "/docs/config-start-tasks", title: "Start Tasks" },
     ],

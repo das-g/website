@@ -21,7 +21,7 @@ Gitpod uses the name and email from your GitHub account ID to create a new Gitpo
 
 To start a new workspace after logging into Gitpod, use cmd-O (ctrl-O on Windows) or click on the **New Workspace** button in https://gitpod.io/workspaces. This will prompt for a repository URL, or suggest recent repositories opened with your account.
 
-You can also start a Gitpod workspace using a GitHub repository URL. Simply point your browser to the repository URL prefixed with `gitpod.io/#` as described in [Getting Started](/docs/getting-started).
+You can also start a Gitpod workspace using a GitHub repository URL. Simply point your browser to the repository URL prefixed with `gitpod.io/#` as described in [Getting Started](/docs/introduction/getting-started).
 
 ## Granting additional GitHub OAuth permissions
 

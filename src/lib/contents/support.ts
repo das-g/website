@@ -6,7 +6,7 @@ export const cards: Card[] = [
     title: "Getting Started",
     text: "This page helps you understand how to provide a configuration for your project.",
     link: {
-      href: "/docs/getting-started",
+      href: "/docs/introduction/getting-started",
       text: "Get Started",
     },
   },

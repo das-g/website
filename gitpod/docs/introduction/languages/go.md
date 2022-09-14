@@ -38,7 +38,7 @@ Here are a few Go example projects that are already automated with Gitpod:
 
 </div>
 
-To install Go Test Explorer for your repository, add the following to your [.gitpod.yml](/docs/configure/projects/gitpod-yaml)
+To install Go Test Explorer for your repository, add the following to your [.gitpod.yml](/docs/references/gitpod-yml)
 
 ```YAML
 vscode:
@@ -55,7 +55,7 @@ tasks:
   - init: go get -v -t -d ./...
 ```
 
-A full example of a [.gitpod.yml](/docs/configure/projects/gitpod-yaml) file might look like this
+A full example of a [.gitpod.yml](/docs/references/gitpod-yml) file might look like this
 
 ```yaml
 image: gitpod/workspace-full
@@ -122,7 +122,7 @@ image:
   file: .gitpod.Dockerfile
 ```
 
-Now you can [See it in action on a new workspace](/docs/configure/projects/gitpod-yaml#see-it-in-action)
+Now you can [See it in action on a new workspace](/docs/references/gitpod-yml#see-it-in-action)
 
 ## Debugging
 

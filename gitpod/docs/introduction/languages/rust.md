@@ -60,7 +60,7 @@ Here are a few Rust example projects that are already automated with Gitpod:
 
 The most popular Rust VSCode extensions are already pre-installed in Gitpod. But here are a few "nice to have" extensions you may choose to install as well.
 
-In order to install one of these extensions for your repository, simply head to Gitpod's [Extensions panel](/docs/references/ides-and-editors/vscode-extensions) (find it in the IDE's left vertical menu), then search for the desired extension by name, and install it for your project. This will add an entry to your [.gitpod.yml](/docs/configure/projects/gitpod-yaml) file that ensures all future Gitpod workspaces for your repository will already have this extension pre-installed.
+In order to install one of these extensions for your repository, simply head to Gitpod's [Extensions panel](/docs/references/ides-and-editors/vscode-extensions) (find it in the IDE's left vertical menu), then search for the desired extension by name, and install it for your project. This will add an entry to your [.gitpod.yml](/docs/references/gitpod-yml) file that ensures all future Gitpod workspaces for your repository will already have this extension pre-installed.
 
 ### Rust Test Explorer
 
@@ -135,7 +135,7 @@ RUN sudo apt-get -q update \
 ENV RUST_LLDB=/usr/bin/lldb-8
 ```
 
-Next, add the following to your [.gitpod.yml](/docs/configure/projects/gitpod-yaml) file:
+Next, add the following to your [.gitpod.yml](/docs/references/gitpod-yml) file:
 
 ```yaml
 image:

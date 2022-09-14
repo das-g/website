@@ -6,8 +6,8 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /code-of-conduct https://github.com/gitpod-io/.github/blob/main/CODE_OF_CONDUCT.md
 /configure/editor /docs/editors/vscode 301
 /direction https://www.notion.so/gitpod/Gitpod-s-Direction-be35d064c0704fbda61c542b84e07ef6 301
-/docs/10_getting_started /docs/getting-started 301
-/docs/10_Getting_Started /docs/getting-started 301
+/docs/10_getting_started /docs/introduction/getting-started 301
+/docs/10_Getting_Started /docs/introduction/getting-started 301
 /docs/20_browser_extension /docs/browser-extension 301
 /docs/20_Browser_Extension /docs/browser-extension 301
 /docs/30_workspaces /docs/workspaces 301
@@ -19,8 +19,8 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/34_command_line_interface /docs/references/gitpod-cli 301
 /docs/40_configuration /docs/configure 301
 /docs/40_Configuration /docs/configure 301
-/docs/41_config_gitpod_file /docs/configure/projects/gitpod-yaml 301
-/docs/41_Config_Gitpod_File /docs/configure/projects/gitpod-yaml 301
+/docs/41_config_gitpod_file /docs/references/gitpod-yml 301
+/docs/41_Config_Gitpod_File /docs/references/gitpod-yml 301
 /docs/42_config_docker /docs/config-docker 301
 /docs/43_config_ports /docs/config-ports 301
 /docs/44_config_start_tasks /docs/config-start-tasks 301
@@ -126,7 +126,7 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/ides-and-editors /docs/references/ides-and-editors 301
 /docs/references/ides-and-editors/jetbrains-gateway /docs/integrations/jetbrains-gateway 301
 /docs/command-line-interface /docs/references/gitpod-cli 301
-/docs/config-gitpod-file /docs/configure/projects/gitpod-yaml 301
+/docs/config-gitpod-file /docs/references/gitpod-yml 301
 /docs/references/gitpod-releases /docs/support/release-cycle 301
 /docs/bitbucket-server-integration /docs/configure/authentication/bitbucket-server 301
 /docs/bitbucket-integration  /docs/configure/authentication/bitbucket 301
@@ -137,3 +137,6 @@ https://community.gitpod.io/* https://www.gitpod.io/chat 301!
 /docs/references/gp-cli /docs/references/gitpod-cli 301
 /docs/context-urls /docs/introduction/learn-gitpod/context-url 301
 /docs/config-dotfiles /docs/configure/users/dotfiles 301
+/docs/teams-and-projects /docs/configure 301
+/docs/getting-started /docs/introduction/getting-started 301
+/docs/teams /docs/configure/teams 301

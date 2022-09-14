@@ -50,4 +50,4 @@ If you prefer to not install browser extensions then you can use the Gitpod [bro
 
 With Gitpod you start treating your dev environments as something ephemeral: you start them, you code, you push your code, and you forget about them. For your next task, you'll use a fresh dev environment.
 
-- [Getting started with your own project](/docs/getting-started)
+- [Getting started with your own project](/docs/introduction/getting-started)

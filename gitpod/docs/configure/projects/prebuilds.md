@@ -43,7 +43,7 @@ To use global installs like 'npm install -g', we suggest using a custom Dockerfi
 
 ## Projects and prebuilds
 
-[Projects](/docs/teams-and-projects#projects) are a convenient way to manage prebuilds and workspaces for your repository.
+[Projects](/docs/configure#projects) are a convenient way to manage prebuilds and workspaces for your repository.
 
 To create a new project:
 
@@ -114,7 +114,7 @@ By default, Gitpod prepares prebuilt workspaces for all changes on the default b
 > **Note**: Prebuilds are executed as the user who enabled them. This means that if you want to use
 > prebuilds on a private repository, you must give Gitpod access to private repositories.
 
-Prebuilds are configured in your repository's [`.gitpod.yml`](/docs/configure/projects/gitpod-yaml) file with the following start tasks:
+Prebuilds are configured in your repository's [`.gitpod.yml`](/docs/references/gitpod-yml) file with the following start tasks:
 
 - `before`
 - `init`
