@@ -15,6 +15,7 @@ function M(
 }
 
 export const MENU: MenuEntry[] = [
+  M("Introduction", "introduction"),
   M("Getting started", "introduction/getting-started"),
   M("Learn Gitpod", "introduction/learn-gitpod", [
     M(
@@ -35,6 +36,7 @@ export const MENU: MenuEntry[] = [
     M("Rust", "introduction/languages/rust"),
   ]),
 
+  M("Configure", "configure"),
   M("Teams", "configure/teams", [
     M("Billing", "configure/teams/billing", [], "beta"),
     M("Plans", "configure/teams/plans", []),
@@ -115,6 +117,8 @@ export const MENU: MenuEntry[] = [
       M("Upgrade Guides", "configure/self-hosted/latest/upgrade-guides"),
     ]),
   ]),
+
+  M("References", "references"),
   M(".gitpod.yml", "references/gitpod-yml"),
   M("IDEs & editors", "references/ides-and-editors", [
     M("VS Code Browser", "references/ides-and-editors/vscode-browser"),
@@ -147,6 +151,7 @@ export const MENU: MenuEntry[] = [
   M("Compatibility", "references/compatibility"),
   // M("Custom Docker image", "references/gitpod-dockerfile"),
   // M("Architecture", "references/architecture"),
+  M("Support", "support"),
   M("Contribute", "support/contribute", [
     M("Content", "support/contribute/content"),
     M("Documentation", "support/contribute/documentation"),

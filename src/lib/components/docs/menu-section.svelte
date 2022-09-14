@@ -14,13 +14,35 @@
           : $docsCurrentSectionStore
       ) >= 0
     : /\/docs\/?$/.test(menuItem.path);
+  let dictionary: any = ["Introduction", "Configure", "References", "Support"];
+
+  const isGroup = dictionary.includes(menuItem.title);
+  const calculateClass = () => {
+    if (isActiveSection && isGroup) {
+      return "text-black dark:text-white font-semibold pt-5 block";
+    } else if (isActiveSection && !isGroup) {
+      return "text-black dark:text-white font-semibold";
+    } else if (isGroup) {
+      return "text-black dark:text-white font-semibold pt-5 block";
+    } else {
+      return "";
+    }
+  };
+  //   <div>
+  //   <div
+  //     class={Object.keys(dictionary).includes(menuItem.title)
+  //       ? "px-6 pt-6 text-sm leading-6 font-bold mt-5"
+  //       : "hidden"}
+  //   >
+  //     {dictionary[menuItem.title]}
+  //   </div>
+  // </div>
 </script>
 
 <li data-analytics={`{"position":"sidebar"}`}>
   <div class="px-6 inline-block text-sm leading-6">
-    <MenuLink
-      class={isActiveSection ? "text-black dark:text-white font-semibold" : ""}
-      href={menuItem.path}>{menuItem.title}</MenuLink
+    <MenuLink class={calculateClass()} href={menuItem.path}
+      >{menuItem.title}</MenuLink
     >
     {#if menuItem.subMenu && isActiveSection}
       <ul
