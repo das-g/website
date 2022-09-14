@@ -1,3 +1,5 @@
+import plusSvelte from "$lib/components/svgs/icons/plus.svelte";
+import tickSvelte from "$lib/components/svgs/icons/tick.svelte";
 import type { Card } from "$lib/types/card.type";
 import type { ExploreSection } from "$lib/types/explore-section.type";
 
@@ -35,18 +37,12 @@ export const benefits: Card[] = [
     text: "Enjoy free, unlimited hours on any public repository.",
   },
   {
-    icon: {
-      src: "/svg/icons/plus.svg",
-      alt: "Plus",
-    },
+    icon: plusSvelte,
     title: "Extra resources",
     text: "Receive exclusive swag, access to resources to help you spread the word, content reviews from the Gitpod team,  and more!",
   },
   {
-    icon: {
-      src: "/svg/icons/tick.svg",
-      alt: "Tick",
-    },
+    icon: tickSvelte,
     title: "Beta access",
     text: "Test new features before they are officially released and share your feedback with our product teams.",
   },
