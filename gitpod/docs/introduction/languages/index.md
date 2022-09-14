@@ -9,23 +9,26 @@ title: Languages
 
 # Languages
 
-Below is a list of language specific tips & tricks
+Lorem Ipsum
 
-- [JavaScript](/docs/languages/javascript)
-- [Python](/docs/languages/python)
-- [HTML/CSS](/docs/languages/html)
-- [Java](/docs/languages/java)
-- [C++](/docs/languages/cpp)
-- [Golang](/docs/languages/go)
-- [Ruby](/docs/languages/ruby)
-- [PHP](/docs/languages/php)
-- [Vue](/docs/languages/vue)
-- [Scala](/docs/languages/scala)
-- [Rust](/docs/languages/rust)
-- [.NET](/docs/languages/dotnet)
-- [Dart](/docs/languages/dart)
-- [Julia](/docs/languages/julia)
-- [LaTeX](/docs/languages/latex)
-- [R](/docs/languages/r)
-- [Kotlin](/docs/languages/kotlin)
-- [Deno](/docs/languages/deno)
+- [JavaScript](/docs/introduction/languages/javascript)
+- [Python](/docs/introduction/languages/python)
+- [Java](/docs/introduction/languages/java)
+- [Golang](/docs/introduction/languages/go)
+- [Rust](/docs/introduction/languages/rust)
+
+---
+
+- [HTML/CSS](/docs/introduction/languages/html)
+- [C++](/docs/introduction/languages/cpp)
+- [Ruby](/docs/introduction/languages/ruby)
+- [PHP](/docs/introduction/languages/php)
+- [Vue](/docs/introduction/languages/vue)
+- [Scala](/docs/introduction/languages/scala)
+- [.NET](/docs/introduction/languages/dotnet)
+- [Dart](/docs/introduction/languages/dart)
+- [Julia](/docs/introduction/languages/julia)
+- [LaTeX](/docs/introduction/languages/latex)
+- [R](/docs/introduction/languages/r)
+- [Kotlin](/docs/introduction/languages/kotlin)
+- [Deno](/docs/introduction/languages/deno)

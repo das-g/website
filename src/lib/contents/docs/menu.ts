@@ -16,7 +16,9 @@ function M(
 
 export const MENU: MenuEntry[] = [
   M("Introduction", "introduction"),
-  M("Getting started", "introduction/getting-started"),
+  M("Getting started", "introduction/getting-started", [
+    M("Quickstart", "introduction/getting-started/quickstart"),
+  ]),
   M("Learn Gitpod", "introduction/learn-gitpod", [
     M(
       "One workspace per task",

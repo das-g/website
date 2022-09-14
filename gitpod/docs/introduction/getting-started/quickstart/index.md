@@ -1,5 +1,5 @@
 ---
-section: quickstart
+section: getting-started
 title: Quickstart
 ---
 
