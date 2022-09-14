@@ -1,5 +1,5 @@
 ---
-section: projects
+section: learn-gitpod
 title: .gitpod.yml
 ---
 

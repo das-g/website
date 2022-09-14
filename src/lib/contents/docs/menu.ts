@@ -29,6 +29,7 @@ export const MENU: MenuEntry[] = [
       "introduction/learn-gitpod/the-life-of-a-workspace"
     ),
     M("Context URL", "introduction/learn-gitpod/context-url"),
+    M(".gitpod.yml", "introduction/learn-gitpod/gitpod-yaml"),
   ]),
   M("Languages", "introduction/languages", [
     M("JavaScript", "introduction/languages/javascript"),
@@ -39,13 +40,9 @@ export const MENU: MenuEntry[] = [
   ]),
 
   M("Configure", "configure"),
-  M("Teams", "configure/teams", [
-    M("Billing", "configure/teams/billing", [], "beta"),
-    M("Plans", "configure/teams/plans", []),
-  ]),
+  M("Teams", "configure/teams"),
 
   M("Projects", "configure/projects", [
-    M(".gitpod.yml", "configure/projects/gitpod-yaml"),
     // Why is this side bar name different to the title / URL?
     M("Tasks", "configure/projects/tasks"),
     M("Ports", "configure/projects/ports"),
@@ -61,7 +58,6 @@ export const MENU: MenuEntry[] = [
     M("SSH", "configure/users/ssh"),
     M("Browser bookmarklet", "configure/users/browser-bookmarklet"),
     M("Browser extension", "configure/users/browser-extension"),
-    M("Usage-based Billing", "usage-based-billing", [], "beta"),
   ]),
 
   M("Workspaces", "configure/workspaces", [
@@ -154,6 +150,11 @@ export const MENU: MenuEntry[] = [
   // M("Custom Docker image", "references/gitpod-dockerfile"),
   // M("Architecture", "references/architecture"),
   M("Support", "support"),
+  M("Billing", "support/billing", [
+    M("Team Billing", "support/billing/team-billing"),
+    M("User Billing", "support/billing/user-billing"),
+    M("Usage-based Billing", "support/billing/usage-based-billing", [], "beta"),
+  ]),
   M("Contribute", "support/contribute", [
     M("Content", "support/contribute/content"),
     M("Documentation", "support/contribute/documentation"),

@@ -1,6 +1,6 @@
 ---
-section: teams
-title: Plans
+section: billing
+title: User Billing
 ---
 
 <script context="module">
