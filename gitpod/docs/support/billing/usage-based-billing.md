@@ -1,5 +1,5 @@
 ---
-section: develop
+section: billing
 title: Usage-based Billing
 ---
 
