@@ -6,6 +6,7 @@
   import Explore from "$lib/components/explore.svelte";
   import FeatureTitles from "$lib/components/feature-titles.svelte";
   import Header from "$lib/components/header.svelte";
+  import ImageLightDark from "$lib/components/image-light-dark.svelte";
   import OpenGraph from "$lib/components/open-graph.svelte";
   import Celebrate from "$lib/components/team/celebrate.svelte";
   import CoreValues from "$lib/components/team/core-values.svelte";
@@ -30,14 +31,14 @@
   text="Gitpod was founded in Germany. Now, it’s fully remote and distributed across the globe."
   class="!max-w-none"
 >
-  <iframe
-    title="World Map of where different people working at Gitpod are located."
+  <ImageLightDark
+    image={{
+      src: "/images/team/map-light.png",
+      darkSrc: "/images/team/map-dark.png",
+      alt: "World Map of Gitpodders",
+    }}
     slot="content"
-    src="https://datastudio.google.com/embed/reporting/4082b7be-0033-437f-9925-4ed2fb6f80a0/page/NaupC"
-    frameborder="0"
-    style="border:0"
-    allowfullscreen
-    class="mx-auto mt-x-small md:mt-small w-full max-w-5xl aspect-[64/50]"
+    class="mt-medium"
   />
 </Header>
 
