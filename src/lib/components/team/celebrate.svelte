@@ -7,9 +7,13 @@
 <Section>
   <Card
     size="medium"
-    class="flex items-center max-w-3xl mx-auto px-small py-medium gap-medium shadow-normal"
+    class="flex items-center max-w-3xl mx-auto p-x-small md:px-small md:py-medium gap-medium shadow-normal"
   >
-    <img src="/images/team/plant.png" alt="Plant" class="w-36" />
+    <img
+      src="/images/team/plant.png"
+      alt="Plant"
+      class="hidden md:block w-36"
+    />
     <div>
       <h2 class="h4">We celebrate diversity</h2>
       <p class="mb-micro">
