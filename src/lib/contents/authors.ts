@@ -373,6 +373,14 @@ export const authors: { [idx: string]: Author } = {
     },
     description: "",
   },
+  whummer: {
+    name: "Waldemar Hummer",
+    socialProfiles: {
+      github: "whummer",
+      twitter: "w_hummer",
+    },
+    description: "",
+  },
 };
 
 export const authorSocialMediaLinks: SocialMediaLinks = Object.entries(
