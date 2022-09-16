@@ -472,6 +472,6 @@ kubectl apply -f issuer.yaml
 ```
 
 > This example ClusterIssuer depends on [Azure Managed Identity](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview) to authorize requests from cert-manager to the AzureDNS API.
-> Refer to the [cert-manager AzureDNS DNS01](https://cert-manager.io/docs/configuration/acme/dns01/azuredns/) documentation for more information on cert-manager API authorization
+> Refer to the [cert-manager AzureDNS DNS01](https://cert-manager.io/docs/configuration/acme/dns01/azuredns/) documentation for more information on cert-manager API authorization.
 
 </CloudPlatformToggle>
