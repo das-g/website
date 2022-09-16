@@ -129,12 +129,16 @@ export const photos: Image[] = [
     alt: "Co-working with other Gitpodders while travelling is always a highlight.",
   },
   {
-    src: "/images/team/life-2.png",
-    alt: "Working from outdoors.",
+    src: "/images/team/life-7.png",
+    alt: "At the company’s offsites we regularly get to meet everyone.",
   },
   {
     src: "/images/team/life-3.png",
     alt: "We love working from the cafès in our neighbourhood.",
+  },
+  {
+    src: "/images/team/life-2.png",
+    alt: "Working from outdoors.",
   },
   {
     src: "/images/team/life-4.png",
@@ -147,10 +151,6 @@ export const photos: Image[] = [
   {
     src: "/images/team/life-6.png",
     alt: "We are in good company.",
-  },
-  {
-    src: "/images/team/life-7.png",
-    alt: "At the company’s offsites we regularly get to meet everyone.",
   },
   {
     src: "/images/team/life-8.png",

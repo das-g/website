@@ -29,7 +29,7 @@
 <Header
   title="We’re the people behind Gitpod"
   text="Gitpod was founded in Germany. Now, it’s fully remote and distributed across the globe."
-  class="!max-w-none"
+  fullWidth={true}
 >
   <ImageLightDark
     image={{
@@ -38,7 +38,7 @@
       alt: "World Map of Gitpodders",
     }}
     slot="content"
-    class="mt-medium"
+    class="mt-x-small md:mt-medium w-full max-w-[925px] mx-auto"
   />
 </Header>
 
