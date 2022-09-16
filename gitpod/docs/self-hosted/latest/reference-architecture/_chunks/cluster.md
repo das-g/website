@@ -677,8 +677,6 @@ Create the AKS cluster and a default node pool. Gitpod services and other suppor
 **TODO**: By default AKS creates cluster using the `kubenet` plugin. Do we need to use the Calico CNI?
 
 ```bash
-K8S_NODE_VM_SIZE=${K8S_NODE_VM_SIZE:="Standard_D4_v3"}
-
 az aks create \
     --name "${CLUSTER_NAME}" \
     --nodepool-name "services" \
@@ -691,7 +689,7 @@ az aks create \
     --max-count "4" \
     --max-pods "110" \
     --node-osdisk-size "100" \
-    --node-vm-size "${K8S_NODE_VM_SIZE}" \
+    --node-vm-size "Standard_D4_v4" \
     --nodepool-labels \
         gitpod.io/workload_meta=true \
         gitpod.io/workload_ide=true \
@@ -716,8 +714,9 @@ az aks nodepool add \
     --max-count "50" \
     --max-pods "110" \
     --node-osdisk-size "512" \
-    --node-vm-size "${K8S_NODE_VM_SIZE}" \
+    --node-vm-size "Standard_D8_v4" \
 ```
+
 Create a node pool for headless workspaces. As headless workspaces typically run non user-facing workloads this node pool is configured to scale to zero.
 
 **TODO** Do we need node taints to repel things like kotsadm?
@@ -735,7 +734,7 @@ az aks nodepool add \
     --max-count "50" \
     --max-pods "110" \
     --node-osdisk-size "512" \
-    --node-vm-size "${K8S_NODE_VM_SIZE}"
+    --node-vm-size "Standard_D8_v4"
 ```
 
 After the cluster and node pools have been created, fetch the AKS credentials. These credentials will be used to install external-dns, cert-manager, and install Gitpod itself.
