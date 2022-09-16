@@ -219,24 +219,6 @@
 </script>
 
 <style lang="postcss">
-  .link {
-    @apply underline;
-  }
-
-  p {
-    color: var(--body);
-  }
-  form {
-    max-width: 45rem;
-    margin: auto;
-  }
-  fieldset ul {
-    @apply flex flex-wrap;
-  }
-  fieldset li {
-    @apply mr-macro;
-  }
-
   .wrapper {
     @apply flex flex-col lg:flex-row;
 
@@ -281,14 +263,18 @@
               : "We received your message. Our team will take a look and get back to you as soon as possible."}
           />
         {:else}
-          <form on:submit|preventDefault={handleSubmit} novalidate>
+          <form
+            on:submit|preventDefault={handleSubmit}
+            novalidate
+            class="max-w-[45rem] m-auto"
+          >
             <div class="space-y-8">
               <div class:error={isFormDirty && !formData.selectedSubject.valid}>
                 <fieldset class="flex">
                   <legend>Please choose a subject</legend>
-                  <ul>
+                  <ul class="flex flex-wrap">
                     {#each subjects as subject, index}
-                      <li>
+                      <li class="mr-macro">
                         <input
                           id="subject-{index}"
                           type="radio"
@@ -444,7 +430,7 @@
               />
               <p class="text-sm my-4">
                 By submitting this form I acknowledge that I have read and
-                understood <a class="link" href="/privacy"
+                understood <a class="!underline" href="/privacy"
                   >Gitpod’s Privacy Policy.</a
                 >
               </p>
