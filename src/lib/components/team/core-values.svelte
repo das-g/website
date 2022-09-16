@@ -7,7 +7,7 @@
 
 <SectionCommon
   title="Our core values shape how we work"
-  text="They are a guiding compass on where we are going. Our core values  are horizontal to our community, and the products and services crafted in Gitpod."
+  text="Guiding our products, services, and community, our core values are reflected in everything we do."
   textClassNames="max-w-5xl mx-auto"
 >
   <div slot="content" class="flex flex-col items-center">

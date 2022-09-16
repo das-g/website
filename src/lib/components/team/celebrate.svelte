@@ -17,10 +17,10 @@
     <div>
       <h2 class="h4">We celebrate diversity</h2>
       <p class="mb-micro">
-        And strive for an equal, inclusive, empathetic and welcoming
-        environment. We cherish that every person brings a unique perspective
-        and experience to the team. Still we are not as diverse as we would like
-        to be and are working on improving it. 🌈
+        Gitpod strives for an inclusive, empathetic and welcoming environment.
+        We cherish that every person brings a unique perspective and experience
+        to the team. Everyone deserves an equal opportunity to be successful at
+        Gitpod.
       </p>
       <LinkButton href="https://www.gitpod.io/careers" variant="primary">
         Become part of the team

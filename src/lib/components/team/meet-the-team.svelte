@@ -5,7 +5,7 @@
 
 <SectionCommon
   title="Meet the team"
-  text="During our regular offsites we get to build a deeper bond and simply celebrate an amazing team and a great product."
+  text="We get to celebrate building deep bonds and great products with our amazing team during regular company offsites."
   textClassNames="max-w-3xl mx-auto"
 >
   <div

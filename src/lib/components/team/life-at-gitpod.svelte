@@ -17,7 +17,7 @@
 
 <SectionCommon
   title="Life at Gitpod"
-  text="Have a sneak peak behind the scene. This is how we work remotely."
+  text="Have a sneak peak behind the scenes. This is how we work remotely."
   textClassNames="mb-small"
 >
   <div slot="content">

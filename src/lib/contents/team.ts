@@ -45,22 +45,22 @@ export const featureTitles: FeatureTitle[] = [
   {
     main: "More than",
     sub: "60",
-    third: "remote team members.",
+    third: "remote team members",
   },
   {
     main: "From",
     sub: "23",
-    third: "different countries",
+    third: "countries",
   },
   {
-    main: "Distributed in",
+    main: "Distributed across",
     sub: "13",
     third: "time zones",
   },
   {
     main: "From",
     sub: "5",
-    third: "different continents.",
+    third: "continents",
   },
 ];
 
@@ -75,7 +75,7 @@ export const coreValues: Card[] = [
   },
   {
     title: "Integrate, don’t dictate",
-    text: "We are humble and kind. We first seek to understand, then be understood - with products and people around us.",
+    text: "We are humble and kind. We first seek to understand, then be understood – with products and people around us.",
     icon: {
       src: "/images/team/integrate.png",
       alt: "Integrate",
@@ -83,7 +83,7 @@ export const coreValues: Card[] = [
   },
   {
     title: "Students of the game",
-    text: "We show up for the team, not for ourselves. We trust and empower each other. We make heroes and unblock others.",
+    text: "We build and learn in the open – always with curiosity. We invest in our personal and professional development.",
     icon: {
       src: "/images/team/students.png",
       alt: "Students of the game",
@@ -91,7 +91,7 @@ export const coreValues: Card[] = [
   },
   {
     title: "Ship skateboards",
-    text: "We show up for the team, not for ourselves. We trust and empower each other. We make heroes and unblock others.",
+    text: "We tackle hard problems with simple solutions that delight. We commit and ship the minimal viable change, then iterate quickly.",
     icon: {
       src: "/images/team/skateboard.png",
       alt: "Skateboard",
@@ -108,7 +108,7 @@ export const joinCards: Card[] = [
     },
   },
   {
-    text: "We aim for a frictionless experience. When interacting with our product, our company and our brand: no hurdles, no BS, no unnecessary extra steps.",
+    text: "We aim for a frictionless experience when interacting with our product, our company and our brand. No hurdles, no BS, no unnecessary extra steps.",
     icon: {
       src: "/images/team/integrate.png",
       alt: "Integrate",

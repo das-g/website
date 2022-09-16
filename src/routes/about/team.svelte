@@ -19,16 +19,16 @@
 
 <OpenGraph
   data={{
-    title: "The people behind Gitpod – Fully remote, distributed, worldwide",
+    title: "The people behind Gitpod – Fully remote, distributed worldwide",
     description:
-      "Gitpod was founded in Germany. Now, it’s fully remote and distributed across the globe. Check out our map to see where our team members are located.",
+      "Gitpod started with a small team in Germany. Now, our fully remote team is distributed across the globe. Check out our map to see where our team members are located.",
     keywords: "gitpod, team, about, map, remote",
   }}
 />
 
 <Header
   title="We’re the people behind Gitpod"
-  text="Gitpod was founded in Germany. Now, it’s fully remote and distributed across the globe."
+  text="Gitpod started with a small team in Germany. Now, our fully remote team is distributed across the globe."
   fullWidth={true}
 >
   <ImageLightDark
