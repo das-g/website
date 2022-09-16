@@ -239,7 +239,7 @@ az role assignment create \
 > to authorizes the entire AKS cluster to manage DNS records in the given zone, including cert-manager and external-dns. Other pods (and potentially gitpod workspaces)
 > may be able to alter DNS records as well.
 
-Install the external-dns helm chart:
+Install the external-dns Helm chart:
 
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
@@ -358,7 +358,7 @@ helm upgrade \
 
 In this reference architecture, we use cert-manager to also create **TLS certificates for the Gitpod domain**. Since we need wildcard certificates for the subdomains, you must use the [DNS-01 challenge](https://letsencrypt.org/docs/challenge-types/#dns-01-challenge).
 
-Using a certificate issued by Let's Encrypt is recommended as it minimizes overhead involving TLS certificates and managing CA certificate trust, but is not required. If you already have a TLS certificates for your Gitpod installation with suitable DNS names you can skip this step and use your own certificates during the installation.
+Using a certificate issued by Let's Encrypt is recommended as it minimizes overhead involving TLS certificates and managing CA certificate trust, but is not required. If you already have TLS certificates for your Gitpod installation with suitable DNS names you can skip this step and use your own certificates during the installation.
 
 <CloudPlatformToggle id="cloud-platform-toggle-cert-manager-tls">
 <div slot="gcp">
@@ -444,7 +444,7 @@ First, determine your Azure subscription ID. You can typically determine your su
 AZURE_SUBSCRIPTION_ID="$(az account subscription list --query '[0].subscriptionId' --output tsv)"
 ```
 
-Then create an `issuer.yaml` containing the following content, expanding the `$AZURE_SUBSCRIPTION_ID`, `$RESOURCE_GROUP`, and `$DOMAIN_NAME` variables:
+Then create a file named `issuer.yaml` containing the following content, expanding the `$AZURE_SUBSCRIPTION_ID`, `$RESOURCE_GROUP`, and `$DOMAIN_NAME` variables:
 
 ```yaml
 apiVersion: cert-manager.io/v1

@@ -270,7 +270,7 @@ After creating the MySQL server create a database called `gitpod`. When Gitpod i
 
 Create a MySQL firewall rule allowing access from your AKS cluster to the MySQL database.
 
-> 💡 MySQL firewall rules with a start IP address of `0.0.0.0` and end IP address of `0.0.0.0` restrict access to Azure resources.
+> 💡 MySQL firewall rules with a start IP address of `0.0.0.0` and an end IP address of `0.0.0.0` restrict access to Azure resources. This is necessary to allow your Kubernetes cluster to connect to the database.
 > See the [Azure MySQL firewall API documentation](https://docs.microsoft.com/en-us/azure/mysql/single-server/concepts-firewall-rules#connecting-from-azure) for more information.
 
 ```bash
