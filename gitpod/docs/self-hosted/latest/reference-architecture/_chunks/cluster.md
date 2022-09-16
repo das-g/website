@@ -719,8 +719,6 @@ az aks nodepool add \
 
 Create a node pool for headless workspaces. As headless workspaces typically run non user-facing workloads this node pool is configured to scale to zero.
 
-**TODO** Do we need node taints to repel things like kotsadm?
-
 ```bash
 az aks nodepool add \
     --name "headless-workspaces" \
