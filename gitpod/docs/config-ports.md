@@ -57,7 +57,7 @@ The property `onOpen` configures port opening behaviors:
 
 - `notify` (default) - Show a notification for newly detected ports.
 - `open-preview` - Open the port URL in a preview within the editor or IDE.
-- `open-browser` - Open the port URL a browser tab.
+- `open-browser` - Open the port URL in a browser tab.
 - `ignore` - Ignore default behavior (notify).
 
 **Example**: Open a browser tab for port 8080
